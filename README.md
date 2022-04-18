@@ -1,7 +1,7 @@
 # grupo_2_DigitalDroneHouse
 
 ## ¿Qué es este Repositorio?
-E-Commerce especializado en Drones, sus accesorios y/o respuestos, para Individuos o Compañías que buscar ver lo que los demás no ven.  
+E-Commerce especializado en Drones, sus accesorios y/o respuestos, para Individuos o Compañías que buscan ver lo que los demás no ven.  
 
 Proyecto integrador para el curso de desarrollo Web Fullstack DH.
 

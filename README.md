@@ -7,6 +7,7 @@ Proyecto integrador para el curso de desarrollo Web Fullstack DH.
 
 ## Acerca de los Colaboradores  
 **Jhonnatan Urquijo**. Ingeniero de Sistemas y Telecomunicaciones apasionado por la tecnología y el **desarrollo de software**, quien además de ejecuta funciones de Auditoría y Control Interno Tecnológico a Empresas.
+
 **Jorge Polania**. Tecnologo Químico y Químico Puro. Trabajo como Analista Químico de Calidad. Interesado en aprender acerca de **Desarrollo Web** para darle un plus diferente al habitual, a mi perfil profesional. 
 
 ## Sitios referentes

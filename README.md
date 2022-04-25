@@ -10,7 +10,7 @@ Proyecto integrador para el curso de desarrollo Web Fullstack DH.
 
 **Jorge Polania**. Tecnologo Químico y Químico Puro. Trabajo como Analista Químico de Calidad. Interesado en aprender acerca de **Desarrollo Web** para darle un plus diferente al habitual, a mi perfil profesional. 
 
-** Adrián Felipe Ochoa H**. Tecnólogo en producción con especialización en formulación de proyectos, auditor de calidad y supervisor de contratos con más de 11 años de experiencia en ese campo, interesado en la programación y diseño de páginas web como nueva habilidad para las profesiones actuales y del futuro. 
+**Adrián Felipe Ochoa H**. Tecnólogo en producción con especialización en formulación de proyectos, auditor de calidad y supervisor de contratos con más de 11 años de experiencia en ese campo, interesado en la programación y diseño de páginas web como nueva habilidad para las profesiones actuales y del futuro. 
 
 
 ## Sitios referentes

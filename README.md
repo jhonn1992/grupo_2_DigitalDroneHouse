@@ -37,3 +37,6 @@ WIREFRAME - Detalle de producto: https://marvelapp.com/prototype/91if928/screen/
 WIREFRAME - Formulario de registro: https://app.uizard.io/p/6a97763f  
 WIREFRAME - HOME DEL SITIO: https://marvelapp.com/prototype/ai9cc1b/screen/86258894  
 WIREFRAME - Carrito de compras: https://app.uizard.io/p/6a97763f ---- https://app.uizard.io/p/6a97763f  
+
+## Enlace tablero Sprint 2  
+https://trello.com/b/RlPy5upv/sprint-2-html-css

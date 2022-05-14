@@ -2,7 +2,7 @@
   "name": "grupo_2_digitaldronehouse",
   "version": "1.0.0",
   "description": "E-Commerce especializado en Drones, sus accesorios y/o respuestos, para Individuos o Compañías que buscan ver lo que los demás no ven.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "nodemon app.js"
   },

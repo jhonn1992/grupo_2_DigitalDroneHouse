@@ -90,6 +90,11 @@
   font-weight: bolder;   
 }
 
+.facebook button{
+  background-color: transparent;
+  border: none;
+}
+
 .facebook:hover {
   background-color: #ffffff;
   cursor: pointer;
@@ -101,7 +106,7 @@
   color: #4867AA; 
   margin-right: 3px; 
   position: absolute;
-  left: 70px;
+  left: 65px;
 }
 
 .google {
@@ -122,7 +127,7 @@
   font-size: 25px; 
   margin-right: 3px; 
   position: absolute;
-  left: 70px;
+  left: 65px;
 }
 
 .google:hover {

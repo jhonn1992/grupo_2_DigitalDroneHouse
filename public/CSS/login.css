@@ -93,6 +93,9 @@
 .facebook button{
   background-color: transparent;
   border: none;
+  font-size:16px ;
+  color: #4867AA;
+  font-weight: bold;
 }
 
 .facebook:hover {
@@ -120,6 +123,14 @@
   border-radius: 2px;
   border: solid 1px grey;  
   font-weight: bolder;   
+}
+
+.google button{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #DB382C;
+  font-weight: bold;
 }
 
 .fa-google{
@@ -153,10 +164,10 @@ a {
   color: #B43056;
 }
 
-a:visited {
-  /* color: black; */
+/* a:visited {
+  color: #38393A;
 }
-
+ */
 .contenedor1 i {
   font-size: 10px;
   color: grey;
@@ -189,6 +200,7 @@ a:visited {
   margin: 10px 0;
   font-size: 16px;
   border-radius: 2px;
+  font-weight: bold;
 }
 
 /* pseudo clase para cambiar el color del botón */

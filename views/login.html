@@ -16,13 +16,13 @@
 </head>
 
 <body>
-  <form action="/img/" method="POST">
+  <form action="/login" method="POST">
     <section class="form-login">
       <div class="ubicacion-logo">
         <img src="./img/logoDDH.png" alt="logoDDH" />
       </div>
 
-      <input class="controls-login" type="email" name="correo" id="correo" placeholder="Email address*" />
+      <input class="controls-login" type="email" name="correo" id="correo" placeholder="Email address*" required>
       <input class="controls-login" type="password" name="password" id="password" placeholder="password*" required
         minlength="6" />
       <button class="botons" type="submit"> LOG IN</button>
@@ -36,19 +36,20 @@
         
         <div class="flex-fg">
           <i class="fa-brands fa-facebook-square"></i>
-           <a class="facebook" href="https://facebook.com" > <button type="submit" >FACEBOOK </button></a>
+           <a class="facebook" href="https://facebook.com/login" > <button type="submit" >FACEBOOK </button></a>
         </div>
 
         <div class="flex-fg">
           <i class="fa-brands fa-google"></i>
-          <input class="google" type="button" value="GOOGLE">
+          <a class="google" href="https://accounts.google.com/servicelogin" > <button type="submit" >GOOGLE </button></a>
+         
         </div>
       </section>
       <p class="by-countinuing">By continuing, you hereby agree to the Privacy Policy and Terms of Use. DJI will use the
         information provided
         by the third party you selected to register or log in.</p>
 
-      <p class="account"><a href="#">Create Your DDH Account</a></p>
+      <p class="account"><a href="http://localhost:5000/register">Create Your DDH Account</a></p>
 
       <p class="help">Need help with login?</p>
 

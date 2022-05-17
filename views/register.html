@@ -16,26 +16,27 @@
 </head>
 
 <body>
-  <form action="/img/" method="POST">
+  <form action="/register" method="POST">
     <section class="form-register">
       <div class="ubicacion-logo">
         <img src="./img/logoDDH.png" alt="logoDDH" />
       </div>
       <h4>REGISTER BY EMAIL</h4>
 
-      <input class="controls-register" type="email" name="correo" id="correo" placeholder="Email address*" />
-      <input class="controls-register" type="password" name="password" id="password" placeholder="password*" required
+      <input class="controls-register" type="email" name="correo" id="correo" placeholder="Email address*" required/>
+
+      <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required
         minlength="6" />
       <input class="controls-register" type="password" name="password" id="password"
-        placeholder="Enter new password again*" />
+        placeholder="Enter new password again*" required/>
 
       <div class="terms-use">
-        <input type="checkbox" name="terms-use"> I agree to comply with the DDH <strong>Privacy Policy</strong> and <a
+        <input type="checkbox" name="terms-use" placeholder="terms-use"> I agree to comply with the DDH <strong>Privacy Policy</strong> and <a
           href="#">Terms of Use.</a></input>
       </div>
       <button class="botons" type="submit"> REGISTER</button>
 
-      <p class="log-in-now"><a href="#">Log In Now</a></p>
+      <p class="log-in-now"><a href="http://localhost:5000/login">Log In Now</a></p>
       <p class="help">Need help with registration?</p>
 
       <div class="contenedor1">

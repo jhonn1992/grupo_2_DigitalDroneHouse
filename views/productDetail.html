@@ -16,7 +16,7 @@
     <header>
         <div class="header">
             <div class="header-detail">
-                <div>
+                <div class="ocultar-menu-hamburguesa">
                     <form action="/home" method="GET">
                         <button type="submit" class="fas fa-bars menu menu-banner iconosHeader"></button>
                     </form>
@@ -24,6 +24,13 @@
                 <div>
                     <img src="/img/logoDDH1.png" alt="logoDDH-pnia" />
                 </div>
+                <nav class="header-detail">
+                    <ul class="ul-nav">
+                        <li><A HREF="#">Camera Drones</A></li>
+                        <li><A HREF="#">Drones</A></li>
+                        <li><A HREF="#">Handheld</A></li>
+                    </ul>
+                </nav>
             </div>
             <div class="header-detail">
                 <div>
@@ -46,15 +53,15 @@
         </div>
     </header>
     <main>
-        <section>
+        <section class="seccion-producto">
             <div class="producto">
-                <img class="imgProducts" src="https://www5.djicdn.com/cms_uploads/product/cover/169/2f8006e7dcdc1a4c7cc1aa1593617823.png" alt="drone1" />
+                <img class="imgProducts" src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/d55541dae0fb81a6dae74c750bedeec8@ultra.jpg" alt="drone1" />
             </div>
-            <div class="margin-all">
+            <div class="margin-all margin-all-pc">
                 <div class="font-size-h">
                     <h2>DJI Mavic Air 2 DRDJI016 Fly More Combo Drone with 4K Camera Gray 3 Batteries</h2>
                 </div>
-                <p>USD $759</p>
+                <p class="precio">USD $759</p>
                 <ul>
                     <li>Version: Fly More Combo.</li>
                     <li>Drone type: aerial.</li>
@@ -63,12 +70,15 @@
                     <li>It has 4 motors.</li>
                     <li>Maximum camera resolution: 4K.</li>
                     <li>Maximum flight time: 34m.</li>
+                    <li>Includes 3 batteries.</li>
+                    <li>It comes with altitude hold mode for stable flights.</li>
+                    <li>It has an auto return function.</li>
                 </ul>
-                <div class="font-size-h">
-                    <h2>Accessories</h2>
-                </div>
             </div>
         </section>
+        <div class="font-size-h txt-accesorio">
+            <h2>Accessories</h2>
+        </div>
         <section class="accesorios">
             <div>
                 <div class="color-accesorios">
@@ -109,7 +119,7 @@
         </section>
         <section class="margin-all">
             <div class="font-size-h">
-                <h2>What do you want to know?</h2>
+                <h2>Let&#39s Answer Your Questions</h2>
             </div>
             <div class="faq-container">
                 <details>
@@ -135,7 +145,7 @@
         <div class="footer">
             <section class="margin-all">
                 <div class="faq-container">
-                    <details>
+                    <details open>
                         <summary class="footer-detail">Products</summary>
                         <div class="sin-margin-listas">
                             <ul>
@@ -145,7 +155,7 @@
                             </ul>
                         </div>
                     </details>
-                    <details>
+                    <details open>
                         <summary class="footer-detail">Explorer</summary>
                         <div class="sin-margin-listas">
                             <ul>
@@ -157,15 +167,15 @@
                 </div>
             </section>
             <div class="iconos-footer">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-youtube-square"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-vimeo"></i>
+                <A HREF="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></A>
+                <A HREF="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></i></A>
+                <A HREF="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></A>
+                <A HREF="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></A>
+                <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
             </div>
             <div>
-                <p>Copyright © 2022 Dron Digital House All Rights Reserved.</p>
-              </div>
+                <p class="copyright">This site is for educational purposes only and is not for commercial purposes at any time - Some materials used on this site are the property of third parties.</p>
+            </div>
         </div>
     </footer>
 </body>

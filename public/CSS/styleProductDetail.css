@@ -1,6 +1,6 @@
 /* ---------------------------------Body ----------------------------------------------------------- */
 
-/* ---------Header ---------- */
+/* -----------------------------------------Header ----------------------------- */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -20,6 +20,10 @@ header {
   padding: 5px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
+}
+
+.ul-nav {
+  display: none;
 }
 
 .menu-banner {
@@ -49,21 +53,22 @@ header {
   font-size: 18px;
 }
 
-/* ---------Main ---------- */
+/* --------------------------------------Main ------------------------------------------------------ */
 main {
   padding-top: 50px;
 }
 
 .producto {
+  position: relative;
   width: 100%;
 }
 
 .imgProducts {
   width: 335px;
   height: 350px;
-  display: flex;
+  position: relative;
+  display: block;
   margin: auto;
-  margin-left: 5px;
   box-shadow: 1px 1px 5px 2px #d8e0e9;
 }
 
@@ -105,6 +110,11 @@ main {
 
 .font-size-h h2 {
   font-size: 16px;
+}
+
+.seccion-producto .margin-all ul li {
+  list-style-type: disc;
+  color: black;
 }
 
 /* Main section accesorios */
@@ -173,19 +183,19 @@ footer {
 }
 
 .footer {
-    padding-bottom: 8px;
-    margin-right: 5px;
-    margin-left: 10px;
-  }
+  padding-bottom: 8px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
 
 ul {
   list-style: none;
 }
 
 li a {
-    text-decoration: none;
-    color: black;
-  }
+  text-decoration: none;
+  color: black;
+}
 
 .footer-detail::before {
   content: "+";
@@ -200,7 +210,124 @@ li a {
 }
 
 .iconos-footer i {
-    padding-right: 10px;
-    font-size: 20px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: black;
 }
 
+.copyright {
+  text-align: center;
+  width: 95%;
+}
+
+/* --------------------------------------------------------Media Queries---------------------------------------*/
+
+@media (min-width: 465px) {
+  /* ----------------Header-----------------*/
+
+  .menu-banner {
+    margin-right: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .margin-all {
+    margin-right: 15%;
+    margin-left: 10%;
+  }
+  /* ----------------------------------------------------*/
+  .iconosHeader {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
+  }
+
+  .ul-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ul-nav li {
+    margin-left: 15px;
+  }
+
+  .producto {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .imgProducts {
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+
+}
+/* ------------------Media query 768---------*/
+@media (min-width: 768px) {
+  .font-size-h h2 {
+    font-size: 18px;
+  }
+  .producto {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .imgProducts {
+    width: 335px;
+    height: 350px;
+    position: relative;
+    display: block;
+    box-shadow: 1px 1px 5px 2px #d8e0e9;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
+  .seccion-producto {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .margin-all-pc {
+    margin: auto;
+    margin-top: 0px;
+    margin-left: -20px;
+    margin-right: 40px;
+    padding: 10px;
+  }
+
+  .font-size-h {
+    margin-bottom: 50px;
+  }
+
+  .txt-accesorio {
+    text-align: center;
+  }
+
+  .footer .margin-all .faq-container {
+    display: flex;
+  }
+  .open summary {
+    font-weight: 600;
+  }
+
+  .precio {
+    font-size: 18px;
+  }
+
+  .footer {
+    margin: auto;
+  }
+}

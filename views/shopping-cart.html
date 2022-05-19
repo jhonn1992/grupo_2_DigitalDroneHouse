@@ -1,183 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Drone</title>
-    <!-- Links para Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Link para iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-     <!-- Mi css -->
-     <link rel="stylesheet" href="/css/shopping-cart.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Drone</title>
+  <!-- Links para Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Link para iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <!-- Mi css -->
+  <link rel="stylesheet" href="/css/shopping-cart.css" />
 </head>
+
 <body>
-    
+
   <header>
     <div class="header">
-        <div class="header-detail">
-            <div class="ocultar-menu-hamburguesa">
-                <form action="/home" method="GET">
-                    <button type="submit" class="fas fa-bars menu menu-banner iconosHeader"></button>
-                </form>
-            </div>
-            <div>
-                <img src="/img/logoDDH1.png" alt="logoDDH-pnia" />
-            </div>
-            <nav class="header-detail">
-                <ul class="ul-nav">
-                    <li><A HREF="#">Camera Drones</A></li>
-                    <li><A HREF="#">Drones</A></li>
-                    <li><A HREF="#">Handheld</A></li>
-                </ul>
-            </nav>
+      <div class="header-detail">
+        <div class="ocultar-menu-hamburguesa">
+          <form action="/home" method="GET">
+            <button type="submit" class="fas fa-bars menu menu-banner iconosHeader"></button>
+          </form>
         </div>
-        <div class="header-detail">
-            <div>
-                <form action="/home" method="GET">
-                    <button type="submit" class="fas fa-search iconosHeader"></button>
-                </form>
-            </div>
-            <div>
-                <form action="/home" method="GET">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
-                </form>
-            </div>
-            <form action="/home" method="GET">
-                <nav class="navegacion">
-                    <ul class="menu">
-                        <li><button type="submit" class="fas fa-user-check iconosHeader"><a
-                                    href="#"></a></a></button>
-                            <ul class="submenu">
-                                <li><a href="/login">Login</a></li>
-                                <li><a href="/register">Register</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </form>
-        </div>
-    </div>
-</header>
-<!-- -----------------------------------main----------------------------------------------------------------- -->
-
-    <main>
-        <h2 class="titular1"> Resumen</h2>
-        <h3 class="titular2"> Mi carrito de Compras</h3>
-          <br><br>
-        <div class="contenedor2Columnas"> 
-          <h4>Producto</h4>
-          <h4>Cantidad</h4>
-        </div>
-        <div class="separacion"></div>
         <div>
-          <article class="item-cart"> 
-            <img src="/img/camera-dji.png" alt="imagen-Articulo1" class="product-img">
-            <div class="contenedor-descripcion">
-              <h4 class="nombre"> Nombre producto 1</h4>
-              <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="contenedor-botones">
-              <div class="boton-cierre"><i class="far fa-window-close"></i></div>
-              <div class="boton-cantidad">
-                <i class="fas fa-angle-double-up"></i>
-                1
-                <i class="fas fa-angle-double-down"></i>
-              </div>
-              <div class="contenedor-precio"><p class="precio"> $325.325</p></div>
-            </div>            
-          </article>
-          <div class="separacion"></div>
-          <article class="item-cart"> 
-            <img src="/img/unDrone.png" alt="imagen-Articulo2" class="product-img">
-            <div class="contenedor-descripcion">
-              <h4 class="nombre"> Nombre producto 2</h4>
-              <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="contenedor-botones">
-              <div class="boton-cierre"><i class="far fa-window-close"></i></div>
-              <div class="boton-cantidad">
-                <i class="fas fa-angle-double-up"></i>
-                1
-                <i class="fas fa-angle-double-down"></i>
-              </div>
-              <div class="contenedor-precio"><p class="precio"> $955.555</p></div>
-            </div>            
-          </article>
-          <div class="separacion"></div>
+          <img src="/img/logoDDH1.png" alt="logoDDH-pnia" />
         </div>
-        <div class="seguir-comprando">
-          <form action="boton"> 
-            <button class="boton">Seguir Comprando</button>
-          </form>         
-        </div>
-
-        <div class="contenedor-total">
-          <h4>TOTAL CARRITO</h4>
-          <div class="separacion"></div>
-            <div class="contenedor-sub contenedor2Columnas"><p>Subtotal</p> <p>$ xxx.xxx</p></div>
-            <div class="contenedor-envio contenedor2Columnas"><p>Envío</p> <p>Gratis</p></div>
-          <div class="separacion"></div>
-          <div class="contenedor2Columnas"><h4>TOTAL</h4> <p>$ xxx.xxx</p></div>
-
-        <div class="contenedor-metodo-pago">
-          <form action="payment-metod">
-            
+        <nav class="header-detail">
+          <ul class="ul-nav">
+            <li><A HREF="#">Camera Drones</A></li>
+            <li><A HREF="#">Drones</A></li>
+            <li><A HREF="#">Handheld</A></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-detail">
+        <div>
+          <form action="/home" method="GET">
+            <button type="submit" class="fas fa-search iconosHeader"></button>
           </form>
         </div>
-
-        <div class="contenedor-boton-final">
-          <form action="boton">
-            <button class="boton">COMPRAR AHORA</button>
+        <div>
+          <form action="/home" method="GET">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
           </form>
         </div>
-        </div>
+        <form action="/home" method="GET">
+          <nav class="navegacion">
+            <ul class="menu">
+              <li><button type="submit" class="fas fa-user-check iconosHeader"><a href="#"></a></a></button>
+                <ul class="submenu">
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/register">Register</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- -----------------------------------main----------------------------------------------------------------- -->
 
-    </main>  
-         
-<!--  footer-------------------------- -----------------------------  -->
-  
-<footer>
-  <div class="footer">
-      <section class="margin-all ocultar-footer">
-          <div class="faq-container">
-              <details open>
-                  <summary class="footer-detail">Products</summary>
-                  <div class="sin-margin-listas">
-                      <ul>
-                          <li><A HREF="#">Camera Drones</A></li>
-                          <li><A HREF="#">Drones</A></li>
-                          <li><A HREF="#">Handheld</A></li>
-                      </ul>
-                  </div>
-              </details>
-              <details open>
-                  <summary class="footer-detail">Explorer</summary>
-                  <div class="sin-margin-listas">
-                      <ul>
-                          <li><A HREF="#">Login or Register</A></li>
-                          <li><A HREF="#">Supports</A></li>
-                      </ul>
-                  </div>
-              </details>
+  <main>
+    <h3 class="titular2"> SHOPPING CART</h3>
+    <br><br>
+    <div class="contenedor2Columnas">
+      <h4>Product</h4>
+      <h4>Cant</h4>
+    </div>
+    <div class="separacion"></div>
+    <div>
+      <article class="item-cart">
+        <img src="/img/camera-dji.png" alt="imagen-Articulo1" class="product-img">
+        <div class="contenedor-descripcion">
+          <h4 class="nombre"> DDH Action 2 Dual-Screen Combo</h4>
+
+          <p class="descripcion">Versatile Magnetic Design, Portable & Wearable. 4K/120fps & Super-Wide FOV,
+            HorizonSteady, 10m Waterproof and AI Editor.</p>
+          <p class="descripcion-2"> By purchasing DDH Action 2, you will receive a DDH Magnetic Protective Case free of
+            charge. The custom-made protective case helps reduce surface temperature to optimize video recording by
+            increasing recording length under normal conditions.</p>
+        </div>
+        <div class="contenedor-botones">
+          <div class="boton-cierre"><i class="far fa-window-close"></i></div>
+          <div class="boton-cantidad">
+            <i class="fas fa-angle-double-up"></i>
+            1
+            <i class="fas fa-angle-double-down"></i>
           </div>
+          <div class="contenedor-precio">
+            <p class="precio"> USD $439</p>
+          </div>
+        </div>
+      </article>
+      <div class="separacion"></div>
+      <article class="item-cart">
+        <img src="/img/unDrone.png" alt="imagen-Articulo2" class="product-img">
+        <div class="contenedor-descripcion">
+          <h4 class="nombre"> Mavic Air 2</h4>
+          <p class="descripcion">1-Inch CMOS Sensor, 5.4K Video, MasterShots, 12km 1080p Transmission, Obstacle Sensing
+            in 4 Directions</p>
+          <p class="descripcion-2"> With a 1-inch sensor, 5.4K video, MasterShots, and much more, DDH Air 2S is the
+            ultimate all-in-one camera drone.</p>
+        </div>
+        <div class="contenedor-botones">
+          <div class="boton-cierre"><i class="far fa-window-close"></i></div>
+          <div class="boton-cantidad">
+            <i class="fas fa-angle-double-up"></i>
+            1
+            <i class="fas fa-angle-double-down"></i>
+          </div>
+          <div class="contenedor-precio">
+            <p class="precio"> USD $955</p>
+          </div>
+        </div>
+      </article>
+      <div class="separacion"></div>
+    </div>
+    <div class="seguir-comprando">
+      <form action="boton">
+        <button class="boton">CONTINUE BUYING</button>
+      </form>
+    </div>
+
+    <div class="contenedor-total">
+      <h4>TOTAL PURCHASE</h4>
+      <div class="separacion"></div>
+      <div class="contenedor-sub contenedor2Columnas">
+        <p>Subtotal</p>
+        <p>USD 1394</p>
+      </div>
+      <div class="contenedor-envio contenedor2Columnas">
+        <p>Shipping</p>
+        <p>Free</p>
+      </div>
+      <div class="separacion"></div>
+      <div class="contenedor2Columnas">
+        <h4>TOTAL</h4>
+        <p>USD 1394</p>
+      </div>
+
+      <div class="contenedor-metodo-pago">
+        <form action="payment-metod">
+
+        </form>
+      </div>
+
+      <div class="contenedor-boton-final">
+        <form action="boton">
+          <button class="boton">BUY NOW</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!--  footer-------------------------- -----------------------------  -->
+
+  <footer>
+    <div class="footer">
+      <section class="margin-all ocultar-footer">
+        <div class="faq-container">
+          <details open>
+            <summary class="footer-detail">Products</summary>
+            <div class="sin-margin-listas">
+              <ul>
+                <li><A HREF="#">Camera Drones</A></li>
+                <li><A HREF="#">Drones</A></li>
+                <li><A HREF="#">Handheld</A></li>
+              </ul>
+            </div>
+          </details>
+          <details open>
+            <summary class="footer-detail">Explorer</summary>
+            <div class="sin-margin-listas">
+              <ul>
+                <li><A HREF="#">Login or Register</A></li>
+                <li><A HREF="#">Supports</A></li>
+              </ul>
+            </div>
+          </details>
+        </div>
       </section>
       <div class="iconos-footer">
-          <A HREF="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></A>
-          <A HREF="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></i></A>
-          <A HREF="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></A>
-          <A HREF="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></A>
-          <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
+        <A HREF="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></A>
+        <A HREF="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></i></A>
+        <A HREF="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></A>
+        <A HREF="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></A>
+        <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
       </div>
       <div>
-          <p class="copyright">This site is for educational purposes only and is not for commercial purposes at
-              any time - Some materials used on this site are the property of third parties.</p>
+        <p class="copyright">This site is for educational purposes only and is not for commercial purposes at
+          any time - Some materials used on this site are the property of third parties.</p>
       </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 </body>
+
 </html>

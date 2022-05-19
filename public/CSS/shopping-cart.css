@@ -318,9 +318,14 @@ main {
 }
 
 .seguir-comprando{
-  text-align: center;
+  text-align: left;
 }
 
+.text-button{
+  text-decoration: none;
+  color:#ffffff;
+  
+}
 
 
 /* ---------------------------- Footer ------------------------------*/

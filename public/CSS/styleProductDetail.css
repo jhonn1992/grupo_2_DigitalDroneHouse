@@ -249,6 +249,7 @@ details[open] summary::before {
   margin: 10px 0;
   font-size: 16px;
   border-radius: 2px;
+  font-weight: bold;
 }
 
 /* pseudo clase para cambiar el color del botón */
@@ -449,6 +450,7 @@ li a {
   }
 
   .botons {
+    font-weight: bold;
     width: 40%;
     border-radius: 2px;
   }

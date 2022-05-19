@@ -19,7 +19,7 @@
   <header>
     <div class="header">
         <div class="header-detail">
-            <div>
+            <div class="ocultar-menu-hamburguesa">
                 <form action="/home" method="GET">
                     <button type="submit" class="fas fa-bars menu menu-banner iconosHeader"></button>
                 </form>
@@ -27,6 +27,13 @@
             <div>
                 <img src="/img/logoDDH1.png" alt="logoDDH-pnia" />
             </div>
+            <nav class="header-detail">
+                <ul class="ul-nav">
+                    <li><A HREF="#">Camera Drones</A></li>
+                    <li><A HREF="#">Drones</A></li>
+                    <li><A HREF="#">Handheld</A></li>
+                </ul>
+            </nav>
         </div>
         <div class="header-detail">
             <div>
@@ -40,14 +47,22 @@
                     <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
                 </form>
             </div>
-            <div>
-                <form action="/home" method="GET">
-                    <button type="submit" class="fas fa-user-check iconosHeader"></button>
-                </form>
-            </div>
+            <form action="/home" method="GET">
+                <nav class="navegacion">
+                    <ul class="menu">
+                        <li><button type="submit" class="fas fa-user-check iconosHeader"><a
+                                    href="#"></a></a></button>
+                            <ul class="submenu">
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </form>
         </div>
     </div>
-</header> -->
+</header>
 <!-- -----------------------------------main----------------------------------------------------------------- -->
 
     <main>
@@ -126,24 +141,43 @@
          
 <!--  footer-------------------------- -----------------------------  -->
   
-  <footer class="pie-de-pagina">
-        <p>Copyright © 2022 DJI All Rights Reserved.</p>
-        <p>
-          <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site Map</a>
-          <a href="#"> Cookie Preferences.</a>
-        </p>
-        <p>
-          Should you have any questions, <a href="#"> click here </a> to contact
-          our dedicated customer support team.
-        </p>
-      </footer>
-      <nav><div class="lista">
-        <ul class="lista1">
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login" >Log in</a></li>
-            <li><a href="/productDetail">productDetail </a></li>
-            <li><a href="/shopping-cart">ShoppingCart</a></li>
-        </ul>
-</div></nav>
+<footer>
+  <div class="footer">
+      <section class="margin-all ocultar-footer">
+          <div class="faq-container">
+              <details open>
+                  <summary class="footer-detail">Products</summary>
+                  <div class="sin-margin-listas">
+                      <ul>
+                          <li><A HREF="#">Camera Drones</A></li>
+                          <li><A HREF="#">Drones</A></li>
+                          <li><A HREF="#">Handheld</A></li>
+                      </ul>
+                  </div>
+              </details>
+              <details open>
+                  <summary class="footer-detail">Explorer</summary>
+                  <div class="sin-margin-listas">
+                      <ul>
+                          <li><A HREF="#">Login or Register</A></li>
+                          <li><A HREF="#">Supports</A></li>
+                      </ul>
+                  </div>
+              </details>
+          </div>
+      </section>
+      <div class="iconos-footer">
+          <A HREF="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></A>
+          <A HREF="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></i></A>
+          <A HREF="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></A>
+          <A HREF="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></A>
+          <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
+      </div>
+      <div>
+          <p class="copyright">This site is for educational purposes only and is not for commercial purposes at
+              any time - Some materials used on this site are the property of third parties.</p>
+      </div>
+  </div>
+</footer>
 </body>
 </html>

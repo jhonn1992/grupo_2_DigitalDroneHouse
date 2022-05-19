@@ -8,6 +8,9 @@
     <title>Product Detail</title>
     <link href="CSS/styleProductDetail.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
@@ -44,18 +47,28 @@
                         <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
                     </form>
                 </div>
-                <div>
-                    <form action="/home" method="GET">
-                        <button type="submit" class="fas fa-user-check iconosHeader"></button>
-                    </form>
-                </div>
+                <form action="/home" method="GET">
+                    <nav class="navegacion">
+                        <ul class="menu">
+                            <li><button type="submit" class="fas fa-user-check iconosHeader"><a
+                                        href="#"></a></a></button>
+                                <ul class="submenu">
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/register">Register</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </form>
             </div>
         </div>
     </header>
     <main>
         <section class="seccion-producto">
             <div class="producto">
-                <img class="imgProducts" src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/d55541dae0fb81a6dae74c750bedeec8@ultra.jpg" alt="drone1" />
+                <img class="imgProducts"
+                    src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/d55541dae0fb81a6dae74c750bedeec8@ultra.jpg"
+                    alt="drone1" />
             </div>
             <div class="margin-all margin-all-pc">
                 <div class="font-size-h">
@@ -76,13 +89,18 @@
                 </ul>
             </div>
         </section>
+        <div class="btn-buy-now">
+            <A HREF="/shopping-cart"><button class="botons" type="submit"> Buy Now </button></A>
+        </div>
         <div class="font-size-h txt-accesorio">
             <h2>Accessories</h2>
         </div>
         <section class="accesorios">
             <div>
                 <div class="color-accesorios">
-                    <img class="img-accesorios" src="https://dji-official-fe.djicdn.com/cms/uploads/eebea4939fabbea9d4f1f92f18db8690.png" alt="drone1" alt="battery" />
+                    <img class="img-accesorios"
+                        src="https://dji-official-fe.djicdn.com/cms/uploads/eebea4939fabbea9d4f1f92f18db8690.png"
+                        alt="drone1" alt="battery" />
                 </div>
                 <p>Remote Control</p>
             </div>
@@ -94,29 +112,38 @@
             </div>
             <div>
                 <div class="color-accesorios">
-                    <img class="img-accesorios" src="https://dji-official-fe.djicdn.com/dps/aa7711eeaa8a652b4b7df9f6c50d3549.png" alt="drone1" alt="remote1" />
+                    <img class="img-accesorios"
+                        src="https://dji-official-fe.djicdn.com/dps/aa7711eeaa8a652b4b7df9f6c50d3549.png" alt="drone1"
+                        alt="remote1" />
                 </div>
                 <p>Front Touchscreen Module</p>
             </div>
             <div>
                 <div class="color-accesorios">
-                    <img class="img-accesorios" src="https://dji-official-fe.djicdn.com/dps/875f8c94a869b775399f6bccad79cea5.png" alt="drone1" alt="remote2" />
+                    <img class="img-accesorios"
+                        src="https://dji-official-fe.djicdn.com/dps/875f8c94a869b775399f6bccad79cea5.png" alt="drone1"
+                        alt="remote2" />
                 </div>
                 <p>DJI Mic</p>
             </div>
             <div>
                 <div class="color-accesorios">
-                    <img class="img-accesorios" src="https://stormsend1.djicdn.com/tpc/uploads/in_the_box/cover/a19c0e4d517c2fb5d5fdb115eea81863@retina_small.png" alt="drone1" alt="remote1" />
+                    <img class="img-accesorios"
+                        src="https://stormsend1.djicdn.com/tpc/uploads/in_the_box/cover/a19c0e4d517c2fb5d5fdb115eea81863@retina_small.png"
+                        alt="drone1" alt="remote1" />
                 </div>
                 <p>DJI FPV AC Power Cable</p>
             </div>
             <div>
                 <div class="color-accesorios">
-                    <img class="img-accesorios" src="https://stormsend1.djicdn.com/tpc/uploads/in_the_box/cover/9d8d75edcdcbfd049a12cb81a83c8c78@retina_small.png" alt="drone1" alt="remote2" />
+                    <img class="img-accesorios"
+                        src="https://stormsend1.djicdn.com/tpc/uploads/in_the_box/cover/9d8d75edcdcbfd049a12cb81a83c8c78@retina_small.png"
+                        alt="drone1" alt="remote2" />
                 </div>
                 <p>DJI FPV AC Power Adapter</p>
             </div>
         </section>
+        <div class="display-section-answer">
         <section class="margin-all">
             <div class="font-size-h">
                 <h2>Let&#39s Answer Your Questions</h2>
@@ -124,26 +151,41 @@
             <div class="faq-container">
                 <details>
                     <summary>What&#39s the difference between DJI FPV and traditional drones?</summary>
-                    <p>Generally speaking, FPV drones differ from traditional drones in two major ways. The first is the immersive flight experience provided by the goggles. The second big difference is the flight itself. Compared to most camera drones, FPV drones typically allow for much higher speeds and limitless maneuvering capabilities with no angle limits on any of the axes. Because of this, FPV drones have typically required a much higher level of skill to fly.</p>
+                    <p>Generally speaking, FPV drones differ from traditional drones in two major ways. The first is the
+                        immersive flight experience provided by the goggles. The second big difference is the flight
+                        itself. Compared to most camera drones, FPV drones typically allow for much higher speeds and
+                        limitless maneuvering capabilities with no angle limits on any of the axes. Because of this, FPV
+                        drones have typically required a much higher level of skill to fly.</p>
                 </details>
                 <details>
                     <summary>What is the difference between DJI FPV and traditional racing drones?</summary>
-                    <p>DJI FPV has a built-in imaging system, high-definition, low-latency transmission with a range of up to 10 km, and a battery life of approximately 20 minutes. The integrated, ready-to-fly design means users don&#39t need to assemble the drone themselves. DJI FPV isalso equipped with advanced safety features such as emergency brake hovering, intelligent return to home, and DJI Care Refresh service for added flight protection and greater peace of mind during flight.</p>
+                    <p>DJI FPV has a built-in imaging system, high-definition, low-latency transmission with a range of
+                        up to 10 km, and a battery life of approximately 20 minutes. The integrated, ready-to-fly design
+                        means users don&#39t need to assemble the drone themselves. DJI FPV isalso equipped with
+                        advanced safety features such as emergency brake hovering, intelligent return to home, and DJI
+                        Care Refresh service for added flight protection and greater peace of mind during flight.</p>
                 </details>
                 <details>
                     <summary>Is the DJI FPV Combo worth it?</summary>
-                    <p>The DJI FPV Combo comes with everything you need to start flying. It includes the FPV Drone, Goggles V2, Remote Controller 2, DJI FPV Intelligent Flight Battery, DJI FPV Goggles Battery, DJI FPV AC Power Adapter, DJI FPV Propellers, and other related cables and accessories. For anyone interested in diving into the world of FPV flight, it&#39s the perfect way to do so.</p>
+                    <p>The DJI FPV Combo comes with everything you need to start flying. It includes the FPV Drone,
+                        Goggles V2, Remote Controller 2, DJI FPV Intelligent Flight Battery, DJI FPV Goggles Battery,
+                        DJI FPV AC Power Adapter, DJI FPV Propellers, and other related cables and accessories. For
+                        anyone interested in diving into the world of FPV flight, it&#39s the perfect way to do so.</p>
                 </details>
                 <details>
                     <summary>What is the Motion Controller? Is it worth it?</summary>
-                    <p>The DJI Motion Controller is a small, hand-held device that revolutionizes the aerial experience. This compact device allows the aircraft to maneuver based on your natural hand motions, delivering an ultra-intuitive experience and allowing even beginners to maneuver like seasoned FPV pilots.</p>
+                    <p>The DJI Motion Controller is a small, hand-held device that revolutionizes the aerial experience.
+                        This compact device allows the aircraft to maneuver based on your natural hand motions,
+                        delivering an ultra-intuitive experience and allowing even beginners to maneuver like seasoned
+                        FPV pilots.</p>
                 </details>
             </div>
         </section>
+    </div>
     </main>
     <footer>
         <div class="footer">
-            <section class="margin-all">
+            <section class="margin-all ocultar-footer">
                 <div class="faq-container">
                     <details open>
                         <summary class="footer-detail">Products</summary>
@@ -174,18 +216,22 @@
                 <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
             </div>
             <div>
-                <p class="copyright">This site is for educational purposes only and is not for commercial purposes at any time - Some materials used on this site are the property of third parties.</p>
+                <p class="copyright">This site is for educational purposes only and is not for commercial purposes at
+                    any time - Some materials used on this site are the property of third parties.</p>
             </div>
         </div>
     </footer>
-    <nav><div class="lista">
-        <ul class="lista1">
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login" >Log in</a></li>
-            <li><a href="/productDetail">productDetail </a></li>
-            <li><a href="/shopping-cart">ShoppingCart</a></li>
-        </ul>
-</div></nav>
+    <nav>
+        <div class="lista">
+            <ul class="lista1">
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Log in</a></li>
+                <li><a href="/productDetail">productDetail </a></li>
+                <li><a href="/shopping-cart">ShoppingCart</a></li>
+            </ul>
+        </div>
+    </nav>
 
 </body>
+
 </html>

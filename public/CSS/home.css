@@ -119,9 +119,10 @@ header {
   margin-left: -50px;
 	padding: 10px;
 	color: black;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: normal;
 	text-decoration: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu li:hover .submenu{

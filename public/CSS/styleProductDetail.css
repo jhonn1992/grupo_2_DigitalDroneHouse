@@ -86,7 +86,7 @@ header {
 
 .submenu{
 	position: absolute;
-  top: 43px;
+  top: 40px;
 	background: white;
 	width: 100%;
 	visibility: hidden;
@@ -96,10 +96,16 @@ header {
 
 .submenu li a{
 	display: block;
-  margin-left: -40px;
+  margin-left: -50px;
 	padding: 10px;
 	color: black;
 	text-decoration: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.index-shopping-cart {
+  z-index: 600;
 }
 
 .menu li:hover .submenu{

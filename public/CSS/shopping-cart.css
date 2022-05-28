@@ -66,7 +66,7 @@ header {
 .navegacion ul {
   list-style: none;
   margin-left: -40px;
-  margin-top: -22px;
+  margin-top: -24px;
 }
 
 .menu>li {
@@ -79,6 +79,10 @@ header {
   padding: 15px 20px;
   color: #353535;
   text-decoration: none;
+}
+
+.index-shopping-cart {
+  z-index: 600;
 }
 
 .menu li a:hover {
@@ -101,10 +105,11 @@ header {
 
 .submenu li a {
   display: block;
-  margin-left: -40px;
+  margin-left: -50px;
   padding: 10px;
   color: black;
-  font-family: 'Open sans';
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
   text-decoration: none;
 }
 

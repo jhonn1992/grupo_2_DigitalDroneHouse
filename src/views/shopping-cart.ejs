@@ -1,71 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Drone</title>
-  <!-- Links para Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <!-- Link para iconos -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <!-- Mi css -->
-  <link rel="stylesheet" href="/css/shopping-cart.css" />
-</head>
+<%- include('partials/head', {titulo: 'Shopping-cart', stylesheet: 'shopping-cart'}) %>
 
 <body>
 
-  <header>
-    <div class="header">
-      <div class="header-detail">
-        <div class="ocultar-menu-hamburguesa">
-          <form action="/home" method="GET">
-            <button type="submit" class="fas fa-bars menu menu-banner iconosHeader"></button>
-          </form>
-        </div>
-        <div>
-          <img src="/img/logoDDH1.png" alt="logoDDH-pnia" />
-        </div>
-        <nav class="header-detail">
-          <ul class="ul-nav">
-            <li><A HREF="/">Home</A></li>
-            <li><A HREF="#">Camera Drones</A></li>
-            <li><A HREF="#">Drones</A></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header-detail">
-        <div>
-          <form action="/home" method="GET">
-            <button type="submit" class="fas fa-search iconosHeader"></button>
-          </form>
-        </div>
-        <div>
-          <form action="/home" method="GET">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
-          </form>
-        </div>
-        <form action='#' method="GET">
-          <nav class="navegacion">
-              <ul class="menu">
-                  <li><button type="submit" class="fas fa-user-check iconosHeader"></button>
-                      <ul class="submenu">
-                          <li><a href="/login">Login</a></li>
-                          <li><a href="/register">Register</a></li>
-                      </ul>
-                  </li>
-              </ul>
-          </nav>
-      </form>
-      </div>
-    </div>
-  </header>
+  <%- include('partials/header') %>
   <!-- -----------------------------------main----------------------------------------------------------------- -->
 
   <main>
@@ -164,44 +101,7 @@
 
   <!--  footer-------------------------- -----------------------------  -->
 
-  <footer>
-    <div class="footer">
-      <section class="margin-all ocultar-footer">
-        <div class="faq-container">
-          <details open>
-            <summary class="footer-detail">Products</summary>
-            <div class="sin-margin-listas">
-              <ul>
-                <li><A HREF="#">Camera Drones</A></li>
-                <li><A HREF="#">Drones</A></li>
-                <li><A HREF="#">Handheld</A></li>
-              </ul>
-            </div>
-          </details>
-          <details open>
-            <summary class="footer-detail">Explorer</summary>
-            <div class="sin-margin-listas">
-              <ul>
-                <li><A HREF="#">Login or Register</A></li>
-                <li><A HREF="#">Supports</A></li>
-              </ul>
-            </div>
-          </details>
-        </div>
-      </section>
-      <div class="iconos-footer">
-        <A HREF="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></A>
-        <A HREF="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></i></A>
-        <A HREF="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square"></i></A>
-        <A HREF="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></A>
-        <A HREF="https://vimeo.com/" target="_blank"><i class="fab fa-vimeo"></i></A>
-      </div>
-      <div>
-        <p class="copyright">This site is for educational purposes only and is not for commercial purposes at
-          any time - Some materials used on this site are the property of third parties.</p>
-      </div>
-    </div>
-  </footer>
+  <%- include('partials/footer') %>
 </body>
 
 </html>

@@ -130,7 +130,10 @@ main {
   margin-left: 5px;
   margin-right: 5px;
   max-width: 90%;
+  padding-left: 4%;
+  margin-top: 50px;
 }
+
 
 h4 {
   margin: 5px 0;
@@ -214,13 +217,7 @@ details[open] summary::before {
   cursor: pointer;
 }
 
-main {
-  width: 90vw;
-  padding-left: 5%;
-  margin-top: 50px;
-}
 
-.titular1,
 .titular2 {
   text-align: center;
   margin-bottom: 0PX;
@@ -261,34 +258,38 @@ main {
 }
 
 .contenedor-descripcion {
-  /*  width: 30%; */
+   width: 38%;
   padding-left: 5px;
   padding-right: 5px;
+  flex-grow: 0.5;
 }
 
 
 .contenedor-botones {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .contenedor-precio {
   padding-top: 5px;
+
 }
 
 .contenedor-botones div {
   padding-bottom: 5px;
-  text-align: left;
+  text-align: right;
 }
 
 .boton-cierre {
   position: relative;
-  left: 35px;
   top: -5px;
 }
 
 .boton-cantidad {
   position: relative;
-  left: 15px;
 }
 
 .contenedor-total {

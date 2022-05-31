@@ -258,7 +258,7 @@ details[open] summary::before {
 }
 
 .contenedor-descripcion {
-   width: 38%;
+  width: 38%;
   padding-left: 5px;
   padding-right: 5px;
   flex-grow: 0.5;

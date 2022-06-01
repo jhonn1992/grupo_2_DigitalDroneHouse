@@ -1,0 +1,107 @@
+<%- include('partials/head', {titulo: 'Shopping-cart', stylesheet: 'shopping-cart'}) %>
+
+<body>
+
+  <%- include('partials/header') %>
+  <!-- -----------------------------------main----------------------------------------------------------------- -->
+
+  <main>
+    <h3 class="titular2"> SHOPPING CART</h3>
+    <br><br>
+    <div class="contenedor2Columnas">
+      <h4>Product</h4>
+      <h4>Cant</h4>
+    </div>
+    <div class="separacion"></div>
+    <div>
+      <article class="item-cart">
+        <img src="/img/camera-dji.png" alt="imagen-Articulo1" class="product-img">
+        <div class="contenedor-descripcion">
+          <h4 class="nombre"> DDH Action 2 Dual-Screen Combo</h4>
+
+          <p class="descripcion">Versatile Magnetic Design, Portable & Wearable. 4K/120fps & Super-Wide FOV,
+            HorizonSteady, 10m Waterproof and AI Editor.</p>
+          <p class="descripcion-2"> By purchasing DDH Action 2, you will receive a DDH Magnetic Protective Case free of
+            charge. The custom-made protective case helps reduce surface temperature to optimize video recording by
+            increasing recording length under normal conditions.</p>
+        </div>
+        <div class="contenedor-botones">
+          <div class="boton-cierre"><i class="far fa-window-close"></i></div>
+          <div class="boton-cantidad">
+            <i class="fas fa-angle-double-up"></i>
+                1
+            <i class="fas fa-angle-double-down"></i>
+          </div>
+          <div class="contenedor-precio">
+            <p class="precio"> USD $439</p>
+          </div>
+        </div>
+      </article>
+      <div class="separacion"></div>
+      <article class="item-cart">
+        <img src="/img/unDrone.png" alt="imagen-Articulo2" class="product-img">
+        <div class="contenedor-descripcion">
+          <h4 class="nombre"> Mavic Air 2</h4>
+          <p class="descripcion">1-Inch CMOS Sensor, 5.4K Video, MasterShots, 12km 1080p Transmission, Obstacle Sensing
+            in 4 Directions</p>
+          <p class="descripcion-2"> With a 1-inch sensor, 5.4K video, MasterShots, and much more, DDH Air 2S is the
+            ultimate all-in-one camera drone.</p>
+        </div>
+        <div class="contenedor-botones">
+          <div class="boton-cierre"><i class="far fa-window-close"></i></div>
+          <div class="boton-cantidad">
+            <i class="fas fa-angle-double-up"></i>
+            1
+            <i class="fas fa-angle-double-down"></i>
+          </div>
+          <div class="contenedor-precio">
+            <p class="precio"> USD $955</p>
+          </div>
+        </div>
+      </article>
+      <div class="separacion"></div>
+    </div>
+    <div class="seguir-comprando">
+      <form action="/home"> 
+        <button class="boton" type="submit"><a class="text-button" href="http://localhost:5000/">KEEP BUYING</a></button>
+      </form>  
+    </div>
+
+    <div class="contenedor-total">
+      <h4>TOTAL PURCHASE</h4>
+      <div class="separacion"></div>
+      <div class="contenedor-sub contenedor2Columnas">
+        <p>Subtotal</p>
+        <p>USD 1394</p>
+      </div>
+      <div class="contenedor-envio contenedor2Columnas">
+        <p>Shipping</p>
+        <p>Free</p>
+      </div>
+      <div class="separacion"></div>
+      <div class="contenedor2Columnas">
+        <h4>TOTAL</h4>
+        <p>USD 1394</p>
+      </div>
+
+      <div class="contenedor-metodo-pago">
+        <form action="payment-metod">
+
+        </form>
+      </div>
+
+      <div class="contenedor-boton-final">
+        <form action="boton">
+          <button class="boton"><a class="text-button" href="http://localhost:5000/">BUY NOW</a></button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!--  footer-------------------------- -----------------------------  -->
+
+  <%- include('partials/footer') %>
+</body>
+
+</html>

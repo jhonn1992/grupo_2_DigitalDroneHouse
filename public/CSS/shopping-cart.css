@@ -1,0 +1,543 @@
+/* ---------------------------------Body ----------------------------------------------------------- */
+
+/* -----------------------------------------Header ----------------------------- */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+section {
+  width: 95%;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  margin-top: 0px;
+  background-color: white;
+  padding: 5px;
+  z-index: 200;
+  border-bottom: 1px solid #d8e0e9;
+  top: 0px;
+}
+
+.ul-nav {
+  display: none;
+  margin-left: -45px;
+}
+
+.menu-banner {
+  margin-right: 5px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.header-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.iconosHeader {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+}
+
+.navegacion {
+  width: 100px;
+  margin: 30px auto;
+  background: #fff;
+}
+
+.navegacion ul {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: -24px;
+}
+
+.menu>li {
+  position: relative;
+  display: inline-block;
+}
+
+.menu>li>a {
+  display: block;
+  padding: 15px 20px;
+  color: #353535;
+  text-decoration: none;
+}
+
+.index-shopping-cart {
+  z-index: 600;
+}
+
+.menu li a:hover {
+  background-color: rgba(22, 22, 23, 0.05);
+  transition: all .3s;
+  border-radius: 10px;
+}
+
+/* Submenu*/
+
+.submenu {
+  position: absolute;
+  top: 43px;
+  background: white;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.submenu li a {
+  display: block;
+  margin-left: -50px;
+  padding: 10px;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.header-detail form {
+  max-width: 35px;
+  max-height: 35px;
+  position: relative;
+}
+
+/* --------------------------------------Main ------------------------------------------------------ */
+main {
+  padding-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 90%;
+  padding-left: 4%;
+  margin-top: 50px;
+}
+
+
+h4 {
+  margin: 5px 0;
+
+}
+
+/* Main section accesorios */
+
+.faq-container {
+  width: 92%;
+  max-width: 800px;
+}
+
+details {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #d8e0e9;
+  position: relative;
+}
+
+details summary {
+  font-weight: bold;
+  font-size: 16;
+  padding: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+details p {
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  font-size: 12px;
+  text-align: justify;
+}
+
+details:hover,
+details[open] {
+  box-shadow: 5px 5px 15px #d9d9d9;
+}
+
+details summary::before {
+  position: absolute;
+  content: "▼";
+  font-size: 1rem;
+  top: 10px;
+  right: 4px;
+}
+
+details[open] summary::before {
+  -webkit-animation: rotate 0.6s ease-in-out both;
+  animation: rotate-emoji 0.6s ease-in-out both;
+}
+
+@keyframes rotate-emoji {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.botons {
+  width: 100%;
+  background-color: #B43056;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* pseudo clase para cambiar el color del botón */
+.botons:hover {
+  background-color: #8b1c3b;
+  cursor: pointer;
+}
+
+
+.titular2 {
+  text-align: center;
+  margin-bottom: 0PX;
+}
+
+.contenedor2Columnas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.contenedor2Columnas h4, p{
+  font-size: 16px;
+  align-self: center;
+}
+
+.separacion {
+  width: 100%;
+  border-bottom: solid 2px #38393A;
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+.item-cart {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.product-img {
+  width: 170px;
+  height: 170px;
+  margin-left: -10px;
+  /* flex-grow: 0.33; */
+}
+
+.contenedor-descripcion {
+  width: 38%;
+  padding-left: 5px;
+  padding-right: 5px;
+  flex-grow: 0.5;
+}
+
+
+.contenedor-botones {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.contenedor-precio {
+  padding-top: 5px;
+
+}
+
+.contenedor-botones div {
+  padding-bottom: 5px;
+  text-align: right;
+}
+
+.boton-cierre {
+  position: relative;
+  top: -5px;
+}
+
+.boton-cantidad {
+  position: relative;
+}
+
+.contenedor-total {
+  margin-top: 20px;
+}
+
+.contenedor-total div {
+  padding: 3px 5px 3px 3px;
+}
+
+.boton {
+  width: 155px;
+  background: #B43056;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.boton:hover {
+  background-color: #8b1c3b;
+  cursor: pointer;
+}
+
+.contenedor-boton-final {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.seguir-comprando{
+  text-align: left;
+}
+
+.text-button{
+  text-decoration: none;
+  color:#ffffff;
+  
+}
+
+
+/* ---------------------------- Footer ------------------------------*/
+footer {
+  font-size: 12px;
+  margin-top: 30px;
+  background-color: rgba(22, 22, 23, 0.05);
+}
+
+.footer {
+  padding-bottom: 8px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-detail::before {
+  content: "+";
+}
+
+.sin-margin-listas {
+  margin-top: -15px;
+}
+
+.iconos-footer {
+  text-align: center;
+}
+
+.iconos-footer i {
+  margin-top: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.copyright {
+  text-align: center;
+  width: 95%;
+}
+
+.ocultar-footer {
+  display: none;
+}
+
+.descripcion-2 {
+  display: none;
+}
+
+
+/* --------------------------------------------------------Media Queries---------------------------------------*/
+
+@media (min-width: 480px) {
+  /* ----------------Header-----------------*/
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+
+    overflow-x: hidden;
+    margin: 0px;
+  }
+
+  .menu-banner {
+    margin-right: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .margin-all {
+    margin-right: 15%;
+    margin-left: 10%;
+  }
+
+  .descripcion-2 {
+    display: block;
+  }
+
+
+  /* ----------------------------------------------------*/
+  .iconosHeader {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
+  }
+
+  .ul-nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ul-nav li {
+    margin-left: 15px;
+  }
+
+  .ocultar-footer {
+    display: block;
+  }
+
+  .btn-buy-now {
+    width: 100%;
+    text-align: center;
+  }
+
+  .botons {
+    width: 40%;
+    border-radius: 2px;
+  }
+
+  .product-img {
+    width: 200px;
+    height: 200px;
+    margin-left: -10px;
+    /* flex-grow: 0.33; */
+  }
+
+
+
+}
+
+/* ------------------Media query 768---------*/
+@media (min-width: 768px) {
+  .font-size-h h2 {
+    font-size: 18px;
+  }
+
+    /* ----------------------MAIN---------------------- */
+  
+
+  .seccion-producto {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .margin-all-pc {
+    margin: auto;
+    margin-top: 0px;
+    margin-left: -20px;
+    margin-right: 40px;
+    /* padding: 10px; */
+  }
+
+  .font-size-h {
+    margin-bottom: 50px;
+  }
+
+  .footer .margin-all .faq-container {
+    display: flex;
+  }
+
+  .open summary {
+    font-weight: 600;
+  }
+
+  .precio {
+    font-size: 18px;
+  }
+
+  .descripcion-2 {
+    display: block;
+  }
+
+  .footer {
+    margin: auto;
+  }
+
+  .ocultar-footer {
+    display: block;
+    position: relative;
+    left: 10vw;
+    max-width: 70vw;
+  }
+
+  .btn-buy-now {
+    width: 100%;
+    text-align: center;
+  }
+
+  .botons {
+    font-weight: bold;
+    width: 40%;
+    border-radius: 2px;
+  }
+
+  .display-section-answer {
+    position: relative;
+    display: block;
+    margin: auto;
+    max-width: 70vw;
+  }
+}

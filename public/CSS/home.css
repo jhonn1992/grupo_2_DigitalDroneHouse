@@ -139,11 +139,7 @@ header {
 /* --------------------------------------Main ------------------------------------------------------ */
 
 
-<<<<<<< HEAD
 .banner {
-=======
-main {
->>>>>>> 7639ca7d1fde5f6fe9251cb9fd5087fd66d22d2a
   padding: 5px;
   width: 100%;
   /* max-width: 687px; */
@@ -631,11 +627,7 @@ li a {
     width: 40%;
     border-radius: 2px;
   }
-<<<<<<< HEAD
   .banner {
-=======
-  main {
->>>>>>> 7639ca7d1fde5f6fe9251cb9fd5087fd66d22d2a
     height: 622px;
     max-width: 1000px;
     margin: auto;
@@ -800,11 +792,7 @@ a :nth-child(3) {
     max-width: 70vw;
   }
 
-<<<<<<< HEAD
   .banner {
-=======
-  main {
->>>>>>> 7639ca7d1fde5f6fe9251cb9fd5087fd66d22d2a
     background-size: contain;
     max-width: 100%;
   }

@@ -1,0 +1,45 @@
+<%- include('partials/head', {titulo: 'productCreate', stylesheet: 'productCreate'}) %>
+
+<body>
+  <form action="/home" method="POST">
+    <section class="form-login">
+      <div class="ubicacion-logo">
+        <a href="/"><img src="./img/logoDDH.png" alt="logoDDH" /></a>
+      </div>
+
+      <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*" required>
+      <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*" required>
+      <input class="controls-login" type="number" name="descuento" id="descuento" placeholder="Discount*" required>
+      <div class="controls-login">
+        <label>Product Image</label>
+        <input type="file" name="imagen" id="imagen" required>
+      </div>
+    <div class="controls-login">
+      <label> <h4>Categorias de Interés</h4></label>
+      <label><input type="checkbox" name="categoria" value="drones"> &nbspDrones</label>
+      <label><input type="checkbox" name="categoria" value="accesorios"> &nbspAccesories</label>
+      <label><input type="checkbox" name="categoria" value="handHeld"> &nbspHandHeld</label>
+    </div>
+    <textarea class="controls-login" name="descripcion" id="descripcion" placeholder="Description*" required></textarea>
+
+      <button class="botons" type="submit"> CREATE</button>
+      <div class="btnreset">
+        <button class="botonstwo" type="reset">CLEAN</button>
+      </div>
+
+      <div class="pie-de-pagina-login">
+        <p>Copyright © 2022 DJI All Rights Reserved.</p>
+        <p>
+          <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site Map</a>
+          <a href="#"> Cookie Preferences.</a>
+        </p>
+        <p>
+          Should you have any questions, <a href="#"> click here </a> to contact
+          our dedicated customer support team.
+        </p>
+      </div>
+    </section>
+  </form>
+ </body>
+
+</html>

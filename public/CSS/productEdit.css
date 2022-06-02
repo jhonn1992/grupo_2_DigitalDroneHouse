@@ -259,30 +259,9 @@ details[open] summary::before {
   font-weight: bold;
 }
 
-.botonstwo {
-  width: 20%;
-  background-color: #B43056;
-  border: none;
-  padding: 10px;
-  color: #ffffff;
-  margin: 10px 0;
-  font-size: 16px;
-  border-radius: 2px;
-  font-weight: bold;
-}
-
 /* pseudo clase para cambiar el color del botón */
 .botons:hover {
   background-color: #8b1c3b;
-  cursor: pointer;
-}
-
-.botonstwo:hover {
-  background-color: #8b1c3b;
-  cursor: pointer;
-}
-
-.form-login .botonstwo:hover {
   cursor: pointer;
 }
 

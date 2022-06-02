@@ -6,7 +6,7 @@ const app = express();
 
 const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
-const productDetailRouter = require('./routes/productsRouter');
+//const productDetailRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 
 app.set('views', path.join(__dirname, '/views'));

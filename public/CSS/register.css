@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* ------------------------FORMULARIO REGISTRO --------------------------- */
 
@@ -132,4 +133,140 @@ a:visited {
 .form-register .botons:hover {
   background-color: #8b1c3b;
   cursor: pointer;
+=======
+
+/* ------------------------FORMULARIO REGISTRO --------------------------- */
+
+:root {
+  color: #B43056;
+  color: #38393A;
+  color: #000000;
+  color: #ffffff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h4 {
+  color: grey;
+}
+
+.form-register {
+  width: 90%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  font-family: Open Sans, PingFang SC, Microsoft YaHei, Helvetica Neue, Hiragino Sans GB, WenQuanYi Micro Hei, Arial, "sans-serif";
+  color: #38393A;
+  box-shadow: 7px 13px 37px #38393A;
+}
+
+.form-register img {
+  width: 30%;
+}
+
+.ubicacion-logo {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.form-register h4 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+
+}
+
+.controls-register {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  border: 1px solid grey;
+  font-size: 15px;
+  color:#38393A;
+}
+
+.controls:hover{
+  border: solid 2px black;
+}
+
+.terms-use {
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 20px;
+  margin-top: 10px;
+  word-spacing: 1px;
+}
+
+.log-in-now {
+  text-align: center;
+  font-size: 14px;
+}
+
+.help {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 70px;
+}
+
+
+/* cambio de color a los liks (etiquetas "a") con pseudo clases */
+a {
+  color: #B43056;
+}
+
+a:visited {
+  /* color: black; */
+}
+
+.contenedor1 i {
+  font-size: 10px;
+  color: grey;
+  margin-top: 5px;
+
+}
+
+.contenedor2 {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.pie-de-pagina {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: rgba(189, 182, 182, 0.3);
+  padding: 15px;
+  word-spacing: 2px;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #B43056;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 2px;
+
+}
+
+/* pseudo clase para cambiar el color del botón */
+.form-register .botons:hover {
+  background-color: #8b1c3b;
+  cursor: pointer;
+>>>>>>> 7639ca7d1fde5f6fe9251cb9fd5087fd66d22d2a
 }

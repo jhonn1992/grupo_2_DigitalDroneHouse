@@ -139,7 +139,7 @@ header {
 /* --------------------------------------Main ------------------------------------------------------ */
 
 
-main {
+.banner {
   padding: 5px;
   width: 100%;
   /* max-width: 687px; */
@@ -627,7 +627,7 @@ li a {
     width: 40%;
     border-radius: 2px;
   }
-  main {
+  .banner {
     height: 622px;
     max-width: 1000px;
     margin: auto;
@@ -792,7 +792,7 @@ a :nth-child(3) {
     max-width: 70vw;
   }
 
-  main {
+  .banner {
     background-size: contain;
     max-width: 100%;
   }

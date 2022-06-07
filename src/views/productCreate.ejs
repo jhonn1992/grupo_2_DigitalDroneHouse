@@ -9,18 +9,30 @@
 
       <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*" required>
       <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*" required>
-      <input class="controls-login" type="number" name="descuento" id="descuento" placeholder="Discount*" required>
+      <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*" required>
       <div class="controls-login">
         <label>Product Image</label>
-        <input type="file" name="imagen" id="imagen" required>
+        <label class="label-file">
+          Upload File<input class="texto-oculto" type="file" name="imagen" id="imagen" required>
+        </label>
       </div>
     <div class="controls-login">
       <label> <h4>Categorias de Interés</h4></label>
       <label><input type="checkbox" name="categoria" value="drones"> &nbspDrones</label>
-      <label><input type="checkbox" name="categoria" value="accesorios"> &nbspAccesories</label>
-      <label><input type="checkbox" name="categoria" value="handHeld"> &nbspHandHeld</label>
+      <label><input type="checkbox" name="categoria" value="accesories"> &nbspAccesories</label>
     </div>
     <textarea class="controls-login" name="descripcion" id="descripcion" placeholder="Description*" required></textarea>
+    <div>
+      <label> <h4>Features</h4></label>
+      <input class="controls-login" type="text" name="features" id="features1" placeholder="Features 1">
+      <input class="controls-login" type="text" name="features" id="features2" placeholder="Features 2">
+      <input class="controls-login" type="text" name="features" id="features3" placeholder="Features 3">
+      <input class="controls-login" type="text" name="features" id="features4" placeholder="Features 4">
+      <input class="controls-login" type="text" name="features" id="features5" placeholder="Features 5">
+      <input class="controls-login" type="text" name="features" id="features6" placeholder="Features 6">
+      <input class="controls-login" type="text" name="features" id="features7" placeholder="Features 7">
+      <input class="controls-login" type="text" name="features" id="features8" placeholder="Features 8">
+    </div>
 
       <button class="botons" type="submit"> CREATE</button>
       <div class="btnreset">

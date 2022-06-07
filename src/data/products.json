@@ -1,0 +1,103 @@
+[
+  {
+    "id": 1,
+    "productName": "DJI Mavic 3",
+    "reference": "ND-filer-set",
+    "description": "Includes one Mavic 3 Cine drone that supports Apple ProRes 422 HQ, Apple ProRes 422, and Apple ProRes 422 LT video recording and has a built-in 1TB SSD",
+    "image": "mavic-air-2.png",
+    "category": "drone",
+    "price": 2049,
+    "features": [
+      "4/3 CMOS Hasselblad Camera",
+      "46 Minutes of Flight Time",
+      "15km Max Transmission Range",
+      "Apple ProRes 422 HQ",
+      "Apple ProRes 422",
+      "Apple ProRes 422 LT",
+      "DJI RC Pro (high-bright display",
+      "Advanced Return to Home"
+    ]
+  },
+  {
+    "id": 2,
+    "productName": "DJI Air 2S",
+    "reference": "Smart Controller",
+    "description": "Includes the DJI Smart Controller, designed for outdoor aerial photography and provides an ultra-bright display that stays visible, even in direct sunlight. This combo also includes a Battery Charging Hub, ND Filters Set, Shoulder Bag, two extra batteries, and more for extended flight time and enhanced content creation. Includes the DJI Smart Controller, designed for outdoor aerial photography and provides an ultra-bright display that stays visible, even in direct sunlight. This combo also includes a Battery Charging Hub, ND Filters Set, Shoulder Bag, two extra batteries, and more for extended flight time and enhanced content creation.. Along with the DJI RC Pro (high-bright display), this combo facilitates professional creation in every way. Includes one Mavic 3 Cine drone that supports Apple ProRes 422 HQ, Apple ProRes 422, and Apple ProRes 422 LT video recording and has a built-in 1TB SSD. Along with the DJI RC Pro (high-bright display), this combo facilitates professional creation in every way",
+    "image": "DJI-AIR-2S.png",
+    "category": "drone",
+    "price": 1499,
+    "features": [
+        "1-Inch CMOS Sensor",
+        "5.4K Video",
+        "MasterShots",
+        "12km 1080p Transmission",
+        "Obstacle Sensing in 4 Directions"
+      ]
+  },
+  {
+    "id": 3,
+    "productName": "DJI Mini 3 Pro",
+    "reference": "DJI RC",
+    "description": "Includes the new DJI RC, which has the DJI Fly App pre-installed and a built-in 5.5-inch HD display for crisp viewing even in direct sunlight. Includes the new DJI RC, which has the DJI Fly App pre-installed and a built-in 5.5-inch HD display for crisp viewing even in direct sunlight",
+    "image": "DJI-mini-3-pro.png",
+    "category": "drone",
+    "price": 909,
+    "features": [
+        "Weighs Less than 249 g",
+        "Tri-Directional Obstacle Sensing (Forward/Backward/Downward)",
+        "Record Up to 4K/60fps Video and 4K/30fps HDR Video",
+        "34-min Max Flight Time",
+        "True Vertical Shooting",
+        "FocusTrack (ActiveTrack, Spotlight, and Point of Interest)",
+        "MasterShots",
+        "Timelapse"
+      ]
+  },
+  {
+    "id": 4,
+    "productName": "DJI Pocket 2",
+    "reference": "pocket 2 creator",
+    "description": "Apart from the main unit, this combo also includes the Do-It-All Handle, Wireless Microphone Transmitter, Micro Tripod, Wide-Angle Lens, and more accessories to expand application scenarios and empower your creativity.Apart from the main unit, this combo also includes the Do-It-All Handle, Wireless Microphone Transmitter, Micro Tripod, Wide-Angle Lens, and more accessories to expand application scenarios and empower your creativity.",
+    "image": "dji pocket.png",
+    "category": "accesory",
+    "price": 499,
+    "features": [
+        "Pocket-Sized",
+        "3-Axis Stabilization",
+        "64MP Photo",
+        "4K/60fps Video",
+        "ActiveTrack 3.0",
+        "Automatic Editing",
+        "DJI Matrix Stereo"
+      ]
+  },
+  {
+    "id": 5,
+    "productName": "DJI Action 2 Dual-Screen Combo",
+    "reference": "Skelly",
+    "description": "The Dual-Screen Combo includes a Camera Unit, Front Touchscreen Module, Magnetic Lanyard, Magnetic Ball-Joint Adapter Mount, Magnetic Adapter Mount, and a power cable. This combo offers dual touchscreens and magnetic versatility for diverse shooting scenarios. The Dual-Screen Combo includes a Camera Unit, Front Touchscreen Module, Magnetic Lanyard, Magnetic Ball-Joint Adapter Mount, Magnetic Adapter Mount, and a power cable. This combo offers dual touchscreens and magnetic versatility for diverse shooting scenarios",
+    "image": "dji-action.png",
+    "category": "accesory",
+    "price": 519,
+    "features": [
+        "Versatile Magnetic Design",
+        "Portable & Wearable",
+        "4K/120fps & Super-Wide FOV",
+        "HorizonSteady",
+        "10m Waterproof",
+        "AI Editor"
+      ]
+  },
+  {
+    "id": 6,
+    "productName": "DJI RS 2",
+    "reference": "Vertical Camera Mount",
+    "description": "The DJI R Vertical Mount offers reliable vertical shooting for longer durations on DJI RS 2",
+    "image": "stabilizer-rs2.png",
+    "category": "accesory",
+    "price": 759,
+    "features": [
+        "Versatile Magnetic Design"
+      ]
+  }
+]

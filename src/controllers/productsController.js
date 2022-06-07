@@ -11,6 +11,9 @@ const productsController = {
     },
     productCreate: (req, res) => {
         res.render('productCreate');
+    },
+    productList: (req, res) => {
+        res.render('productList');
     }
 }
 

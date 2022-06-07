@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "first_name": "Jorge",
+    "last_name": "Polania",
+    "email": "jorge.polania@dg.com",
+    "password": "RmyWso",
+    "rol": "administrador"
+  },
+  {
+    "id": 2,
+    "first_name": "adrian",
+    "last_name": "ochoa",
+    "email": "adrian.ochoa@dg.com",
+    "password": "tlqI7B5",
+    "rol": "comprador"
+  },
+  {
+    "id": 3,
+    "first_name": "brian",
+    "last_name": "bustamante",
+    "email": "brian.bustamante@dg.com",
+    "password": "vUysNI0K",
+    "rol": "vendedor"
+  },
+  {
+    "id": 4,
+    "first_name": "jhonnatan",
+    "last_name": "urquijo",
+    "email": "jhonnatan.urquijo@dg.com",
+    "password": "EUdApoL",
+    "rol": "administrador"
+  },
+  {
+    "id": 5,
+    "first_name": "andres",
+    "last_name": "hernandez",
+    "email": "andres.hernandez@dg.com",
+    "password": "6TFSaIgWN7",
+    "rol": "comprador"
+  },
+  {
+    "id": 6,
+    "first_name": "ovidio",
+    "last_name": "matusalen",
+    "email": "ovidio.matusalen@dg.com",
+    "password": "oQfElJQbYG",
+    "rol": "vendedor"
+  }
+]

@@ -34,6 +34,19 @@
     margin-bottom: 18px;
   }
   
+  .texto-oculto {
+    display: none;
+  }
+
+  .label-file {
+    padding: 6px 100px;
+    border: solid 1px grey;
+    cursor: pointer;
+    z-index: 400;
+    border-radius: 4px;
+    background-color: #B43056;
+    color: white;
+  }
   
   .controls-login{
     width: 100%;
@@ -44,6 +57,7 @@
     border: 1px solid grey;
     font-size: 15px;
     color: #38393A;
+    
   }
   
   .controls-login:hover{

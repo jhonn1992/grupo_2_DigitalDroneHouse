@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Retrospectiva Sprint 1  
 
 ## Fortalezas:  
@@ -27,7 +26,7 @@
 ## Dejar de hacer:  
 1. Programar reuniones los domingos en la noche.  
 2. Cancelar reuniones a última hora. 
-=======
+
 # Retrospectiva Sprint 1  
 
 ## Fortalezas:  
@@ -56,4 +55,22 @@
 ## Dejar de hacer:  
 1. Programar reuniones los domingos en la noche.  
 2. Cancelar reuniones a última hora. 
->>>>>>> 7639ca7d1fde5f6fe9251cb9fd5087fd66d22d2a
+
+# Retrospectiva Sprint 3    
+
+## Comenzar a hacer:  
+1. No se identifica en este Sprint.   
+
+## Hacer más:  
+1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.  
+2. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
+
+## Continuar haciendo:  
+1. Tenemos una buena distribución de actividades.  
+2. Continuar trabajando en equipo.       
+
+## Hacer menos:  
+1. No se identifica en este Sprint.  
+
+## Dejar de hacer:  
+1. No se identifica en este Sprint.  

@@ -1,3 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+
 // Rutas y vistas
 const productsController = {
     shoppingCart: (req, res) => {
@@ -13,7 +18,11 @@ const productsController = {
         res.render('productCreate');
     },
     productList: (req, res) => {
-        res.render('productList');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('productList', {
+			products
+		});
+        console.log(products);
     }
 }
 

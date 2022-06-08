@@ -2,74 +2,29 @@
 
 <body>
     <%- include('partials/header') %>
-
     <main>
+        <div class="productList-title">
+            <h2>PRODUCT LIST </h2>
+        </div>
         <section class="container-one">
-            <article class="drone-one">
-                <h6>DRONE 1</h6>
-                <h4>DIGITAL DRONE 1</h4>
-                <h5>ALL IN ONE</h5>
-                <div class="links">
-                    <a href="/productDetail">
-                        <div>View More</div>
-                        <div class="icon"></div>
-                    </a>
-                    <a href="/shopping-cart">
-                        <div>Buy Now!</div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-            </article>
-    
-            <article class="drone-two">
-                <h6>DRONE 2</h6>
-                <h4>DIGITAL DRONE 2</h4>
-                <h5>ALL IN ONE</h5>
-                <div class="links">
-                    <a href="/productDetail">
-                        <div>View More</div>
-                        <div class="icon"></div>
-                    </a>
-                    <a href="/shopping-cart">
-                        <div>Buy Now!</div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-            </article>
-    
-            <article class="drone-three">
-                <h6>DRONE 3</h6>
-                <h4>DIGITAL DRONE 3</h4>
-                <h5>ALL IN ONE</h5>
-                <div class="links">
-                    <a href="/productDetail">
-                        <div>View More</div>
-                        <div class="icon"></div>
-                    </a>
-                    <a href="/shopping-cart">
-                        <div>Buy Now!</div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-            </article>
-    
-            <!-- <div class="space"></div> -->
-    
-            <article class="drone-four">
-                <h6>DRONE 4</h6>
-                <h4>DIGITAL DRONE 4</h4>
-                <h5>ALL IN ONE</h5>
-                <div class="links">
-                    <a href="/productDetail">
-                        <div>View More</div>
-                        <div class="icon"></div>
-                    </a>
-                    <a href="/shopping-cart">
-                        <div>Buy Now!</div>
-                        <div class="icon"></div>
-                    </a>
-                </div>
-            </article>
+            <% products.forEach(product => { %>
+                <article class="drone-one">
+                    <img  src="/img/<%=product.image%>" class="drone-product-list">
+                    <h6><%= product.productName  %> </h6>
+                    <h4><%= product.reference  %></h4>
+                    <h5>ALL IN ONE</h5>
+                    <div class="links">
+                        <a href="/productDetail">
+                            <div>View More</div>
+                            <div class="icon"></div>
+                        </a>
+                        <a href="/shopping-cart">
+                            <div>Buy Now!</div>
+                            <div class="icon"></div>
+                        </a>
+                    </div>
+                </article>
+            <% }) %>
     
         </section>
     

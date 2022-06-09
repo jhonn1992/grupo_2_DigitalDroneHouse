@@ -9,10 +9,17 @@ const productsController = {
         res.render('shopping-cart');
     },
     productDetail: (req, res) => {
-        res.render('productDetail');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let id = req.params.id;
+		let productDetail = products.find(product => product.id == id);
+		res.render('productDetail', {productDetail})
     },
     productEdit: (req, res) => {
-        res.render('productEdit');
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let id = req.params.id;
+		let productToEdit = products.find(product => product.id == id);
+        console.log(productToEdit);
+		res.render('productEdit', {productToEdit})
     },
     productCreate: (req, res) => {
         res.render('productCreate');

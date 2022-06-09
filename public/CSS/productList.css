@@ -241,60 +241,7 @@
     top: 100px;
     max-width: 60%;
   }
-  
-  .drone-two {
-    padding: 15px;
-    display: flex;
-    width: 100%;
-    height: 350px;
-    max-width: 390px;
-    min-width: 320px;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    background-image: url(../img/drone3.jpg);
-    background-position: center;
-    background-size: cover;
-    margin: auto;
-    border-top: #c28691 2px solid;
-    margin-top: 5px;
-  }
-  
-  .drone-three {
-    padding: 15px;
-    display: flex;
-    width: 100%;
-    height: 350px;
-    max-width: 390px;
-    min-width: 320px;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../img/drone4.jpg);
-    background-position: center;
-    background-size: cover;
-    border-top: #c28691 2px solid;
-    margin: auto;
-    margin-top: 5px;
-  }
-  
-  .drone-four {
-    padding: 15px;
-    display: flex;
-    width: 100%;
-    height: 350px;
-    max-width: 390px;
-    min-width: 320px;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../img/drone6.jpg);
-    background-position: center;
-    background-size: cover;
-    /* border-top: #B34056 3px solid; */
-    border-top: #c28691 2px solid;
-    margin: auto;
-    margin-top: 5px;
-  }
-  
+   
   article h4 {
     margin: 3px;
   }
@@ -633,7 +580,7 @@
       flex-wrap: wrap;
     }
   
-    .drone-one, .drone-two, .drone-three, .drone-four {
+    .drone-one {
       width: 46%;
       margin: 10px;
       border: #B34056 1px solid;

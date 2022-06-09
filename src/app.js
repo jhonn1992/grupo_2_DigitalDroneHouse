@@ -10,10 +10,7 @@ const usersRouter = require('./routes/usersRouter');
 
 app.set('views', path.join(__dirname, '/views'));
 
-// const publicPath = path.resolve(__dirname, './public');
-
-// app.use(express.static(publicPath));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '../public')));  
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
@@ -26,8 +23,6 @@ app.listen(5000, () => {
 
 // Rutas y vistas
 app.use('/', mainRouter);
-
-app.use('/', productsRouter);
 
 app.use('/', usersRouter);
 

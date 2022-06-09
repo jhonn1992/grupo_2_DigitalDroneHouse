@@ -22,8 +22,33 @@ const productsController = {
         res.render('productList', {
 			products
 		});
-        console.log(products);
+    },
+    productCreatePOST: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        let featuresEntry = req.body.features;
+        let featuresSave = [];
+        featuresEntry.forEach(feature => {
+            if(feature != ''){
+                featuresSave.push(feature);
+            }
+           });
+
+        let newProduct = {
+            id: products[products.length - 1].id + 1,
+            productName: req.body.nombre,
+            reference: req.body.reference,
+            description: req.body.descripcion,
+            image: req.file.filename,
+            category: req.file.filename,
+            price: req.body.categoria,
+            features: featuresSave
+        }
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+        res.redirect("/productList");
+        
     }
 }
 
-module.exports = productsController;
+module.exports = productsController;    

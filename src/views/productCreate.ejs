@@ -1,16 +1,16 @@
 <%- include('partials/head', {titulo: 'productCreate', stylesheet: 'productCreate'}) %>
 
 <body>
-  <form action="/home" method="POST">
+  <form method="POST" action="/productList" enctype="multipart/form-data">
     <section class="form-login">
       <div class="ubicacion-logo">
-        <a href="/"><img src="./img/logoDDH.png" alt="logoDDH" /></a>
+        <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
       </div>
 
       <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*" required>
       <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*" required>
       <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*" required>
-      <div class="controls-login">
+        <div class="controls-login">
         <label>Product Image</label>
         <label class="label-file">
           Upload File<input class="texto-oculto" type="file" name="imagen" id="imagen" required>
@@ -34,7 +34,7 @@
       <input class="controls-login" type="text" name="features" id="features8" placeholder="Features 8">
     </div>
 
-      <button class="botons" type="submit"> CREATE</button>
+      <button type="submit" class="botons"> CREATE</button>
       <div class="btnreset">
         <button class="botonstwo" type="reset">CLEAN</button>
       </div>

@@ -6,34 +6,25 @@
     <main>
         <section class="seccion-producto">
             <div class="producto">
-                <img class="imgProducts"
-                    src="https://stormsend1.djicdn.com/tpc/uploads/carousel/image/d55541dae0fb81a6dae74c750bedeec8@ultra.jpg"
-                    alt="drone1" />
+                <img class="imgProducts" src="/img/products/<%= productDetail.image %>" alt="product image">
             </div>
             <div class="margin-all margin-all-pc">
                 <div class="font-size-h">
-                    <h2>DJI Mavic Air 2 DRDJI016 Fly More Combo Drone with 4K Camera Gray 3 Batteries</h2>
+                    <h2><%= productDetail.productName + ' ' + productDetail.reference %></h2>
                 </div>
-                <p class="precio">USD $759</p>
+                <p class="precio">USD <%= productDetail.price %></p>
                 <ul>
-                    <li>Version: Fly More Combo.</li>
-                    <li>Drone type: aerial.</li>
-                    <li>GPS included.</li>
-                    <li>It reaches a maximum speed of 19m/s.</li>
-                    <li>It has 4 motors.</li>
-                    <li>Maximum camera resolution: 4K.</li>
-                    <li>Maximum flight time: 34m.</li>
-                    <li>Includes 3 batteries.</li>
-                    <li>It comes with altitude hold mode for stable flights.</li>
-                    <li>It has an auto return function.</li>
+                    <% for( let i = 0; i < productDetail.features.length; i++ ) { %>
+                        <li><%= productDetail.features[i] %></li>
+                    <% } %>
                 </ul>
             </div>
         </section>
         <div class="btn-buy-now">
-            <A HREF="/shopping-cart"><button class="botons" type="submit"> Buy Now </button></A>
+            <A HREF="/productList/shopping-cart"><button class="botons" type="submit"> Buy Now </button></A>
         </div>
         <div class="btn-buy-now">
-            <A HREF="/productEdit"><button class="botonstwo" type="submit"> Edit </button></A>
+            <A HREF="/productList/productEdit"><button class="botonstwo" type="submit"> Edit </button></A>
         </div>
         <div class="font-size-h txt-accesorio">
             <h2>Accessories</h2>

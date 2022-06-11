@@ -18,8 +18,9 @@ const productsController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
-        console.log(productToEdit);
 		res.render('productEdit', {productToEdit})
+    },
+    productUpdate: (req, res) => { 
     },
     productCreate: (req, res) => {
         res.render('productCreate');

@@ -40,6 +40,7 @@ const validations = [
 router.get('/shopping-cart', productsController.shoppingCart);
 router.get('/productDetail/:id', productsController.productDetail);
 router.get('/productEdit/:id', productsController.productEdit);
+router.patch('/productEdit/:id', productsController.productUpdate);
 router.get('/productCreate', productsController.productCreate);
 router.post('/', uploadFile.single('imagen'), validations, productsController.productCreatePOST);
 router.get('/', productsController.productList);

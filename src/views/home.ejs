@@ -23,9 +23,8 @@
                     <img  src="/img/products/<%=product.image%>" class="drone-product-list">
                     <h6><%= product.productName  %> </h6>
                     <h4><%= product.reference  %></h4>
-                    <h5>ALL IN ONE</h5>
                     <div class="links">
-                        <a href="/productList/productDetail">
+                        <a href="/productList/productDetail/<%= product.id %> ">
                             <div>View More</div>
                             <div class="icon"></div>
                         </a>

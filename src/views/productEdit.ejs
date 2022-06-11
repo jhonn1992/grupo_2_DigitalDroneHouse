@@ -1,7 +1,8 @@
 <%- include('partials/head', {titulo: 'productEdit' , stylesheet: 'productEdit' }) %>
 
     <body>
-        <form method="POST" action="/productList/productEdit/<%=productToEdit.id%>?_method=PATCH" enctype="multipart/form-data">
+        <form action="/productList/productEdit/<%=productToEdit.id%>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
             <section class="form-login">
                 <div class="ubicacion-logo">
                     <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
@@ -9,12 +10,13 @@
                 <div class="productList-title">
                     <h2>EDITING...</h2>
                 </div>
-                
-                <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="<%=productToEdit.productName %>" 
-                   value="<%=productToEdit.productName %>" required>
-                <input class="controls-login" type="number" name="precio" id="precio" placeholder="<%=productToEdit.price %>" value="<%=productToEdit.price %>" required>
-                <input class="controls-login" type="text" name="reference" id="reference" placeholder="<%=productToEdit.referece %>" value="<%=productToEdit.reference %>"
-                    required>
+
+                <input class="controls-login" type="text" name="nombre" id="nombre"
+                    placeholder="<%=productToEdit.productName %>" value="<%=productToEdit.productName %>" required>
+                <input class="controls-login" type="number" name="precio" id="precio"
+                    placeholder="<%=productToEdit.price %>" value="<%=productToEdit.price %>" required>
+                <input class="controls-login" type="text" name="reference" id="reference"
+                    placeholder="<%=productToEdit.referece %>" value="<%=productToEdit.reference %>" required>
                 <div class="controls-login">
                     <label>Product Image</label>
                     <label class="label-file">
@@ -25,19 +27,20 @@
                     <label>
                         <h4>Categorias de Interés</h4>
                     </label>
-                    <label><input type="radio" name="categoria" value="drones" > &nbspDrones</label>
-                    <label><input type="radio" name="categoria" value="accesories"> &nbspAccesories</label>
+                    <label><input type="radio" name="categoria" value="drone"> &nbspDrones</label>
+                    <label><input type="radio" name="categoria" value="accesory"> &nbspAccesories</label>
                 </div>
                 <div>
                     <label>
                         <h4>Features</h4>
                     </label>
-                    <% for( let i = 0; i < productToEdit.features.length; i++ ) { %>
-                    
-                    <input class="controls-login" type="text" name="features" id="<%= productToEdit.features.indexOf([i]) %> " placeholder="<%= productToEdit.features[i] %>" 
-                    value="<%= productToEdit.features[i] %>">
-                    
-                    <% } %>
+                    <% for( let i=0; i < productToEdit.features.length; i++ ) { %>
+
+                        <input class="controls-login" type="text" name="features"
+                            id="<%= productToEdit.features.indexOf([i]) %> "
+                            placeholder="<%= productToEdit.features[i] %>" value="<%= productToEdit.features[i] %>">
+
+                        <% } %>
                 </div>
 
                 <button type="submit" class="botons"> CREATE</button>

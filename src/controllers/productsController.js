@@ -9,7 +9,10 @@ const productsController = {
     res.render("shopping-cart");
   },
   shoppingCartProductDetail: (req, res) => {
-    res.render("shopping-cart");
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let id = req.params.id;
+    let productToBuy = products.find((product) => product.id == id);
+    res.render("shopping-cart", { productToBuy });
   },
   productDetail: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -39,8 +42,7 @@ const productsController = {
         id: req.params.id,
         productName: req.body.nombre,
         reference: req.body.reference,
-        description: req.body.descripcion,
-        image: req.file.filename,
+        image: req.file ? req.file.filename : productToEdit.image,
         category: req.body.categoria,
         price: req.body.precio,
         features: featuresSave, 
@@ -76,7 +78,6 @@ const productsController = {
       id: products[products.length - 1].id + 1,
       productName: req.body.nombre,
       reference: req.body.reference,
-      description: req.body.descripcion,
       image: req.file.filename,
       category: req.body.categoria,
       price: req.body.precio,

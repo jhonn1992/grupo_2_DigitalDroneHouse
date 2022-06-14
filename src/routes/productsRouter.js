@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const { body } = require('express-validator');
+const { check } = require('express-validator');
 
 const productsController = require('../controllers/productsController');
 
@@ -19,10 +19,11 @@ const storage = multer.diskStorage ({
 const uploadFile = multer({storage: storage});
 
 const validations = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('precio').notEmpty().withMessage('Tienes que escribir un precio'),
-    body('reference').notEmpty().withMessage('Tienes que escribir una referencia'),
-    body('imagen').custom((value, { req }) => {
+    check('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),
+    check('precio').notEmpty().withMessage('Tienes que escribir el precio'),
+    check('reference').notEmpty().withMessage('Tienes que escribir una referencia'),
+    check('categoria').notEmpty().withMessage('Tienes que seleccionar una categoría'),
+    check('imagen').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png'];
         if(!file) {
@@ -41,7 +42,7 @@ router.get('/shopping-cart', productsController.shoppingCart);
 router.get('/shopping-cart/:id', productsController.shoppingCartProductDetail);
 router.get('/productDetail/:id', productsController.productDetail);
 router.get('/productEdit/:id', productsController.productEdit);
-router.put('/productEdit/:id', uploadFile.single('imagen'), productsController.productUpdate);
+router.put('/productEdit/:id', uploadFile.single('imagen'), validations, productsController.productUpdate);
 router.get('/productCreate', productsController.productCreate);
 router.post('/', uploadFile.single('imagen'), validations, productsController.productCreatePOST);
 router.get('/', productsController.productList);

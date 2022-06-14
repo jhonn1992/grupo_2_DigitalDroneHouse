@@ -1,57 +1,96 @@
-<%- include('partials/head', {titulo: 'productCreate', stylesheet: 'productCreate'}) %>
+<%- include('partials/head', {titulo: 'productCreate' , stylesheet: 'productCreate' }) %>
 
-<body>
-  <form method="POST" action="/productList" enctype="multipart/form-data">
-    <section class="form-login">
-      <div class="ubicacion-logo">
-        <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
-      </div>
+  <body>
+    <form method="POST" action="/productList" enctype="multipart/form-data">
+      <section class="form-login">
+        <div class="ubicacion-logo">
+          <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
+        </div>
 
-      <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*" required>
-      <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*" required>
-      <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*" required>
-        <div class="controls-login">
-        <label>Product Image</label>
-        <label class="label-file">
-          Upload File<input class="texto-oculto" type="file" name="imagen" id="imagen" required>
-        </label>
-      </div>
-    <div class="controls-login">
-      <label> <h4>Categorias de Interés</h4></label>
-      <label><input type="radio" name="categoria" value="drone"> &nbspDrones</label>
-      <label><input type="radio" name="categoria" value="accesory"> &nbspAccesories</label>
-    </div>
-    
-    <div>
-      <label> <h4>Features</h4></label>
-      <input class="controls-login" type="text" name="features" id="features1" placeholder="feature 1">
-      <input class="controls-login" type="text" name="features" id="features2" placeholder="feature 2">
-      <input class="controls-login" type="text" name="features" id="features3" placeholder="feature 3">
-      <input class="controls-login" type="text" name="features" id="features4" placeholder="feature 4">
-      <input class="controls-login" type="text" name="features" id="features5" placeholder="feature 5">
-      <input class="controls-login" type="text" name="features" id="features6" placeholder="feature 6">
-      <input class="controls-login" type="text" name="features" id="features7" placeholder="feature 7">
-      <input class="controls-login" type="text" name="features" id="features8" placeholder="feature 8">
-    </div>
+        <% if (locals.errors && errors.nombre) { %>
+          <div class="text-danger">
+            <%= errors.nombre.msg %>
+          </div>
+          <% } %>
+            <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*">
 
-      <button type="submit" class="botons"> CREATE</button>
-      <div class="btnreset">
-        <button class="botonstwo" type="reset">CLEAN</button>
-      </div>
+            <% if (locals.errors && errors.precio) { %>
+              <div class="text-danger">
+                <%= errors.precio.msg %>
+              </div>
+              <% } %>
+                <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*">
 
-      <div class="pie-de-pagina-login">
-        <p>Copyright © 2022 DJI All Rights Reserved.</p>
-        <p>
-          <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site Map</a>
-          <a href="#"> Cookie Preferences.</a>
-        </p>
-        <p>
-          Should you have any questions, <a href="#"> click here </a> to contact
-          our dedicated customer support team.
-        </p>
-      </div>
-    </section>
-  </form>
- </body>
+                <% if (locals.errors && errors.reference) { %>
+                  <div class="text-danger">
+                    <%= errors.reference.msg %>
+                  </div>
+                  <% } %>
+                    <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*">
+                    <% if (locals.errors && errors.imagen) { %>
+                      <div class="text-danger">
+                        <%= errors.imagen.msg %>
+                      </div>
+                      <% } %>
+                        <div class="controls-login">
+                          <label>Product Image</label>
+                          <label class="label-file">
+                            Upload File<input class="texto-oculto" type="file" name="imagen" id="imagen">
+                          </label>
+                        </div>
+                        <% if (locals.errors && errors.categoria) { %>
+                          <div class="text-danger">
+                            <%= errors.categoria.msg %>
+                          </div>
+                          <% } %>
+                            <div class="controls-login">
+                              <label>
+                                <h4>Categorias de Interés</h4>
+                              </label>
+                              <label><input type="radio" name="categoria" value="drone"> &nbspDrones</label>
+                              <label><input type="radio" name="categoria" value="accesory"> &nbspAccesories</label>
+                            </div>
 
-</html>
+                            <div>
+                              <label>
+                                <h4>Features</h4>
+                              </label>
+                              <input class="controls-login" type="text" name="features" id="features1"
+                                placeholder="feature 1">
+                              <input class="controls-login" type="text" name="features" id="features2"
+                                placeholder="feature 2">
+                              <input class="controls-login" type="text" name="features" id="features3"
+                                placeholder="feature 3">
+                              <input class="controls-login" type="text" name="features" id="features4"
+                                placeholder="feature 4">
+                              <input class="controls-login" type="text" name="features" id="features5"
+                                placeholder="feature 5">
+                              <input class="controls-login" type="text" name="features" id="features6"
+                                placeholder="feature 6">
+                              <input class="controls-login" type="text" name="features" id="features7"
+                                placeholder="feature 7">
+                              <input class="controls-login" type="text" name="features" id="features8"
+                                placeholder="feature 8">
+                            </div>
+
+                            <button type="submit" class="botons"> CREATE</button>
+                            <div class="btnreset">
+                              <button class="botonstwo" type="reset">CLEAN</button>
+                            </div>
+
+                            <div class="pie-de-pagina-login">
+                              <p>Copyright © 2022 DJI All Rights Reserved.</p>
+                              <p>
+                                <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site Map</a>
+                                <a href="#"> Cookie Preferences.</a>
+                              </p>
+                              <p>
+                                Should you have any questions, <a href="#"> click here </a> to contact
+                                our dedicated customer support team.
+                              </p>
+                            </div>
+      </section>
+    </form>
+  </body>
+
+  </html>

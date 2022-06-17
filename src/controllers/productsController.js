@@ -7,7 +7,7 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 // Rutas y vistas
 const productsController = {
   shoppingCart: (req, res) => {
-    res.render("shopping-cart");
+    res.redirect("/productList/");
   },
   shoppingCartProductDetail: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));

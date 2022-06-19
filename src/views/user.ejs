@@ -1,0 +1,92 @@
+<%- include('partials/head', {titulo: 'User Profile' , stylesheet: 'user' }) %>
+
+    <body>
+        <%- include('partials/header') %>
+
+            <main>
+                <section class="seccion-producto">
+                    <div class="usuario">
+                        <img class="avatar" src="/img/users/<%= user.avatar%>" alt="user image">
+                    </div>
+                    <div class="margin-all margin-all-pc">
+                        <div class="font-size-h">
+                            <h2><%= user.name%> <%= user.lastName%></h2>
+                        </div>
+                        <p class="rol"><%= user.rol%></p>
+                        <p class="datos"><%= user.email%></p>
+                    </div>
+                </section>
+                <div>
+                    <div class="btn-buy-now">
+                        <A HREF="/"><button class="botons" type="submit">Go to Sell Now </button>
+                    </div>
+                    <div class="btn-buy-now">
+                        <div class="butons-box">
+                            <A HREF="/user/edit/:id?"><button class="botonstwo" type="submit"> Edit Profile
+                                </button></A>
+                            <form action="/user" method="POST">
+                                <button class="botonstwo" type="submit"> Delete Profile </button></A>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-section-answer">
+                    <section class="margin-all">
+                        <div class="font-size-h">
+                            <h2>Let&#39s Answer Your Questions</h2>
+                        </div>
+                        <div class="faq-container">
+                            <details>
+                                <summary>What&#39s the difference between DJI FPV and traditional drones?</summary>
+                                <p>Generally speaking, FPV drones differ from traditional drones in two major ways. The
+                                    first is the
+                                    immersive flight experience provided by the goggles. The second big difference is
+                                    the flight
+                                    itself. Compared to most camera drones, FPV drones typically allow for much higher
+                                    speeds and
+                                    limitless maneuvering capabilities with no angle limits on any of the axes. Because
+                                    of this, FPV
+                                    drones have typically required a much higher level of skill to fly.</p>
+                            </details>
+                            <details>
+                                <summary>What is the difference between DJI FPV and traditional racing drones?</summary>
+                                <p>DJI FPV has a built-in imaging system, high-definition, low-latency transmission with
+                                    a range of
+                                    up to 10 km, and a battery life of approximately 20 minutes. The integrated,
+                                    ready-to-fly design
+                                    means users don&#39t need to assemble the drone themselves. DJI FPV isalso equipped
+                                    with
+                                    advanced safety features such as emergency brake hovering, intelligent return to
+                                    home, and DJI
+                                    Care Refresh service for added flight protection and greater peace of mind during
+                                    flight.</p>
+                            </details>
+                            <details>
+                                <summary>Is the DJI FPV Combo worth it?</summary>
+                                <p>The DJI FPV Combo comes with everything you need to start flying. It includes the FPV
+                                    Drone,
+                                    Goggles V2, Remote Controller 2, DJI FPV Intelligent Flight Battery, DJI FPV Goggles
+                                    Battery,
+                                    DJI FPV AC Power Adapter, DJI FPV Propellers, and other related cables and
+                                    accessories. For
+                                    anyone interested in diving into the world of FPV flight, it&#39s the perfect way to
+                                    do so.</p>
+                            </details>
+                            <details>
+                                <summary>What is the Motion Controller? Is it worth it?</summary>
+                                <p>The DJI Motion Controller is a small, hand-held device that revolutionizes the aerial
+                                    experience.
+                                    This compact device allows the aircraft to maneuver based on your natural hand
+                                    motions,
+                                    delivering an ultra-intuitive experience and allowing even beginners to maneuver
+                                    like seasoned
+                                    FPV pilots.</p>
+                            </details>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
+    </html>

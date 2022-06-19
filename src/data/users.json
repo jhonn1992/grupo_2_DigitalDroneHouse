@@ -5,7 +5,9 @@
     "last_name": "Polania",
     "email": "jorge.polania@dg.com",
     "password": "RmyWso",
-    "rol": "administrador"
+    "rol": "administrador",
+    "avatar": "defaultAvatar.png"
+    
   },
   {
     "id": 2,
@@ -13,7 +15,8 @@
     "last_name": "ochoa",
     "email": "adrian.ochoa@dg.com",
     "password": "tlqI7B5",
-    "rol": "comprador"
+    "rol": "comprador",
+    "avatar": "defaultAvatar.png"
   },
   {
     "id": 3,
@@ -21,7 +24,8 @@
     "last_name": "bustamante",
     "email": "brian.bustamante@dg.com",
     "password": "vUysNI0K",
-    "rol": "vendedor"
+    "rol": "vendedor",
+    "avatar": "defaultAvatar.png"
   },
   {
     "id": 4,
@@ -29,7 +33,8 @@
     "last_name": "urquijo",
     "email": "jhonnatan.urquijo@dg.com",
     "password": "EUdApoL",
-    "rol": "administrador"
+    "rol": "administrador",
+    "avatar": "defaultAvatar.png"
   },
   {
     "id": 5,
@@ -37,7 +42,8 @@
     "last_name": "hernandez",
     "email": "andres.hernandez@dg.com",
     "password": "6TFSaIgWN7",
-    "rol": "comprador"
+    "rol": "comprador",
+    "avatar": "defaultAvatar.png"
   },
   {
     "id": 6,
@@ -45,6 +51,7 @@
     "last_name": "matusalen",
     "email": "ovidio.matusalen@dg.com",
     "password": "oQfElJQbYG",
-    "rol": "vendedor"
+    "rol": "vendedor",
+    "avatar": "defaultAvatar.png"
   }
 ]

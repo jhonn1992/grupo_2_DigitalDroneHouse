@@ -124,6 +124,12 @@ header {
   position: relative;
 }
 
+.content-img-user-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* --------------------------------------Main ------------------------------------------------------ */
 main {
   padding-top: 20px;
@@ -333,6 +339,10 @@ details[open] summary::before {
   
 }
 
+.ocultar-navbar {
+  display: none;
+}
+
 
 /* ---------------------------- Footer ------------------------------*/
 footer {
@@ -465,7 +475,9 @@ li a {
     /* flex-grow: 0.33; */
   }
 
-
+  .ocultar-navbar {
+    display: flex;
+  }
 
 }
 

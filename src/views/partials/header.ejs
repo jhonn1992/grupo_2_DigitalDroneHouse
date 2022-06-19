@@ -13,12 +13,29 @@
                 <ul class="ul-nav">
                     <li><a href="/">Home</A></li>
                     <li><a href="/productList">Products</A></li>
-                    <li><a href="#">Handheld</A></li>
                     <li><a href="/productList/productCreate">Create</A></li>
                 </ul>
             </nav>
         </div>
-        <div class="header-detail">
+
+        <div class="header-detail ocultar-navbar">
+            <div class="content-img-user-header">
+                <img src="//stormsend1.djicdn.com/tpc/uploads/in_the_box/cover/a19c0e4d517c2fb5d5fdb115eea81863@retina_small.png"
+                    width="40" style="border-radius: 100%;">
+                <p>Hi Jhonnatan</p>
+                <form>
+                    <nav class="navegacion">
+                        <ul class="menu">
+                            <li class="fas fa-user-check iconosHeader">
+                                <ul class="submenu">+
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/register">Register</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </form>
+            </div>
             <div class="margin-iconos-header-der">
                 <form action="/home" method="GET">
                     <button type="submit" class="fas fa-search iconosHeader"></button>
@@ -29,18 +46,6 @@
                     <button type="submit" class="fas fa-shopping-cart iconosHeader"></button>
                 </form>
             </div>
-            <form class="margin-iconos-header-der">
-                <nav class="navegacion">
-                    <ul class="menu">
-                        <li class="fas fa-user-check iconosHeader">
-                            <ul class="submenu">
-                                <li><a href="/login">Login</a></li>
-                                <li><a href="/register">Register</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </form>
         </div>
     </div>
 </header>

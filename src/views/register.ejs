@@ -8,12 +8,31 @@
       </div>
       <h4>REGISTER BY EMAIL</h4>
 
+      <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" required/>
+
+      <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" required/>
+
       <input class="controls-register" type="email" name="correo" id="correo" placeholder="Email address*" required/>
 
       <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required
         minlength="6" />
       <input class="controls-register" type="password" name="password" id="password"
-        placeholder="Enter new password again*" required/>
+        placeholder="Enter password again*" required/>
+
+      <div class="controls-login">
+          <label>
+            <h5>Choose your purpose*</h5>
+          </label>
+          <label><input type="radio" name="rol" value="vendedor"> &nbspSell</label>
+          <label><input type="radio" name="rol" value="cliente"> &nbspBuy</label>
+      </div>
+      
+      <div class="controls-login">
+          <label>Profile Image</label>
+          <label class="label-file botons2">
+            Upload File<input class="texto-oculto" type="file" name="avatar" id="avatar">
+          </label>
+      </div>
 
       <div class="terms-use">
         <input type="checkbox" name="terms-use" placeholder="terms-use"> I agree to comply with the DDH <strong>Privacy Policy</strong> and <a

@@ -130,6 +130,12 @@
     max-height: 35px;
     position: relative;
   }
+
+  .content-img-user-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
   
   /* --------------------------------------Main ------------------------------------------------------ */
   
@@ -403,6 +409,10 @@
   details[open] {
     box-shadow: 5px 5px 15px #d9d9d9;
   }
+
+  .ocultar-navbar {
+    display: none;
+  }
   
   /* ---------------------------- Footer ------------------------------*/
   footer {
@@ -519,6 +529,10 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+    }
+
+    .ocultar-navbar {
+      display: flex;
     }
   
     .margin-all {

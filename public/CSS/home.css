@@ -136,6 +136,12 @@ header {
   position: relative;
 }
 
+.content-img-user-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* --------------------------------------Main ------------------------------------------------------ */
 
 
@@ -435,6 +441,10 @@ details[open] {
   box-shadow: 5px 5px 15px #d9d9d9;
 }
 
+.ocultar-navbar {
+  display: none;
+}
+
 /* ---------------------------- Footer ------------------------------*/
 footer {
   font-size: 12px;
@@ -558,6 +568,10 @@ li a {
     align-items: center;
   }
 
+  .ocultar-navbar {
+    display:flex;
+  }
+
   .margin-all {
     margin-right: 15%;
     margin-left: 10%;
@@ -572,7 +586,7 @@ li a {
   .ocultar-menu-hamburguesa {
     display: none;
   }
-
+  
   .ul-nav {
     display: flex;
     justify-content: space-around;

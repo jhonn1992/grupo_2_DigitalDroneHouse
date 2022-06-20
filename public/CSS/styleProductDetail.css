@@ -123,6 +123,12 @@ header {
   z-index: 1000;
 }
 
+.content-img-user-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* --------------------------------------Main ------------------------------------------------------ */
 main {
   padding-top: 50px;
@@ -290,6 +296,10 @@ details[open] summary::before {
   text-align: center;
 }
 
+.ocultar-navbar {
+  display: none;
+}
+
 /* ---------------------------- Footer ------------------------------*/
 footer {
   font-size: 12px;
@@ -399,6 +409,10 @@ li a {
   .botons {
     width: 40%;
     border-radius: 2px;
+  }
+  
+  .ocultar-navbar {
+    display: flex;
   }
 
 }

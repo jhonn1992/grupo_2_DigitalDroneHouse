@@ -1,6 +1,13 @@
 /* ---------------------------------Body ----------------------------------------------------------- */
 
 /* -----------------------------------------Header ----------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -19,6 +26,11 @@ header {
   padding: 5px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
+  box-sizing: content-box;
+}
+
+.inonos-header {
+  margin: 0px 10px;
 }
 
 .ul-nav {
@@ -37,14 +49,21 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-right: 50px;
+  margin-left: -30px;
+  width: 99%;
 }
+
+.margin-iconos-header-der {
+  margin-left: 10px;
+}
+
 
 .header-detail {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-left: 35px;
 }
 
 .iconosHeader {
@@ -61,8 +80,8 @@ header {
 
 .navegacion ul{
 	list-style: none;
-  margin-left: -40px;
   margin-top: -22px;
+  margin-left: 2px;
 }
 
 .menu > li{
@@ -79,6 +98,7 @@ header {
 
 .menu li a:hover{
   background-color: rgba(22, 22, 23, 0.05);
+	 transition: all .3s;
   border-radius: 2px;
 }
 
@@ -87,7 +107,6 @@ header {
 .submenu{
 	position: absolute;
   top: 40px;
-	background: white;
 	width: 100%;
 	visibility: hidden;
 	opacity: 0;
@@ -95,17 +114,15 @@ header {
 }
 
 .submenu li a{
+  background: white;
 	display: block;
   margin-left: -50px;
 	padding: 10px;
 	color: black;
-	text-decoration: none;
   font-size: 14px;
+  font-weight: normal;
+	text-decoration: none;
   font-family: "Open Sans", sans-serif;
-}
-
-.index-shopping-cart {
-  z-index: 600;
 }
 
 .menu li:hover .submenu{
@@ -119,8 +136,10 @@ header {
   position: relative;
 }
 
-.peso-shooping-card {
-  z-index: 1000;
+.content-img-user-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* --------------------------------------Main ------------------------------------------------------ */

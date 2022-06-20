@@ -18,7 +18,12 @@
                 </section>
                 <div>
                     <div class="btn-buy-now">
-                        <A HREF="/"><button class="botons" type="submit">Go to Sell Now </button>
+                        <% if (user.rol == "vendedor") { %>
+                            <A HREF="/productList/productCreate"><button class="botons" type="submit">Go to Sell Now </button>
+                        <% } else { %>
+                        <A HREF="/productList"><button class="botons" type="submit">Go to Buy Now </button>
+                            <% } %> 
+                        
                     </div>
                     <div class="btn-buy-now">
                         <div class="butons-box">

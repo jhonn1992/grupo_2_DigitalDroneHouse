@@ -19,6 +19,8 @@ const usersController = require('../controllers/usersController');
 router.get('/register', usersController.register);
 router.post('/', uploadFile.single('avatar'),usersController.userRegister);
 router.get('/user/:id?', usersController.user);
+router.get('/user/edit/:id', usersController.userEdit);
+router.put('/user/edit/:id',uploadFile.single('avatar'),usersController.userUpload);
 router.get('/login', usersController.login);
 
 module.exports = router;

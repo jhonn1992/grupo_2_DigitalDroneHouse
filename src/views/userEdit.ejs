@@ -1,18 +1,18 @@
-<%- include('partials/head', {titulo: 'Register', stylesheet: 'register'}) %>
+<%- include('partials/head', {titulo: 'Edit Profile', stylesheet: 'userEdit'}) %>
 
 <body>
-  <form action="/" method="POST" enctype="multipart/form-data">
+  <form action="/user/edit/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <section class="form-register">
       <div class="ubicacion-logo">
         <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
       </div>
       <h4>REGISTER BY EMAIL</h4>
 
-      <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" required/>
+      <input class="controls-register" type="text" name="name" id="name" placeholder="<%= user.name %>" value="<%= user.name %>" required/>
 
-      <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" required/>
+      <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" value="<%= user.lastName %>" required/>
 
-      <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" required/>
+      <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" value="<%= user.email %>" required/>
 
       <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required
         minlength="6" />
@@ -23,14 +23,14 @@
           <label>
             <h5>Choose your purpose*</h5>
           </label>
-          <label><input type="radio" name="rol" value="vendedor"> &nbspSell</label>
-          <label><input type="radio" name="rol" value="cliente" checked> &nbspBuy</label>
+          <label><input type="radio" name="rol" value="vendedor" <% if (user.rol == "vendedor") {%> checked <% } %>  > &nbspSell</label>
+          <label><input type="radio" name="rol" value="cliente" <% if (user.rol == "cliente") {%> checked <% } %>> &nbspBuy</label>
       </div>
       
       <div class="controls-login">
           <label>Profile Image</label>
           <label class="label-file botons2">
-            Upload File<input class="texto-oculto" type="file" name="avatar" id="avatar">
+            Upload File<input class="texto-oculto" type="file" name="avatar" id="avatar" >
           </label>
       </div>
 
@@ -38,15 +38,12 @@
         <input type="checkbox" name="terms-use" placeholder="terms-use" required> I agree to comply with the DDH <strong>Privacy Policy</strong> and <a
           href="#">Terms of Use.</a></input>
       </div>
-      <button class="botons" type="submit"> REGISTER</button>
+      <button class="botons" type="submit"> UPLOAD PROFILE</button>
 
-      <p class="log-in-now"><a href="/login">Log In Now</a></p>
-      <p class="help">Need help with registration?</p>
 
       <div class="contenedor1">
         <nav class="contenedor2">
           <p class="Support"><a href="#">DDH Support</a></p>
-          <i class="fa-solid fa-grip-lines"></i>
           <p class="FAQ"><a href="#">FAQ</a></p>
         </nav>
       </div>

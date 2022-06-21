@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path')
 const multer = require('multer');
+
+
 const storage = multer.diskStorage ({
     destination: (req, file, cb) => {
         cb(null, 'public/img/users');
@@ -23,5 +25,7 @@ router.get('/user/edit/:id', usersController.userEdit);
 router.put('/user/edit/:id',uploadFile.single('avatar'),usersController.userUpload);
 router.delete('/user/userDelete/:id', usersController.userDelete);
 router.get('/login', usersController.login);
+
+router.post('/register', usersController.proccessLogin);
 
 module.exports = router;

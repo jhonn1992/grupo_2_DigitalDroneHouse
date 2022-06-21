@@ -1,13 +1,18 @@
 <%- include('partials/head', {titulo: 'Login', stylesheet: 'login'}) %>
 
 <body>
-  <form action="/home" method="POST">
+  <form action="/register" method="POST">
     <section class="form-login">
       <div class="ubicacion-logo">
         <a href="/"><img src="./img/logoDDH.png" alt="logoDDH" /></a>
       </div>
 
       <input class="controls-login" type="email" name="correo" id="correo" placeholder="Email address*" required>
+      <% if (locals.errors && errors.email) { %>
+        <div class="text-danger">
+          <%= errors.email.msg %>
+        </div>
+        <% } %>
       <input class="controls-login" type="password" name="password" id="password" placeholder="password*" required
         minlength="6" />
       <button class="botons" type="submit"> LOG IN</button>

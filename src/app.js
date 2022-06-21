@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 // Se importan los Routers
 
@@ -17,6 +18,11 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); 
 app.use(methodOverride('_method')); 
+app.use(session({
+    secret: 'variable de session',
+    resave: false,
+    saveUninitialized: false
+}));
 
 // Servidor escuchando
 app.listen(5000, () => {

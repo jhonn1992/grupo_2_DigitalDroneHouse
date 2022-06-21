@@ -62,6 +62,15 @@ const usersController = {
           res.redirect("/user/" + req.params.id);
 
     },
+    userDelete: (req, res)=> {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        let finalUsers = users.filter(
+            (user) => user.id != req.params.id
+          );
+          fs.writeFileSync(usersFilePath,JSON.stringify(finalUsers, null, " "));
+      
+          res.redirect("/");
+    },
     login: (req, res) => {
         res.render('login');
     }

@@ -29,7 +29,7 @@
                         <div class="butons-box">
                             <A HREF="/user/edit/<%=user.id%>"><button class="botonstwo" type="submit"> Edit Profile
                                 </button></A>
-                            <form action="/user" method="POST">
+                            <form action="/user/userDelete/<%= user.id %>?_method=DELETE" method="POST">
                                 <button class="botonstwo" type="submit"> Delete Profile </button></A>
                             </form>
                         </div>

@@ -21,6 +21,7 @@ router.post('/', uploadFile.single('avatar'),usersController.userRegister);
 router.get('/user/:id?', usersController.user);
 router.get('/user/edit/:id', usersController.userEdit);
 router.put('/user/edit/:id',uploadFile.single('avatar'),usersController.userUpload);
+router.delete('/user/userDelete/:id', usersController.userDelete);
 router.get('/login', usersController.login);
 
 module.exports = router;

@@ -12,10 +12,11 @@ const usersController = {
   },
 
   user: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    let id = req.params.id;
-    let user = users.find((user) => user.id == id);
-    res.render("user", { user });
+      const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+      let id = req.params.id;
+      let user = users.find((user) => user.id == id);
+      res.render("user", { user });
+
   },
   userRegister: (req, res) => {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -79,8 +80,8 @@ const usersController = {
       );
       if (isOkThePassword) {
         delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-        return res.redirect("/");
+        req.session.userLogged = userToLogin;   
+        return res.redirect("/user/" + req.session.userLogged.id);  
       }
       return res.render("login", {
         errors: {
@@ -100,6 +101,14 @@ const usersController = {
     });
 
   },
+  userNotFound: (req, res) => {
+    //Pendiente terminar función
+    return res.redirect("/login");
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/");
+  }
 };
 
 module.exports = usersController;

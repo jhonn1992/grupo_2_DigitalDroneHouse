@@ -64,3 +64,21 @@
 
 ## Dejar de hacer:  
 1. No se identifica en este Sprint.  
+
+# Retrospectiva Sprint 5    
+
+## Comenzar a hacer:  
+1. Distribución individual y/o por pares de actividades.  
+
+## Hacer más:  
+1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.   
+
+## Continuar haciendo:  
+1. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
+2. Continuar trabajando en equipo.       
+
+## Hacer menos:  
+1. No se identifica en este Sprint.  
+
+## Dejar de hacer:  
+1. No se identifica en este Sprint.  

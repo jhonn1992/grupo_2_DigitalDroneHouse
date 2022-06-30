@@ -57,7 +57,6 @@ header {
   margin-left: 10px;
 }
 
-
 .header-detail {
   display: flex;
   flex-wrap: wrap;
@@ -66,68 +65,83 @@ header {
   margin-left: 35px;
 }
 
+.ocultar-menu-hamburguesa {
+  display: flex;
+  padding: 5px;
+}
+
+.navbar-ocultar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.navbar-ocultar-menu li {
+  display: none;
+}
+
 .iconosHeader {
   background-color: transparent;
   border: none;
   font-size: 18px;
 }
 
-.navegacion{
-	width: 100px;
-	margin: 30px auto;
-	background: #fff;
+.navegacion {
+  width: 100px;
+  margin: 30px auto;
+  background: #fff;
 }
 
-.navegacion ul{
-	list-style: none;
+.navegacion ul {
+  list-style: none;
   margin-top: -22px;
   margin-left: 2px;
 }
 
-.menu > li{
-	position: relative;
-	display: inline-block;
+.menu > li {
+  position: relative;
+  display: inline-block;
 }
 
-.menu > li > a{
-	display: block;
-	padding: 15px 20px;
-	color: #353535;
-	text-decoration: none;
+.menu > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: #353535;
+  text-decoration: none;
 }
 
-.menu li a:hover{
+.menu li a:hover {
   background-color: rgba(22, 22, 23, 0.05);
-	 transition: all .3s;
+  transition: all 0.3s;
   border-radius: 2px;
 }
 
 /* Submenu*/
 
-.submenu{
-	position: absolute;
+.submenu {
+  position: absolute;
   top: 40px;
-	width: 100%;
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 1.5s;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
-.submenu li a{
+.submenu li a {
   background: white;
-	display: block;
+  display: block;
   margin-left: -50px;
-	padding: 10px;
-	color: black;
+  padding: 10px;
+  color: black;
   font-size: 14px;
   font-weight: normal;
-	text-decoration: none;
+  text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
 
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 1;
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header-detail form {
@@ -144,24 +158,23 @@ header {
 
 /* --------------------------------------Main ------------------------------------------------------ */
 
-
 .banner {
   padding: 5px;
   width: 100%;
   /* max-width: 687px; */
   height: 418px;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   align-items: center;
   align-content: space-around;
   justify-content: flex-end;
   background-image: url(../img/drone1.jpg);
   background-position: bottom;
-  background-size:cover;
+  background-size: cover;
   flex-direction: column;
   color: aliceblue;
-  color:rgb(224, 239, 253);
-  color: #B34056;
+  color: rgb(224, 239, 253);
+  color: #b34056;
   position: relative;
   top: 50px;
 }
@@ -172,26 +185,24 @@ header {
   align-items: center;
   position: absolute;
   top: 5px;
-
 }
-
 
 main p {
   margin-top: 10px;
   color: #3c3c3c;
   font-weight: bold;
-  font-size:x-small;
+  font-size: x-small;
 }
 
 main h2 {
   font-weight: bold;
-  font-size:x-large;
+  font-size: x-large;
 }
 
 main h3 {
   margin-top: 0px;
-  font-size:x-small;
-  color:#3c3c3c
+  font-size: x-small;
+  color: #3c3c3c;
 }
 
 .know-shop {
@@ -200,23 +211,22 @@ main h3 {
   margin-left: 30%;
   text-decoration: none;
   bottom: 5px;
-  display: flex
-
+  display: flex;
 }
 
 .know-shop a {
   color: aliceblue;
-  color:#e0effd;
-  color:#B34056;
+  color: #e0effd;
+  color: #b34056;
   text-decoration: none;
-  font-size:x-small;
+  font-size: x-small;
 }
 
 .know {
   margin-right: 25px;
   bottom: 10px;
   right: 5px;
-  background-color:aliceblue;
+  background-color: aliceblue;
   opacity: 50%;
   border-radius: 5%;
 }
@@ -228,7 +238,7 @@ main h3 {
 .shopping {
   bottom: 10px;
   right: 5px;
-  background-color:aliceblue;
+  background-color: aliceblue;
   opacity: 50%;
   border-radius: 5%;
 }
@@ -265,11 +275,9 @@ main h3 {
   max-width: 60%;
 }
 
-
 article h4 {
   margin: 3px;
 }
-
 
 .links {
   display: flex;
@@ -278,26 +286,26 @@ article h4 {
 .links a {
   margin: 5px;
   text-decoration: none;
-  color: #B34056;
+  color: #b34056;
 }
 
 /* Estilos Nosotros */
 
-.nosotros{
+.nosotros {
   padding-bottom: 30px;
 }
 
-.foto-equipo{
+.foto-equipo {
   width: 100%;
   max-width: 570px;
   margin: auto;
 }
-.foto-equipo img{
+.foto-equipo img {
   width: 100%;
   padding-left: 10px;
 }
 
-.conocenos{
+.conocenos {
   text-align: center;
   padding: 15px 0px;
   max-width: 570px;
@@ -311,7 +319,7 @@ article h4 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size:smaller;
+  font-size: smaller;
 }
 
 .featuresp {
@@ -322,13 +330,13 @@ article h4 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size:smaller;
-  position:relative;
+  font-size: smaller;
+  position: relative;
   top: 50px;
 }
 
 .conocenos p:nth-child(1) {
-  font-size:small;
+  font-size: small;
   margin: 10px;
   font-weight: bold;
 }
@@ -340,8 +348,8 @@ article h4 {
 }
 
 .conocenos .click {
-  background-color: #B34056;
-  color: #FFFFFF;
+  background-color: #b34056;
+  color: #ffffff;
   width: 28%;
   margin: auto;
 }
@@ -350,7 +358,7 @@ article h4 {
   text-decoration: none;
 }
 
-.where-support-pay{
+.where-support-pay {
   background-color: rgb(246, 246, 246);
   width: 90%;
   margin: auto;
@@ -361,7 +369,7 @@ article h4 {
 }
 
 .where-support-pay ul {
-  padding: 10px
+  padding: 10px;
 }
 
 .where-support-pay ul li {
@@ -371,8 +379,8 @@ article h4 {
 
 .where-support-pay a {
   text-decoration: none;
-  color:#333232;
-  font-size:large;
+  color: #333232;
+  font-size: large;
   display: flex;
   align-items: flex-end;
 }
@@ -383,13 +391,12 @@ article h4 {
 }
 
 .icon {
-  color:rgb(145, 145, 145)
+  color: rgb(145, 145, 145);
 }
-
 
 .section-two {
   display: flex;
-  background-color: rgb(246, 246, 246)
+  background-color: rgb(246, 246, 246);
 }
 
 .down {
@@ -405,7 +412,6 @@ article h4 {
 }
 
 /* Final Main */
-
 
 /* Main section accesorios */
 
@@ -439,10 +445,6 @@ details p {
 details:hover,
 details[open] {
   box-shadow: 5px 5px 15px #d9d9d9;
-}
-
-.ocultar-navbar {
-  display: none;
 }
 
 /* ---------------------------- Footer ------------------------------*/
@@ -568,13 +570,18 @@ li a {
     align-items: center;
   }
 
-  .ocultar-navbar {
-    display:flex;
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
   }
 
   .margin-all {
     margin-right: 15%;
     margin-left: 10%;
+  }
+
+  .navbar-ocultar-menu li {
+    display: flex;
   }
   /* ----------------------------------------------------*/
   .iconosHeader {
@@ -586,7 +593,7 @@ li a {
   .ocultar-menu-hamburguesa {
     display: none;
   }
-  
+
   .ul-nav {
     display: flex;
     justify-content: space-around;
@@ -616,15 +623,15 @@ li a {
   }
 
   .information-main p {
-    font-size:medium;
+    font-size: medium;
   }
 
   .information-main h3 {
-    font-size:medium;
+    font-size: medium;
   }
 
   .information-main h2 {
-    font-size:xx-large;
+    font-size: xx-large;
   }
 
   .know-shop a {
@@ -638,14 +645,13 @@ li a {
   .drone-one {
     width: 46%;
     margin: 10px;
-    border: #B34056 1px solid;
-    box-shadow: 1px 1px 1px 1px #B34056;
+    border: #b34056 1px solid;
+    box-shadow: 1px 1px 1px 1px #b34056;
   }
 
   .container-one {
     justify-content: space-around;
   }
-  
 
   .contenedor {
     display: flex;
@@ -656,17 +662,18 @@ li a {
     display: block;
   }
 
-  .foto-equipo, .conocenos {
+  .foto-equipo,
+  .conocenos {
     width: 45%;
   }
 
   .conocenos p:nth-child(1) {
-    font-size:medium;
-}
+    font-size: medium;
+  }
 
-.conocenos p:nth-child(2) {
-  font-size:small;
-}
+  .conocenos p:nth-child(2) {
+    font-size: small;
+  }
 
   .down {
     display: none;
@@ -677,7 +684,7 @@ li a {
     align-content: center;
   }
 
-  .where-support-pay{
+  .where-support-pay {
     width: 100%;
     padding: 30px;
   }
@@ -685,7 +692,6 @@ li a {
   #id {
     display: block;
   }
-
 
   .where-support-pay ul {
     display: flex;
@@ -703,7 +709,7 @@ li a {
   }
 
   #learn-more {
-    display:contents;
+    display: contents;
   }
 
   .icon {
@@ -713,35 +719,43 @@ li a {
 
   .where-support-pay ul li h4 {
     font-size: small;
-}
+  }
 
-a :nth-child(3) {
-  display: none;
-}
+  a :nth-child(3) {
+    display: none;
+  }
 
-#learn-more {
-  font-size:x-small;
-  display: flex;
-  align-items: flex-start;
-  margin: 5px;
-  flex-direction: row-reverse;
-}
+  #learn-more {
+    font-size: x-small;
+    display: flex;
+    align-items: flex-start;
+    margin: 5px;
+    flex-direction: row-reverse;
+  }
 
-.conocenos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .conocenos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-.angle {
-  padding: 2px;
-}
-
+  .angle {
+    padding: 2px;
+  }
 }
 /* ------------------Media query 768---------*/
 @media (min-width: 768px) {
   .font-size-h h2 {
     font-size: 18px;
+  }
+
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ul-nav {
+    display: flex;
   }
 
   .margin-all-pc {
@@ -750,6 +764,14 @@ a :nth-child(3) {
     margin-left: -20px;
     margin-right: 40px;
     padding: 10px;
+  }
+
+  .navbar-ocultar-menu li {
+    display: flex;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
   }
 
   .font-size-h {
@@ -781,22 +803,26 @@ a :nth-child(3) {
 
   .container-one {
     justify-content: space-evenly;
+  }
+
+  .conocenos p:nth-child(1) {
+    font-size: large;
+  }
+
+  .conocenos p:nth-child(2) {
+    font-size: medium;
+  }
+
+  .nosotros {
+    margin-right: 5px;
+  }
+
+  .foto-equipo {
+    margin: 0%;
+  }
 }
 
-.conocenos p:nth-child(1) {
-  font-size:large;
-}
-
-.conocenos p:nth-child(2) {
-font-size:medium;
-}
-
-.nosotros {
-  margin-right: 5px;
-}
-
-.foto-equipo {
-  margin:0%;
-}
-
+.logo-vs-menu-navbar {
+  display: flex;
+  flex-wrap: wrap;
 }

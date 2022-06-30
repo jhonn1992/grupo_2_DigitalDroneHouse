@@ -18,7 +18,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding: 5px;
+  padding-left: 10px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
   top: 0px;
@@ -49,6 +49,21 @@ header {
   align-items: center;
   justify-content: space-between;
   
+}
+
+.ocultar-menu-hamburguesa {
+  display: flex;
+  padding: 5px;
+}
+
+.navbar-ocultar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.navbar-ocultar-menu li {
+  display: none;
 }
 
 .iconosHeader {
@@ -339,10 +354,6 @@ details[open] summary::before {
   
 }
 
-.ocultar-navbar {
-  display: none;
-}
-
 
 /* ---------------------------- Footer ------------------------------*/
 footer {
@@ -424,10 +435,20 @@ li a {
     align-items: center;
   }
 
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
   .margin-all {
     margin-right: 15%;
     margin-left: 10%;
   }
+
+  .navbar-ocultar-menu li {
+    display: flex;
+  }
+
 
   .descripcion-2 {
     display: block;
@@ -487,6 +508,15 @@ li a {
     font-size: 18px;
   }
 
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ul-nav {
+    display: flex;
+  }
+
     /* ----------------------MAIN---------------------- */
   
 
@@ -502,6 +532,14 @@ li a {
     margin-left: -20px;
     margin-right: 40px;
     /* padding: 10px; */
+  }
+
+  .navbar-ocultar-menu li {
+    display: flex;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
   }
 
   .font-size-h {
@@ -552,4 +590,9 @@ li a {
     margin: auto;
     max-width: 70vw;
   }
+}
+
+.logo-vs-menu-navbar {
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -16,7 +16,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding: 5px;
+  padding-left: 10px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
 }
@@ -45,6 +45,21 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.ocultar-menu-hamburguesa {
+  display: flex;
+  padding: 5px;
+}
+
+.navbar-ocultar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.navbar-ocultar-menu li {
+  display: none;
 }
 
 .iconosHeader {
@@ -296,9 +311,6 @@ details[open] summary::before {
   text-align: center;
 }
 
-.ocultar-navbar {
-  display: none;
-}
 
 /* ---------------------------- Footer ------------------------------*/
 footer {
@@ -367,9 +379,18 @@ li a {
     align-items: center;
   }
 
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
   .margin-all {
     margin-right: 15%;
     margin-left: 10%;
+  }
+
+  .navbar-ocultar-menu li {
+    display: flex;
   }
   /* ----------------------------------------------------*/
   .iconosHeader {
@@ -443,6 +464,15 @@ li a {
     margin-top: 20px;
   }
 
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ul-nav {
+    display: flex;
+  }
+
   .margin-all-pc {
     margin: auto;
     margin-top: 0px;
@@ -450,6 +480,14 @@ li a {
     margin-right: 40px;
     padding: 10px;
     width: 60%;
+  }
+
+  .navbar-ocultar-menu li {
+    display: flex;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
   }
 
   .font-size-h {
@@ -499,4 +537,9 @@ li a {
     margin: auto;
     max-width: 70vw;
   }
+}
+
+.logo-vs-menu-navbar {
+  display: flex;
+  flex-wrap: wrap;
 }

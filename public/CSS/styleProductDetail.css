@@ -11,12 +11,13 @@ body {
 section {
   width: 95%;
 }
+
 header {
   position: fixed;
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding-left: 10px;
+  padding: 4px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
 }
@@ -379,6 +380,11 @@ li a {
     align-items: center;
   }
 
+  header {
+    padding: 0%;
+    padding-left: 5px;
+  }
+
   .navbar-ocultar-menu {
     display: flex;
     flex-direction: row;
@@ -456,6 +462,11 @@ li a {
     margin-top: -20px;
     margin-left: auto;
     margin-bottom: 20px;
+  }
+
+  header {
+    padding: 0%;
+    padding-left: 5px;
   }
 
   .seccion-producto {

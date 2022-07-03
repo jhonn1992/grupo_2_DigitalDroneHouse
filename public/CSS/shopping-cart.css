@@ -18,7 +18,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding-left: 10px;
+  padding: 4px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
   top: 0px;
@@ -435,6 +435,11 @@ li a {
     align-items: center;
   }
 
+  header {
+    padding: 0%;
+    padding-left: 5px;
+  }
+
   .navbar-ocultar-menu {
     display: flex;
     flex-direction: row;
@@ -515,6 +520,11 @@ li a {
 
   .ul-nav {
     display: flex;
+  }
+
+  header {
+    padding: 0%;
+    padding-left: 5px;
   }
 
     /* ----------------------MAIN---------------------- */

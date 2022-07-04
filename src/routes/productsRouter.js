@@ -1,22 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const multer = require('multer');
+const uploadFile = require('../models/multer');
 const { check } = require('express-validator');
 
 const productsController = require('../controllers/productsController');
-
-const storage = multer.diskStorage ({
-    destination: (req, file, cb) => {
-        cb(null, 'public/img/products');
-    },
-    filename: (req, file, cb) => {
-        let filename = `${Date.now()}_img${path.extname(file.originalname)}`;
-        cb(null, filename);
-    }
-})
-
-const uploadFile = multer({storage: storage});
 
 const validations = [
     check('nombre').notEmpty().withMessage('Tienes que escribir un nombre'),

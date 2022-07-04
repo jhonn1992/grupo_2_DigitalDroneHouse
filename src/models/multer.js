@@ -2,16 +2,24 @@ const express = require('express');
 const path = require('path');
 const multer = require('multer');
 
+let finalFolder = '';
+
 const storage = multer.diskStorage ({
     destination: (req, file, cb) => {
-        cb(null, 'public/img/users');
+        if(req.headers.referer.includes('product')){
+            finalFolder = 'products';
+        } else{
+            finalFolder = 'users'
+        } 
+        cb(null,  `public/img/${finalFolder}`);
     },
     filename: (req, file, cb) => {
-        let filename = `${Date.now()}_avatar${path.extname(file.originalname)}`;
+        filename = `${Date.now()}_img${path.extname(file.originalname)}`;
         cb(null, filename);
     }
 })
 
-const uploadFile = multer({storage:storage}).single('imagen');
+var uploadFile = multer({storage:storage});
+
 
 module.exports = uploadFile;

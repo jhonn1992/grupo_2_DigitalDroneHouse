@@ -61,5 +61,14 @@
   "password": "$2a$10$TINc03qOVwnQAdFb6JxJmO/dAZLoO.cuiht2IwhM2tCnTWz0Hzaem",
   "rol": "cliente",
   "avatar": "1655857956508_avatar.png"
+ },
+ {
+  "id": 8,
+  "name": "csdd",
+  "lastName": "dwdd",
+  "email": "dwsdw@SFDCSWD.COM",
+  "password": "$2a$10$BScrIGGksXKTj1iDDfhEZ.KXvE4cruOqFyrWSluS1MDWAI3Q7P3ya",
+  "rol": "cliente",
+  "avatar": "defaultAvatar.png"
  }
 ]

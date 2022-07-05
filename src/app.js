@@ -19,6 +19,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); 
 app.use(methodOverride('_method')); 
+
 app.use(session({
     secret: 'variable de session',
     resave: false,
@@ -38,6 +39,10 @@ app.use('/', mainRouter);
 app.use('/', usersRouter);
 
 app.use('/productList', productsRouter);
+
+app.use((req,res,next) => {
+    res.status(404).render('not-found');
+})
 
 /* ---------------RUTAS DE LOS BOTONES EN FORMULARIOS LOGIN Y REGISTER--------------- */
 

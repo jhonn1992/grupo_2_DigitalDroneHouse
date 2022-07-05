@@ -61,6 +61,21 @@
     margin-left: 35px;
   }
   
+  .ocultar-menu-hamburguesa {
+    display: flex;
+    padding: 5px;
+  }
+  
+  .navbar-ocultar-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .navbar-ocultar-menu li {
+    display: none;
+  }
+
   .iconosHeader {
     background-color: transparent;
     border: none;
@@ -410,10 +425,7 @@
     box-shadow: 5px 5px 15px #d9d9d9;
   }
 
-  .ocultar-navbar {
-    display: none;
-  }
-  
+ 
   /* ---------------------------- Footer ------------------------------*/
   footer {
     font-size: 12px;
@@ -531,14 +543,21 @@
       align-items: center;
     }
 
-    .ocultar-navbar {
+
+    .navbar-ocultar-menu {
       display: flex;
+      flex-direction: row;
     }
   
     .margin-all {
       margin-right: 15%;
       margin-left: 10%;
     }
+
+    .navbar-ocultar-menu li {
+      display: flex;
+    }
+
     /* ----------------------------------------------------*/
     .iconosHeader {
       background-color: transparent;
@@ -702,6 +721,15 @@
     .font-size-h h2 {
       font-size: 18px;
     }
+
+    .navbar-ocultar-menu {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .ul-nav {
+      display: flex;
+    }
   
     .margin-all-pc {
       margin: auto;
@@ -711,6 +739,14 @@
       padding: 10px;
     }
   
+    .navbar-ocultar-menu li {
+      display: flex;
+    }
+  
+    .ocultar-menu-hamburguesa {
+      display: none;
+    }
+
     .font-size-h {
       margin-bottom: 50px;
     }
@@ -755,3 +791,7 @@
   
   }
   
+  .logo-vs-menu-navbar {
+    display: flex;
+    flex-wrap: wrap;
+  }

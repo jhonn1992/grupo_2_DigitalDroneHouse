@@ -16,7 +16,6 @@ const usersController = {
       let id = req.params.id;
       let user = users.find((user) => user.id == id);
       res.render("user", { user });
-
   },
   userRegister: (req, res) => {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));

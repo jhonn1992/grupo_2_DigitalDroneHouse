@@ -61,5 +61,14 @@
   "password": "$2a$10$TINc03qOVwnQAdFb6JxJmO/dAZLoO.cuiht2IwhM2tCnTWz0Hzaem",
   "rol": "cliente",
   "avatar": "1655857956508_avatar.png"
+ },
+ {
+  "id": 8,
+  "name": "casimiro",
+  "lastName": "turraja",
+  "email": "casimiro.turra@dg.com",
+  "password": "$2a$10$5J4nkVwY2HjdGfM3bu7EYedmP4GR1GfUnPdWYY/XV60aXW/v1GQVO",
+  "rol": "cliente",
+  "avatar": "defaultAvatar.png"
  }
 ]

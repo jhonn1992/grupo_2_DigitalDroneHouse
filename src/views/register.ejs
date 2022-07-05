@@ -12,6 +12,11 @@
 
       <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" required/>
 
+      <% if (locals.errors && errors.email) { %>
+        <div class="text-danger">
+          <%= errors.email.msg %>
+        </div>
+        <% } %>
       <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" required/>
 
       <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required

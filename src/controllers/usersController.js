@@ -19,6 +19,33 @@ const usersController = {
   },
   userRegister: (req, res) => {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+    let userExist = users.find((user) => req.body.email == user.email);
+    if(userExist){
+      let errors = {
+        email: {msg: 'User already exist'}
+      };
+
+      res.render("register", {
+        errors: errors,
+        oldData: req.body,
+      });
+    } else {if (validationResult(req).errors.length > 0) {
+
+      let userToCreate = {  
+        name: req.body.name,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        rol: req.body.rol,
+        avatar: req.file ? req.file.filename : "defaultAvatar.png",
+      };
+      res.render("register", {
+        userToCreate: userToCreate,
+        errors: validationResult(req).mapped(),
+        oldData: req.body,
+      });
+      console.log(validationResult(req).errors)
+}else{
+    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
     let newUser = {
       id: users[users.length - 1].id + 1,
@@ -33,7 +60,7 @@ const usersController = {
     users.push(newUser);
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
     res.redirect("/");
-  },
+  }}},
   userEdit: (req, res) => {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
     let id = req.params.id;

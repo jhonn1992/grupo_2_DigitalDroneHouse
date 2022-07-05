@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cookies = require('cookie-parser');// cookie-parser
 
 // Se importan los Routers
 
@@ -10,6 +11,8 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+app.use(cookies()); //cookie-parser
 
 app.set('views', path.join(__dirname, '/views'));
 

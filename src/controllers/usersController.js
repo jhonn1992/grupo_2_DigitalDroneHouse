@@ -80,7 +80,13 @@ const usersController = {
       );
       if (isOkThePassword) {
         delete userToLogin.password;
-        req.session.userLogged = userToLogin;   
+        req.session.userLogged = userToLogin;  
+
+        
+        if(req.body.remember_user){ // remmeber_user
+          res.cookie("userEmail", req.body.correo, { maxAge:( 1000 * 60) * 2 })
+        }
+        
         return res.redirect("/user/" + req.session.userLogged.id);  
       }
       return res.render("login", {
@@ -106,9 +112,17 @@ const usersController = {
     return res.redirect("/login");
   },
   logout: (req, res) => {
+    res.clearCookie("userEmail");// detruir cookie loggout 
     req.session.destroy();
     return res.redirect("/");
+  },
+
+  profile: (req, res) => { //remmenber user profile
+    return res.render("userProfile", {
+      user: req.session.userLogged
+    });
   }
+
 };
 
 module.exports = usersController;

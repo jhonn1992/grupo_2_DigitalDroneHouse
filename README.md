@@ -14,6 +14,8 @@ Proyecto integrador para el curso de desarrollo Web Fullstack DH.
 
 **Brian Bustamante**. Contador Público con especialización en habilidades gerenciales, actualmente trabajo como contador en la Dirección de recaudos y pagos de mi ciudad. Desde el colegio me sentía sumamente atraído por la programación. Ahora, al fin tomé la decisión de hacer parte de esta revolución digital.
 
+**Michael Hernandez**. Michael andres Hernandez Urrego, tengo 25 años, profesional en Cien-cias del deporte, apasionado por la estetica corporal y el bodybuil-ding.
+
 ## Sitios referentes
 
 Los sitios a continuación relacionados, fueron tomados como referentes, no tanto por su temática sino por el contrario por su diseño y usabilidad; 

@@ -10,8 +10,6 @@ Proyecto integrador para el curso de desarrollo Web Fullstack DH.
 
 **Jorge Polania**. Tecnologo Químico y Químico Puro. Trabajo como Analista Químico de Calidad. Interesado en aprender acerca de **Desarrollo Web** para darle un plus diferente al habitual, a mi perfil profesional. 
 
-**Adrián Felipe Ochoa H**. Tecnólogo en producción con especialización en formulación de proyectos, auditor de calidad y supervisor de contratos con más de 11 años de experiencia en ese campo, interesado en la programación y diseño de páginas web como nueva habilidad para las profesiones actuales y del futuro. 
-
 **Brian Bustamante**. Contador Público con especialización en habilidades gerenciales, actualmente trabajo como contador en la Dirección de recaudos y pagos de mi ciudad. Desde el colegio me sentía sumamente atraído por la programación. Ahora, al fin tomé la decisión de hacer parte de esta revolución digital.
 
 **Michael Hernandez**. Michael andres Hernandez Urrego, tengo 25 años, profesional en Cien-cias del deporte, apasionado por la estetica corporal y el bodybuil-ding.

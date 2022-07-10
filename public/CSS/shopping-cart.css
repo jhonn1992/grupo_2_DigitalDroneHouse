@@ -4,7 +4,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-
   overflow-x: hidden;
   margin: 0px;
 }
@@ -21,7 +20,6 @@ header {
   padding: 4px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
-  top: 0px;
 }
 
 .ul-nav {
@@ -48,7 +46,6 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .ocultar-menu-hamburguesa {
@@ -72,71 +69,74 @@ header {
   font-size: 18px;
 }
 
-.navegacion {
-  width: 100px;
-  margin: 30px auto;
-  background: #fff;
+.navegacion{
+	width: 100px;
+	margin: 30px auto;
+	background: #fff;
 }
 
-.navegacion ul {
-  list-style: none;
+.navegacion ul{
+	list-style: none;
   margin-left: -40px;
-  margin-top: -24px;
+  margin-top: -22px;
 }
 
-.menu>li {
-  position: relative;
-  display: inline-block;
+.menu > li{
+	position: relative;
+	display: inline-block;
 }
 
-.menu>li>a {
-  display: block;
-  padding: 15px 20px;
-  color: #353535;
-  text-decoration: none;
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	text-decoration: none;
+}
+
+.menu li a:hover{
+  background-color: rgba(22, 22, 23, 0.05);
+  border-radius: 2px;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+  top: 40px;
+	background: white;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+  margin-left: -50px;
+	padding: 10px;
+	color: black;
+	text-decoration: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .index-shopping-cart {
   z-index: 600;
 }
 
-.menu li a:hover {
-  background-color: rgba(22, 22, 23, 0.05);
-  transition: all .3s;
-  border-radius: 10px;
-}
-
-/* Submenu*/
-
-.submenu {
-  position: absolute;
-  top: 43px;
-  background: white;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1.5s;
-}
-
-.submenu li a {
-  display: block;
-  margin-left: -50px;
-  padding: 10px;
-  color: black;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.menu li:hover .submenu {
-  visibility: visible;
-  opacity: 1;
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
 
 .header-detail form {
   max-width: 35px;
   max-height: 35px;
   position: relative;
+}
+
+.peso-shooping-card {
+  z-index: 1000;
 }
 
 .content-img-user-header {
@@ -147,12 +147,15 @@ header {
 
 /* --------------------------------------Main ------------------------------------------------------ */
 main {
-  padding-top: 20px;
+/*   padding-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
   max-width: 90%;
   padding-left: 4%;
-  margin-top: 50px;
+  margin-top: 50px; */
+  padding-top: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 
@@ -417,7 +420,7 @@ li a {
 
   body {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
 
     overflow-x: hidden;
     margin: 0px;

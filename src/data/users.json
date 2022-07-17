@@ -1,57 +1,65 @@
 [
-    {
-      "id": 1,
-      "name": "Jorge",
-      "lastName": "Polania",
-      "email": "jorge.polania@dg.com",
-      "password": "RmyWso",
-      "rol": "administrador",
-      "avatar": "defaultAvatar.png"
-      
-    },
-    {
-      "id": 2,
-      "name": "Adrian",
-      "lastName": "Ochoa",
-      "email": "adrian.ochoa@dg.com",
-      "password": "tlqI7B5",
-      "rol": "cliente",
-      "avatar": "defaultAvatar.png"
-    },
-    {
-      "id": 3,
-      "name": "Brian",
-      "lastName": "Bustamante",
-      "email": "brian.bustamante@dg.com",
-      "password": "vUysNI0K",
-      "rol": "vendedor",
-      "avatar": "defaultAvatar.png"
-    },
-    {
-      "id": 4,
-      "name": "Jhonnatan",
-      "lastName": "Urquijo",
-      "email": "jhonnatan.urquijo@dg.com",
-      "password": "EUdApoL",
-      "rol": "administrador",
-      "avatar": "defaultAvatar.png"
-    },
-    {
-      "id": 5,
-      "name": "Andres",
-      "lastName": "Hernandez",
-      "email": "andres.hernandez@dg.com",
-      "password": "6TFSaIgWN7",
-      "rol": "cliente",
-      "avatar": "defaultAvatar.png"
-    },
-    {
-      "id": 6,
-      "name": "Ovidio",
-      "lastName": "Matusalen",
-      "email": "ovidio.matusalen@dg.com",
-      "password": "oQfElJQbYG",
-      "rol": "vendedor",
-      "avatar": "defaultAvatar.png"
-    }
-  ]
+ {
+  "id": 1,
+  "name": "Jorge",
+  "lastName": "Polania",
+  "email": "jorge.polania@dg.com",
+  "password": "RmyWso",
+  "rol": "administrador",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 2,
+  "name": "Adrian",
+  "lastName": "Ochoa",
+  "email": "adrian.ochoa@dg.com",
+  "password": "tlqI7B5",
+  "rol": "cliente",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 3,
+  "name": "Brian",
+  "lastName": "Bustamante",
+  "email": "brian.bustamante@dg.com",
+  "password": "vUysNI0K",
+  "rol": "vendedor",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 4,
+  "name": "Jhonnatan",
+  "lastName": "Urquijo",
+  "email": "jhonnatan.urquijo@dg.com",
+  "password": "EUdApoL",
+  "rol": "administrador",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 5,
+  "name": "Andres",
+  "lastName": "Hernandez",
+  "email": "andres.hernandez@dg.com",
+  "password": "6TFSaIgWN7",
+  "rol": "cliente",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 6,
+  "name": "Ovidio",
+  "lastName": "Matusalen",
+  "email": "ovidio.matusalen@dg.com",
+  "password": "oQfElJQbYG",
+  "rol": "vendedor",
+  "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 7,
+  "name": "Rocío",
+  "lastName": "Álvarez",
+  "email": "rocio.alvarez@dg.com",
+  "password": "$2a$10$euPpcxL2La.Sd5Gxy1SXI./jA2/tQkDLA1ioTlOMFDWYkIP9QTyJK",
+  "rol": "cliente",
+  "avatar": "1658015189913_img.png"
+ }
+]

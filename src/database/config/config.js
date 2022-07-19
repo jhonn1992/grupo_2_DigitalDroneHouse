@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "Mister2021*mysql",
-    "database": "droneDigitalHouseDB",
+    "database": "dronedigitalhousedb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

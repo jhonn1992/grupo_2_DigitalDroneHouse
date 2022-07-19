@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
@@ -89,10 +90,20 @@ const productsController = {
     res.render("productCreate");
   },
   productList: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    db.Category.findAll()
+    .then(category => {
+        res.send(category);
+    })
+/*     db.Products.findAll()
+    .then(product => {
+        res.send(product);
+    }).catch (error => {
+      res.send(error);
+    }); */
+/*     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     res.render("productList", {
       products,
-    });
+    }); */
   },
   productCreatePOST: (req, res) => {
     if (validationResult(req).errors.length > 0) {

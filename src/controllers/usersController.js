@@ -4,6 +4,7 @@ const bcryptjs = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const UserModel = require("../models/users");
+const db = require('../database/models');
 
 // Rutas y vistas
 const usersController = {
@@ -94,7 +95,15 @@ const usersController = {
     res.redirect("/");
   },
   login: (req, res) => {
-    res.render("login");
+    //res.render("login");
+/*     db.Rol.findAll()
+    .then(rol => {
+        res.send(rol);
+    }) */
+    db.User.findAll()
+    .then(user => {
+        res.send(user);
+    })
   },
   proccessLogin: (req, res) => {
     let userToLogin = UserModel.findByField("email", req.body.correo);

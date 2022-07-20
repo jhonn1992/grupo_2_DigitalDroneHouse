@@ -17,10 +17,24 @@ const productsController = {
     res.render("shopping-cart", { productToBuy });
   },
   productDetail: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let id = req.params.id;
-    let productDetail = products.find((product) => product.id == id);
-    res.render("productDetail", { productDetail });
+    db.Products.findByPk(req.params.id)
+            .then(product => {
+              let features = [];
+
+              if(product.features1 != null){
+                features.push(product.features1);
+              }
+              if(product.features2 != null){
+                features.push(product.features2);
+              }
+              if(product.features3 != null){
+                features.push(product.features3);
+              }
+              if(product.features4 != null){
+                features.push(product.features4);
+              }
+              res.render('productDetail', {productDetail: product, features}); 
+            }) 
   },
   productEdit: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -90,20 +104,14 @@ const productsController = {
     res.render("productCreate");
   },
   productList: (req, res) => {
-    db.Category.findAll()
-    .then(category => {
-        res.send(category);
-    })
-/*     db.Products.findAll()
-    .then(product => {
-        res.send(product);
+    db.Products.findAll()
+    .then(products => {
+      res.render("productList", {
+        products,
+      });
     }).catch (error => {
       res.send(error);
-    }); */
-/*     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    res.render("productList", {
-      products,
-    }); */
+    });
   },
   productCreatePOST: (req, res) => {
     if (validationResult(req).errors.length > 0) {

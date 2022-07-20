@@ -10,23 +10,23 @@
             </div>
             <div class="margin-all margin-all-pc">
                 <div class="font-size-h">
-                    <h2><%= productDetail.productName + ' ' + productDetail.reference %></h2>
+                    <h2><%= productDetail.product_name + ' ' + productDetail.reference %></h2>
                 </div>
                 <p class="precio">USD <%= productDetail.price %></p>
                 <ul>
-                    <% for( let i = 0; i < productDetail.features.length; i++ ) { %>
-                        <li><%= productDetail.features[i] %></li>
+                    <% for( let i = 0; i < features.length; i++ ) { %>
+                        <li><%= features[i] %></li>
                     <% } %>
                 </ul>
             </div>
         </section>
         <div class="btn-buy-now">
-            <A HREF="/productList/shopping-cart/<%= productDetail.id %>"><button class="botons" type="submit"> Buy Now </button></A>
+            <A HREF="/productList/shopping-cart/<%= productDetail.product_id %>"><button class="botons" type="submit"> Buy Now </button></A>
         </div>
         <div class="btn-buy-now">
             <div>
-                <A HREF="/productList/productEdit/<%= productDetail.id %> "><button class="botonstwo" type="submit"> Edit </button></A>
-                <form action="/productList/productDelete/<%= productDetail.id %>?_method=DELETE" method="POST">
+                <A HREF="/productList/productEdit/<%= productDetail.product_id %> "><button class="botonstwo" type="submit"> Edit </button></A>
+                <form action="/productList/productDelete/<%= productDetail.product_id %>?_method=DELETE" method="POST">
                     <button class="botonstwo" type="submit"> Eliminar </button></A>
                 </form>
             </div>

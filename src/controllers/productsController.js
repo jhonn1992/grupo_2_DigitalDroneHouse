@@ -11,10 +11,26 @@ const productsController = {
     res.redirect("/productList/");
   },
   shoppingCartProductDetail: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let id = req.params.id;
-    let productToBuy = products.find((product) => product.id == id);
-    res.render("shopping-cart", { productToBuy });
+    db.Products.findByPk(req.params.id)
+      .then(product => {
+        let features = [];
+
+              if(product.features1 != null){
+                features.push(product.features1);
+              }
+              if(product.features2 != null){
+                features.push(product.features2);
+              }
+              if(product.features3 != null){
+                features.push(product.features3);
+              }
+              if(product.features4 != null){
+                features.push(product.features4);
+              }
+        res.render("shopping-cart", { productToBuy: product, features });
+      }).catch (error => {
+        res.send(error);
+      });    
   },
   productDetail: (req, res) => {
     db.Products.findByPk(req.params.id)
@@ -37,10 +53,24 @@ const productsController = {
             }) 
   },
   productEdit: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let id = req.params.id;
-    let productToEdit = products.find((product) => product.id == id);
-    res.render("productEdit", { productToEdit });
+    db.Products.findByPk(req.params.id)
+    .then(product => {
+      let features = [];
+
+      if(product.features1 != null){
+        features.push(product.features1);
+      }
+      if(product.features2 != null){
+        features.push(product.features2);
+      }
+      if(product.features3 != null){
+        features.push(product.features3);
+      }
+      if(product.features4 != null){
+        features.push(product.features4);
+      }
+      res.render('productEdit', {productToEdit: product, features}); 
+    }) 
   },
   productUpdate: (req, res) => {
     if (validationResult(req).errors.length > 0) {
@@ -70,34 +100,35 @@ const productsController = {
       });
       
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToEdit = products.find(
-        (product) => req.params.id == product.id
-      );
-
+      
       let featuresEntry = req.body.features;
-      let featuresSave = [];
-      featuresEntry.forEach((feature) => {
-        if (feature != "") {
-          featuresSave.push(feature);
-        }
-      });
+      let featuresEntrySize = featuresEntry.length;
+      let categoryConvert = 0;
+      if(req.body.categoria == "drone"){
+        categoryConvert = 1;
+      } else{
+        categoryConvert = 2;
+      }
 
-      let editedProduct = {
-        id: req.params.id,
-        productName: req.body.nombre,
-        reference: req.body.reference,
-        image: req.file ? req.file.filename : productToEdit.image,
-        category: req.body.categoria,
-        price: req.body.precio,
-        features: featuresSave,
-      };
-
-      let indice = products.findIndex((product) => product.id == req.params.id);
-      products[indice] = editedProduct;
-
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/productList/productDetail/" + req.params.id);
+      db.Products.update (
+        {
+          id: 0,
+          product_name: req.body.nombre,
+          reference: req.body.reference,
+          image: req.file.filename,
+          category_id: categoryConvert,
+          price: req.body.precio,
+          features1: featuresEntrySize >=1 ? featuresEntry[0] : null,
+          features2: featuresEntrySize >=2 ? featuresEntry[1] : null,
+          features3: featuresEntrySize >=3 ? featuresEntry[2] : null,
+          features4: featuresEntrySize >=4 ? featuresEntry[3] : null
+        },
+        {
+            where: {product_id: req.params.id}
+        })
+        .then(()=> {
+          return res.redirect("/productList/productDetail/" + req.params.id)})           
+        .catch(error => res.send(error));
     }
   },
   productCreate: (req, res) => {
@@ -120,42 +151,41 @@ const productsController = {
         oldData: req.body,
       });
     } else {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
       let featuresEntry = req.body.features;
-      let featuresSave = [];
-      featuresEntry.forEach((feature) => {
-        if (feature != "") {
-          featuresSave.push(feature);
-        }
-      });
-
-      let newProduct = {
-        id: products[products.length - 1].id + 1,
-        productName: req.body.nombre,
-        reference: req.body.reference,
-        image: req.file.filename,
-        category: req.body.categoria,
-        price: req.body.precio,
-        features: featuresSave,
-      };
-      products.push(newProduct);
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-      res.redirect("/productList");
+      let featuresEntrySize = featuresEntry.length;
+      let categoryConvert = 0;
+      if(req.body.categoria == "drone"){
+        categoryConvert = 1;
+      } else{
+        categoryConvert = 2;
+      }
+      
+      db.Products.create (
+        {
+          id: 0,
+          product_name: req.body.nombre,
+          reference: req.body.reference,
+          image: req.file.filename,
+          category_id: categoryConvert,
+          price: req.body.precio,
+          features1: featuresEntrySize >=1 ? featuresEntry[0] : null,
+          features2: featuresEntrySize >=2 ? featuresEntry[1] : null,
+          features3: featuresEntrySize >=3 ? featuresEntry[2] : null,
+          features4: featuresEntrySize >=4 ? featuresEntry[3] : null
+        })
+        .then(()=> {
+          return res.redirect("/productList")})            
+        .catch(error => res.send(error));
     }
   },
   productDelete: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-    let finalProducts = products.filter(
-      (product) => product.id != req.params.id
-    );
-    fs.writeFileSync(
-      productsFilePath,
-      JSON.stringify(finalProducts, null, " ")
-    );
-
-    res.redirect("/productList");
+    let productId = req.params.id;
+    db.Products.destroy({
+      where: {product_id: productId}, force: true
+    })
+    .then(()=>{
+      return res.redirect('/productList')})
+    .catch(error => res.send(error))
   },
 };
 

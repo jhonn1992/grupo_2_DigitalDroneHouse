@@ -1,7 +1,7 @@
 <%- include('partials/head', {titulo: 'productEdit' , stylesheet: 'productEdit' }) %>
 
     <body>
-        <form action="/productList/productEdit/<%=productToEdit.id%>?_method=PUT" method="POST"
+        <form action="/productList/productEdit/<%=productToEdit.product_id%>?_method=PUT" method="POST"
             enctype="multipart/form-data">
             <section class="form-login">
                 <div class="ubicacion-logo">
@@ -17,7 +17,7 @@
                     </div>
                     <% } %>
                         <input class="controls-login" type="text" name="nombre" id="nombre"
-                            placeholder="<%=productToEdit.productName %>" value="<%=productToEdit.productName %>">
+                            placeholder="<%=productToEdit.product_name %>" value="<%=productToEdit.product_name %>">
                         <input class="controls-login" type="number" name="precio" id="precio"
                             placeholder="<%=productToEdit.price %>" value="<%=productToEdit.price %>">
                         <input class="controls-login" type="text" name="reference" id="reference"
@@ -46,12 +46,12 @@
                                     <label>
                                         <h4>Features</h4>
                                     </label>
-                                    <% for( let i=0; i < productToEdit.features.length; i++ ) { %>
+                                    <% for( let i=0; i < features.length; i++ ) { %>
 
                                         <input class="controls-login" type="text" name="features"
-                                            id="<%= productToEdit.features.indexOf([i]) %> "
-                                            placeholder="<%= productToEdit.features[i] %>"
-                                            value="<%= productToEdit.features[i] %>">
+                                            id="<%= features.indexOf([i]) %> "
+                                            placeholder="<%= features[i] %>"
+                                            value="<%= features[i] %>">
 
                                         <% } %>
                                 </div>

@@ -17,13 +17,13 @@
             <img src="/img/products/<%=productToBuy.image%>" alt="imagen-Articulo1" class="product-img">
             <div class="contenedor-descripcion">
               <h4 class="nombre">
-                <%=productToBuy.productName%>
+                <%=productToBuy.product_name%>
               </h4>
               <p class="descripcion">
               <ul>
-                <% for( let i=0; i < productToBuy.features.length; i++ ) { %>
+                <% for( let i=0; i < features.length; i++ ) { %>
                   <li>
-                    <%= productToBuy.features[i] %>
+                    <%= features[i] %>
                   </li>
                   <% } %>
               </ul>

@@ -13,25 +13,26 @@ const usersController = {
   },
 
   user: (req, res) => {
-      const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-      let id = req.params.id;
-      let user = users.find((user) => user.id == id);
-      res.render("user", { user });
+      db.User.findByPk(req.params.id, {include: [{association: "roles"}]})
+      .then(user => {
+        res.render("user", { user });
+      }) 
   },
   userRegister: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    let userExist = users.find((user) => req.body.email == user.email);
-    if(userExist){
-      let errors = {
-        email: {msg: 'User already exist'}
-      };
-
-      res.render("register", {
-        errors: errors,
-        oldData: req.body,
-      });
-    } else {if (validationResult(req).errors.length > 0) {
-
+    db.User.findAll({where: {email: req.body.email}})
+           .then(resultado => {
+            if(resultado.length > 0){
+              let errors = {
+                email: {msg: 'User already exist'}
+              };
+              console.log(req.body);
+              res.render("register", {
+                errors: errors,
+                oldData: req.body,
+              });
+            }
+           }); 
+ if (validationResult(req).errors.length > 0) {
       let userToCreate = {  
         name: req.body.name,
         lastName: req.body.lastName,
@@ -44,29 +45,40 @@ const usersController = {
         errors: validationResult(req).mapped(),
         oldData: req.body,
       });
-      console.log(validationResult(req).errors)
-}else{
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+} else{
+  let userRolConvert = req.body.rol;
+  let recibeUserRolConvert = 0;
+  
+  switch (userRolConvert) {
+    case "vendedor":
+      recibeUserRolConvert = 3;
+      break;
+      case "cliente":
+        recibeUserRolConvert = 2;
+        break;
+      default: 
+      break; 
+  }
 
-    let newUser = {
-      id: users[users.length - 1].id + 1,
-
+  db.User.create (   
+    {
+      user_id: 0,
       name: req.body.name,
       lastName: req.body.lastName,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
-      rol: req.body.rol,
-      avatar: req.file ? req.file.filename : "defaultAvatar.png",
-    };
-    users.push(newUser);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-    res.redirect("/");
-  }}},
+      rol_id: recibeUserRolConvert,
+      avatar: req.file ? req.file.filename : "defaultAvatar.png"
+    })
+     .then(()=> {
+       return res.redirect("/")})            
+     .catch(error => res.send(error));
+  }},
   userEdit: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    let id = req.params.id;
-    let user = users.find((user) => user.id == id);
-    res.render("userEdit", { user });
+    db.User.findByPk(req.params.id, {include: [{association: "roles"}]})
+    .then(user => {
+      res.render("userEdit", { user });
+    }) 
   },
   userUpload: (req, res) => {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -91,19 +103,10 @@ const usersController = {
     const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
     let finalUsers = users.filter((user) => user.id != req.params.id);
     fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, " "));
-
     res.redirect("/");
   },
   login: (req, res) => {
-    //res.render("login");
-/*     db.Rol.findAll()
-    .then(rol => {
-        res.send(rol);
-    }) */
-    db.User.findAll()
-    .then(user => {
-        res.send(user);
-    })
+    res.render("login");
   },
   proccessLogin: (req, res) => {
     let userToLogin = UserModel.findByField("email", req.body.correo);

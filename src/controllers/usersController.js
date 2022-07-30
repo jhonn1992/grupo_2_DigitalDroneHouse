@@ -13,7 +13,8 @@ const usersController = {
   },
 
   user: (req, res) => {
-      db.User.findByPk(req.params.id, {include: [{association: "roles"}]})
+    console.log(req.params.user_id);
+      db.User.findByPk(req.params.user_id, {include: [{association: "roles"}]})
       .then(user => {
         res.render("user", { user });
       }) 
@@ -113,7 +114,6 @@ const usersController = {
   },
   proccessLogin: (req, res) => {
     let userToLogin;
-    //let userToLogin = UserModel.findByField("email", req.body.correo);
     db.User.findAll({where: {email: req.body.correo}})
            .then(user => {
             userToLogin = user[0];
@@ -121,7 +121,8 @@ const usersController = {
            if (user.length > 0) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
-              //delete userToLogin.password;
+              delete userToLogin.password;
+              console.log(userToLogin.password);
               req.session.userLogged = userToLogin;  
               
               if(req.body.remember_user){ // remmeber_user
@@ -130,8 +131,21 @@ const usersController = {
 
               return res.redirect("/user/" + req.session.userLogged.user_id);  
             };
+            return res.render("login", {
+              errors: {
+                email: {
+                  msg: "Las credenciales son inválidas",
+                },
+              },
+            });
           }else{
-            res.send("Ese correo no está en la BD");
+            return res.render('login', {
+              errors: {
+                  email: {
+                      msg: 'No se encuentra este email en nuestra base de datos'
+                  }
+              }
+          });
            }
      })
      .catch(error => res.send(error));

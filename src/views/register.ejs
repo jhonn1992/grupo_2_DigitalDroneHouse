@@ -7,17 +7,23 @@
         <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
       </div>
       <h4>REGISTER BY EMAIL</h4>
+      
+        <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.name %>" 
+        <% } %>
+        required/>
 
-      <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" required/>
-
-      <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" required/>
+      <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.lastName %>" 
+      <% } %>
+      required/>
 
       <% if (locals.errors && errors.email) { %>
         <div class="text-danger">
           <%= errors.email.msg %>
         </div>
         <% } %>
-      <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" required/>
+      <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.email %>" 
+      <% } %>
+      required/>
 
       <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required
         minlength="6" />
@@ -28,8 +34,10 @@
           <label>
             <h5>Choose your purpose*</h5>
           </label>
-          <label><input type="radio" name="rol" value="vendedor"> &nbspSell</label>
-          <label><input type="radio" name="rol" value="cliente" checked> &nbspBuy</label>
+          <label><input type="radio" name="rol" <% if (locals.inputDataUser && locals.inputDataUser.rol == "vendedor") { %> checked 
+            <% } %> value="vendedor"> &nbspSell</label>
+          <label><input type="radio" name="rol" <% if (locals.inputDataUser && locals.inputDataUser.rol == "cliente") { %> checked 
+            <% } %> value="cliente"> &nbspBuy</label>
       </div>
       
       <div class="controls-login">

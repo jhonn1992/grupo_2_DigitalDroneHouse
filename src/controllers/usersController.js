@@ -13,7 +13,6 @@ const usersController = {
   },
 
   user: (req, res) => {
-    console.log(req.params.user_id);
       db.User.findByPk(req.params.user_id, {include: [{association: "roles"}]})
       .then(user => {
         res.render("user", { user });
@@ -26,55 +25,58 @@ const usersController = {
               let errors = {
                 email: {msg: 'User already exist'}
               };
-              console.log(req.body);
+              
               res.render("register", {
                 errors: errors,
-                oldData: req.body,
+                inputDataUser: req.body,
               });
+            } else {
+              if (validationResult(req).errors.length > 0) {
+                let userToCreate = {  
+                  name: req.body.name,
+                  lastName: req.body.lastName,
+                  email: req.body.email,
+                  rol: req.body.rol,
+                  avatar: req.file ? req.file.filename : "defaultAvatar.png",
+                };
+                res.render("register", {
+                  userToCreate: userToCreate,
+                  errors: validationResult(req).mapped(),
+                  oldData: req.body,
+                });
+          } else{
+            let userRolConvert = req.body.rol;
+            let recibeUserRolConvert = 0;
+            
+            switch (userRolConvert) {
+              case "vendedor":
+                recibeUserRolConvert = 3;
+                break;
+                case "cliente":
+                  recibeUserRolConvert = 2;
+                  break;
+                default: 
+                break; 
             }
-           }); 
- if (validationResult(req).errors.length > 0) {
-      let userToCreate = {  
-        name: req.body.name,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        rol: req.body.rol,
-        avatar: req.file ? req.file.filename : "defaultAvatar.png",
-      };
-      res.render("register", {
-        userToCreate: userToCreate,
-        errors: validationResult(req).mapped(),
-        oldData: req.body,
-      });
-} else{
-  let userRolConvert = req.body.rol;
-  let recibeUserRolConvert = 0;
-  
-  switch (userRolConvert) {
-    case "vendedor":
-      recibeUserRolConvert = 3;
-      break;
-      case "cliente":
-        recibeUserRolConvert = 2;
-        break;
-      default: 
-      break; 
-  }
+          
+            db.User.create (   
+              {
+                user_id: 0,
+                name: req.body.name,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                rol_id: recibeUserRolConvert,
+                avatar: req.file ? req.file.filename : "defaultAvatar.png"
+              })
+               .then(()=> {
+                 return res.redirect("/")})            
+               .catch(error => res.send(error));
+            };
+            }
 
-  db.User.create (   
-    {
-      user_id: 0,
-      name: req.body.name,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      rol_id: recibeUserRolConvert,
-      avatar: req.file ? req.file.filename : "defaultAvatar.png"
-    })
-     .then(()=> {
-       return res.redirect("/")})            
-     .catch(error => res.send(error));
-  }},
+           }); 
+ },
   userEdit: (req, res) => {
     db.User.findByPk(req.params.id, {include: [{association: "roles"}]})
     .then(user => {
@@ -82,23 +84,36 @@ const usersController = {
     }) 
   },
   userUpload: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    let userToEdit = users.find((user) => req.params.id == user.id);
-
-    let userEdited = {
-      id: req.params.id,
-      name: req.body.name,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: req.body.password,
-      rol: req.body.rol,
-      avatar: req.file ? req.file.filename : userToEdit.avatar,
-    };
-    let indice = users.findIndex((user) => user.id == req.params.id);
-    users[indice] = userEdited;
-
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-    res.redirect("/user/" + req.params.id);
+    let userId = req.params.id;
+    let userRolConvert = req.body.rol;
+    let recibeUserRolConvert = 0;
+    
+    switch (userRolConvert) {
+      case "vendedor":
+        recibeUserRolConvert = 3;
+        break;
+        case "cliente":
+          recibeUserRolConvert = 2;
+          break;
+        default: 
+        break; 
+    }
+    db.User.update(
+        {
+          user_id: req.params.id,
+          name: req.body.name,
+          lastName: req.body.lastName,
+          email: req.body.email,
+          password: bcryptjs.hashSync(req.body.password, 10),
+          rol_id: recibeUserRolConvert,
+          avatar: req.file ? req.file.filename : "defaultAvatar.png"
+        },
+        {
+            where: {user_id: userId}
+        })
+    .then(()=> {
+        return res.redirect("/user/" + req.params.id)})            
+    .catch(error => res.send(error))
   },
   userDelete: (req, res) => {
     let userId = req.params.id;
@@ -118,17 +133,23 @@ const usersController = {
            .then(user => {
             userToLogin = user[0];
 
-           if (user.length > 0) {
+            if (user.length > 0) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
               delete userToLogin.password;
-              console.log(userToLogin.password);
-              req.session.userLogged = userToLogin;  
               
+               req.session.userLogged = {
+                user_id : userToLogin.user_id,
+                name : userToLogin.name,
+                lastName : userToLogin.lastName,
+                email : userToLogin.email,
+                rol_id : userToLogin.rol_id,
+                avatar : userToLogin.avatar
+              }
+
               if(req.body.remember_user){ // remmeber_user
                 res.cookie("userEmail", req.body.correo, { maxAge:( 1000 * 60) * 2 })
               };
-
               return res.redirect("/user/" + req.session.userLogged.user_id);  
             };
             return res.render("login", {
@@ -145,8 +166,8 @@ const usersController = {
                       msg: 'No se encuentra este email en nuestra base de datos'
                   }
               }
-          });
-           }
+            });
+        }
      })
      .catch(error => res.send(error));
   },
@@ -165,7 +186,6 @@ const usersController = {
       user: req.session.userLogged
     });
   }
-
 };
 
 module.exports = usersController;

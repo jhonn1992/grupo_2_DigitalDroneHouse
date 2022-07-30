@@ -109,6 +109,9 @@ h4 {
   margin-top: 70px;
 }
 
+.text-danger{
+  color: red;
+}
 
 /* cambio de color a los liks (etiquetas "a") con pseudo clases */
 a {

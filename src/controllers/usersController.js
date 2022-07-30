@@ -100,50 +100,41 @@ const usersController = {
     res.redirect("/user/" + req.params.id);
   },
   userDelete: (req, res) => {
-    const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-    let finalUsers = users.filter((user) => user.id != req.params.id);
-    fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, " "));
-    res.redirect("/");
+    let userId = req.params.id;
+    db.User.destroy({
+      where: {user_id: userId}, force: true
+    })
+    .then(()=>{
+      return res.redirect('/')})
+    .catch(error => res.send(error));
   },
   login: (req, res) => {
     res.render("login");
   },
   proccessLogin: (req, res) => {
-    let userToLogin = UserModel.findByField("email", req.body.correo);
+    let userToLogin;
+    //let userToLogin = UserModel.findByField("email", req.body.correo);
+    db.User.findAll({where: {email: req.body.correo}})
+           .then(user => {
+            userToLogin = user[0];
 
-    if (userToLogin) {
-      let isOkThePassword = bcryptjs.compareSync(
-        req.body.password,
-        userToLogin.password
-      );
-      if (isOkThePassword) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;  
+           if (user.length > 0) {
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+              //delete userToLogin.password;
+              req.session.userLogged = userToLogin;  
+              
+              if(req.body.remember_user){ // remmeber_user
+                res.cookie("userEmail", req.body.correo, { maxAge:( 1000 * 60) * 2 })
+              };
 
-        
-        if(req.body.remember_user){ // remmeber_user
-          res.cookie("userEmail", req.body.correo, { maxAge:( 1000 * 60) * 2 })
-        }
-        
-        return res.redirect("/user/" + req.session.userLogged.id);  
-      }
-      return res.render("login", {
-        errors: {
-          email: {
-            msg: "Las credenciales son inválidas",
-          },
-        },
-      });
-    }
-
-    return res.render('login', {
-        errors: {
-            email: {
-                msg: 'No se encuentra este email en nuestra base de datos'
-            }
-        }
-    });
-
+              return res.redirect("/user/" + req.session.userLogged.user_id);  
+            };
+          }else{
+            res.send("Ese correo no está en la BD");
+           }
+     })
+     .catch(error => res.send(error));
   },
   userNotFound: (req, res) => {
     //Pendiente terminar función

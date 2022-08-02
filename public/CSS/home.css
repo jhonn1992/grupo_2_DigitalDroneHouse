@@ -15,9 +15,9 @@ body {
   margin: 0px;
 }
 
-section {
+/* section {
   width: 95%;
-}
+} */
 header {
   position: fixed;
   width: 100vw;
@@ -319,7 +319,7 @@ article h4 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: smaller;
+  font-size: medium;
 }
 
 .featuresp {
@@ -330,7 +330,7 @@ article h4 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: smaller;
+  font-size: medium;
   position: relative;
   top: 50px;
 }

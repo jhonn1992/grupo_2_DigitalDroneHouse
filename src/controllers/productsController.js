@@ -115,7 +115,7 @@ const productsController = {
           id: 0,
           product_name: req.body.nombre,
           reference: req.body.reference,
-          image: req.file.filename,
+          image: req.file ? req.file.filename : req.body.image_default,
           category_id: categoryConvert,
           price: req.body.precio,
           features1: featuresEntrySize >=1 ? featuresEntry[0] : null,

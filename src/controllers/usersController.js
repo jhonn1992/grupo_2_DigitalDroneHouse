@@ -106,7 +106,7 @@ const usersController = {
           email: req.body.email,
           password: bcryptjs.hashSync(req.body.password, 10),
           rol_id: recibeUserRolConvert,
-          avatar: req.file ? req.file.filename : "defaultAvatar.png"
+          avatar: req.file ? req.file.filename : req.body.image_default
         },
         {
             where: {user_id: userId}

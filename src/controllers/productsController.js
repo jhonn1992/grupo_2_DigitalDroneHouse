@@ -15,16 +15,16 @@ const productsController = {
       .then(product => {
         let features = [];
 
-              if(product.features1 != null){
+              if(product.features1 != null && product.features1 != ""){
                 features.push(product.features1);
               }
-              if(product.features2 != null){
+              if(product.features2 != null && product.features2 != ""){
                 features.push(product.features2);
               }
-              if(product.features3 != null){
+              if(product.features3 != null && product.features3 != ""){
                 features.push(product.features3);
               }
-              if(product.features4 != null){
+              if(product.features4 != null && product.features4 != ""){
                 features.push(product.features4);
               }
         res.render("shopping-cart", { productToBuy: product, features });
@@ -37,16 +37,16 @@ const productsController = {
             .then(product => {
               let features = [];
 
-              if(product.features1 != null){
+              if(product.features1 != null && product.features1 != ""){
                 features.push(product.features1);
               }
-              if(product.features2 != null){
+              if(product.features2 != null && product.features2 != ""){
                 features.push(product.features2);
               }
-              if(product.features3 != null){
+              if(product.features3 != null && product.features3 != ""){
                 features.push(product.features3);
               }
-              if(product.features4 != null){
+              if(product.features4 != null && product.features4 != ""){
                 features.push(product.features4);
               }
               res.render('productDetail', {productDetail: product, features}); 
@@ -57,16 +57,16 @@ const productsController = {
     .then(product => {
       let features = [];
 
-      if(product.features1 != null){
+      if(product.features1 != null && product.features1 != ""){
         features.push(product.features1);
       }
-      if(product.features2 != null){
+      if(product.features2 != null && product.features2 != ""){
         features.push(product.features2);
       }
-      if(product.features3 != null){
+      if(product.features3 != null && product.features3 != ""){
         features.push(product.features3);
       }
-      if(product.features4 != null){
+      if(product.features4 != null && product.features4 != ""){
         features.push(product.features4);
       }
       res.render('productEdit', {productToEdit: product, features}); 
@@ -85,7 +85,7 @@ const productsController = {
       let productToEdit = [];
       productToEdit = {
         id: req.params.id,
-        productName: req.body.nombre,
+        product_name: req.body.nombre,
         reference: req.body.reference,
         image: req.file ? req.file.filename : productToEdit.image,
         category: req.body.categoria,
@@ -94,7 +94,8 @@ const productsController = {
       };
 
       res.render("productEdit", {
-        productToEdit: productToEdit,
+        productToEdit: productToEdit, 
+        features: featuresSave,
         errors: validationResult(req).mapped(),
         oldData: req.body,
       });

@@ -39,8 +39,8 @@
                                     <label>
                                         <h4>Categorias de Interés</h4>
                                     </label>
-                                    <label><input type="radio" name="categoria" value="drone"> &nbspDrones</label>
-                                    <label><input type="radio" name="categoria" value="accesory">
+                                    <label><input type="radio" name="categoria" value="drone" <% if (productToEdit.category == "drone") {%> checked <% } %>> &nbspDrones</label>
+                                    <label><input type="radio" name="categoria" value="accesory" <% if (productToEdit.category == "accesory") {%> checked <% } %>>
                                         &nbspAccesories</label>
                                 </div>
                                 <div>
@@ -53,7 +53,13 @@
                                             id="<%= features.indexOf([i]) %> "
                                             placeholder="<%= features[i] %>"
                                             value="<%= features[i] %>">
-
+                                        <% } %>
+                                        <% if (features.length < 4 ) { %>
+                                            <% for( let j = features.length; j < 4 ; j++ ) { %>
+                                                <input class="controls-login" type="text" name="features"
+                                            id="<%= features.indexOf([j]) %> "
+                                            placeholder="<%= 'feature'+[j+1] %>">
+                                            <% } %>
                                         <% } %>
                                 </div>
 

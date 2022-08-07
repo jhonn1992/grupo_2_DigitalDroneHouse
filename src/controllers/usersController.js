@@ -25,7 +25,6 @@ const usersController = {
               let errors = {
                 email: {msg: 'User already exist'}
               };
-              
               res.render("register", {
                 errors: errors,
                 inputDataUser: req.body,
@@ -42,7 +41,7 @@ const usersController = {
                 res.render("register", {
                   userToCreate: userToCreate,
                   errors: validationResult(req).mapped(),
-                  oldData: req.body,
+                  inputDataUser: req.body,
                 });
           } else{
             let userRolConvert = req.body.rol;

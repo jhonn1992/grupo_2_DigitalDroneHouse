@@ -38,6 +38,10 @@
     display: none;
   }
 
+  .text-danger{
+    color: red;
+  }
+
   .label-file {
     padding: 6px 100px;
     border: solid 1px grey;

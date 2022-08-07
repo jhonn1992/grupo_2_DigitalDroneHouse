@@ -23,8 +23,12 @@
           <label>
             <h5>Choose your purpose*</h5>
           </label>
-          <label><input type="radio" name="rol" value="vendedor" <% if (user.rol == "vendedor") {%> checked <% } %>  > &nbspSell</label>
-          <label><input type="radio" name="rol" value="cliente" <% if (user.rol == "cliente") {%> checked <% } %>> &nbspBuy</label>
+          <label><input type="radio" name="rol" value="vendedor" <% if (user.rol_id == "3") {%> 
+            checked
+            <% } %>  > &nbspSell</label>
+          <label><input type="radio" name="rol" value="cliente" <% if (user.rol_id == "2") {%>
+             checked 
+             <% } %>> &nbspBuy</label>
       </div>
       
       <div class="controls-login">

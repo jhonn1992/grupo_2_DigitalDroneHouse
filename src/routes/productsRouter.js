@@ -16,11 +16,11 @@ const validations = [
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
         if(!file) {
-            throw new Error('Sube una imagen');
+            throw new Error('Upload a product image');
         } else {
             let fileExtesion =  path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtesion)) {
-                throw new Error(`Las extensiones de archivos permitidas son${acceptedExtensions.join(', ')}`);
+                throw new Error(`Allowed extensions ${acceptedExtensions.join(', ')}`);
             }
         }
         return true
@@ -33,7 +33,7 @@ router.get('/productDetail/:id', productsController.productDetail);
 router.get('/productEdit/:id', productsController.productEdit);
 router.put('/productEdit/:id', uploadFile.single('imagen'), validations, productsController.productUpdate);
 router.get('/productCreate', productsController.productCreate);
-router.post('/', uploadFile.single('imagen'), productsController.productCreatePOST);
+router.post('/', uploadFile.single('imagen'), validations, productsController.productCreatePOST);
 router.get('/', productsController.productList);
 
 router.delete('/productDelete/:id', productsController.productDelete);

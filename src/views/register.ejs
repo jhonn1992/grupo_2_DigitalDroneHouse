@@ -7,14 +7,26 @@
         <a href="/"><img src="/img/logoDDH.png" alt="logoDDH" /></a>
       </div>
       <h4>REGISTER BY EMAIL</h4>
-      
+
+      <% if (locals.errors && errors.name) { %>
+        <div class="text-danger">
+          <%= errors.name.msg %>
+        </div>
+        <% } %>
+
         <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.name %>" 
         <% } %>
-        required/>
+        />
+
+        <% if (locals.errors && errors.lastName) { %>
+          <div class="text-danger">
+            <%= errors.lastName.msg %>
+          </div>
+          <% } %>
 
       <input class="controls-register" type="text" name="lastName" id="lastName" placeholder="Last Name*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.lastName %>" 
       <% } %>
-      required/>
+      />
 
       <% if (locals.errors && errors.email) { %>
         <div class="text-danger">
@@ -23,12 +35,16 @@
         <% } %>
       <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.email %>" 
       <% } %>
-      required/>
-
-      <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" required
+      />
+      <% if (locals.errors && errors.password) { %>
+        <div class="text-danger">
+          <%= errors.password.msg %>
+        </div>
+        <% } %>
+      <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" 
         minlength="6" />
       <input class="controls-register" type="password" name="passwordRepeat" id="passwordRepeat"
-        placeholder="Enter password again*" required/>
+        placeholder="Enter password again*" />
 
       <div class="controls-login">
           <label>
@@ -40,6 +56,12 @@
             <% } %> value="cliente"> &nbspBuy</label>
       </div>
       
+      <% if (locals.errors && errors.avatar) { %>
+        <div class="text-danger">
+          <%= errors.avatar.msg %>
+        </div>
+        <% } %>
+
       <div class="controls-login">
           <label>Profile Image</label>
           <label class="label-file botons2">
@@ -48,7 +70,7 @@
       </div>
 
       <div class="terms-use">
-        <input type="checkbox" name="terms-use" placeholder="terms-use" required> I agree to comply with the DDH <strong>Privacy Policy</strong> and <a
+        <input type="checkbox" name="terms-use" placeholder="terms-use" > I agree to comply with the DDH <strong>Privacy Policy</strong> and <a
           href="#">Terms of Use.</a></input>
       </div>
       <button class="botons" type="submit"> REGISTER</button>

@@ -132,8 +132,12 @@ const usersController = {
     db.User.findAll({where: {email: req.body.correo}})
            .then(user => {
             userToLogin = user[0];
-
+            console.log(userToLogin);
+            console.log("---------------------");
+            console.log(user[0]);
+            
             if (user.length > 0) {
+              console.log('Entre al condicional de user.lengh');
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
               delete userToLogin.password;

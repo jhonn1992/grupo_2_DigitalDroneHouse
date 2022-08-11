@@ -147,7 +147,7 @@ const productsController = {
     if (validationResult(req).errors.length > 0) {
       return res.render("productCreate", {
         errors: validationResult(req).mapped(),
-        oldData: req.body,
+        inputProduct: req.body,
       });
     } else {
       let featuresEntry = req.body.features;

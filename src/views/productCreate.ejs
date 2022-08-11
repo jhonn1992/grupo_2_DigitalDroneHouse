@@ -12,21 +12,24 @@
             <%= errors.nombre.msg %>
           </div>
           <% } %>
-            <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*">
+            <input class="controls-login" type="text" name="nombre" id="nombre" placeholder="Product Name*" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.nombre %>" 
+            <% } %>>
 
             <% if (locals.errors && errors.precio) { %>
               <div class="text-danger">
                 <%= errors.precio.msg %>
               </div>
               <% } %>
-                <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*">
+                <input class="controls-login" type="number" name="precio" id="precio" placeholder="Price*" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.precio %>" 
+                <% } %>>
 
                 <% if (locals.errors && errors.reference) { %>
                   <div class="text-danger">
                     <%= errors.reference.msg %>
                   </div>
                   <% } %>
-                    <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*">
+                    <input class="controls-login" type="text" name="reference" id="reference" placeholder="Reference*" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.reference %>" 
+                    <% } %>>
                     <% if (locals.errors && errors.imagen) { %>
                       <div class="text-danger">
                         <%= errors.imagen.msg %>
@@ -47,8 +50,10 @@
                               <label>
                                 <h4>Categorias de Interés</h4>
                               </label>
-                              <label><input type="radio" name="categoria" value="drone"> &nbspDrones</label>
-                              <label><input type="radio" name="categoria" value="accesory"> &nbspAccesories</label>
+                              <label><input type="radio" name="categoria" value="drone" <% if
+                                (locals.inputProduct && locals.inputProduct.categoria == "drone") {%> checked <% } %>> &nbspDrones</label>
+                              <label><input type="radio" name="categoria" value="accesory" <% if
+                                (locals.inputProduct && locals.inputProduct.categoria == "accesory") {%> checked <% } %>> &nbspAccesories</label>
                             </div>
 
                             <div>
@@ -56,13 +61,17 @@
                                 <h4>Features</h4>
                               </label>
                               <input class="controls-login" type="text" name="features" id="features1"
-                                placeholder="feature 1">
+                                placeholder="feature 1" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.features[0] %>" 
+                                <% } %>>
                               <input class="controls-login" type="text" name="features" id="features2"
-                                placeholder="feature 2">
+                                placeholder="feature 2" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.features[1] %>" 
+                                <% } %>>
                               <input class="controls-login" type="text" name="features" id="features3"
-                                placeholder="feature 3">
+                                placeholder="feature 3" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.features[2] %>" 
+                                <% } %>>
                               <input class="controls-login" type="text" name="features" id="features4"
-                                placeholder="feature 4">
+                                placeholder="feature 4" <% if (locals.inputProduct) { %> value="<%= locals.inputProduct.features[3] %>" 
+                                <% } %>>
                             </div>
 
                             <button type="submit" class="botons"> CREATE</button>

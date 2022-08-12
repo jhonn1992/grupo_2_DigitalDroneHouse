@@ -37,7 +37,7 @@ router.get('/user', usersController.userNotFound);
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/', uploadFile.single('avatar'), validations, usersController.userRegister);
 router.get('/user/:user_id?', authMiddleware, anotherUserAccountMiddleware, usersController.user);
-router.get('/user/edit/:id', authMiddleware, usersController.userEdit);
+router.get('/user/edit/:id', authMiddleware, anotherUserAccountMiddleware, usersController.userEdit);
 router.put('/user/edit/:id', uploadFile.single('avatar'), validations, authMiddleware, usersController.userUpload);
 router.delete('/user/userDelete/:id', authMiddleware, usersController.userDelete);
 router.get('/login', guestMiddleware, usersController.login);

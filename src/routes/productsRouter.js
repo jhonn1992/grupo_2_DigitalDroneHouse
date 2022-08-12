@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const uploadFile = require('../models/multer');
 const { check } = require('express-validator');
+const authMiddleware = require('../middlewares/authMiddleware');
+const administratorAccountMiddleware = require('../middlewares/administratorAccountMiddleware');
 
 const productsController = require('../controllers/productsController');
 
@@ -51,12 +53,12 @@ const validationsProductEdit = [
 router.get('/shopping-cart', productsController.shoppingCart);
 router.get('/shopping-cart/:id', productsController.shoppingCartProductDetail);
 router.get('/productDetail/:id', productsController.productDetail);
-router.get('/productEdit/:id', productsController.productEdit);
+router.get('/productEdit/:id', authMiddleware, administratorAccountMiddleware, productsController.productEdit);
 router.put('/productEdit/:id', uploadFile.single('imagen'), validationsProductEdit, productsController.productUpdate);
-router.get('/productCreate', productsController.productCreate);
+router.get('/productCreate', authMiddleware, administratorAccountMiddleware, productsController.productCreate);
 router.post('/', uploadFile.single('imagen'), validations, productsController.productCreatePOST);
 router.get('/', productsController.productList);
 
-router.delete('/productDelete/:id', productsController.productDelete);
+router.delete('/productDelete/:id', authMiddleware, administratorAccountMiddleware, productsController.productDelete);
 
 module.exports = router;

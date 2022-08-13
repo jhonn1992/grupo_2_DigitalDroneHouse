@@ -13,10 +13,13 @@
                 <ul class="ul-nav navbar-ocultar-menu">
                     <li><a href="/">Home</A></li>
                     <li><a href="/productList">Products</A></li>
-                    <li><a href="/productList/productCreate">Create</A></li>
+                    <% if (locals.userLogged && locals.userLogged.user_id == 1) { %>
+                        <li><a href="/productList/productCreate">Create</A></li>
+                    <% } %>
                 </ul>
             </nav>
         </div>
+        
 
         <div class="header-detail ocultar-navbar">
             <div class="content-img-user-header">

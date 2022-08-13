@@ -11,10 +11,10 @@
 # Retrospectiva Sprint 2    
 
 ## Comenzar a hacer:  
-1. Tener reuniones sincronicas periodicas con horario preestablecido.   
+1. Tener reuniones sincrónicas periodicas con horario preestablecido.   
 
 ## Hacer más:  
-1. En lo posible trabajar de manera sincronica, aprovechando al máximo los espacios de trabajo en conjunto.  
+1. En lo posible trabajar de manera sincrónica, aprovechando al máximo los espacios de trabajo en conjunto.  
 2. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
 
 ## Continuar haciendo:  
@@ -33,7 +33,7 @@
 1. No se identifica en este Sprint.   
 
 ## Hacer más:  
-1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.  
+1. Continuar en lo posible con reuniones sincrónicas, aprovechando al máximo los espacios de trabajo en conjunto.  
 2. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
 
 ## Continuar haciendo:  
@@ -53,7 +53,7 @@
 2. Hacer commits más seguidos.  
 
 ## Hacer más:  
-1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.   
+1. Continuar en lo posible con reuniones sincrónicas, aprovechando al máximo los espacios de trabajo en conjunto.   
 
 ## Continuar haciendo:  
 1. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
@@ -71,7 +71,7 @@
 1. Distribución individual y/o por pares de actividades.  
 
 ## Hacer más:  
-1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.   
+1. Continuar en lo posible con reuniones sincrónicas, aprovechando al máximo los espacios de trabajo en conjunto.   
 
 ## Continuar haciendo:  
 1. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).  
@@ -90,6 +90,25 @@
   
 ## Hacer más:    
 1. Continuar en lo posible con reuniones sincronicas, aprovechando al máximo los espacios de trabajo en conjunto.     
+  
+## Continuar haciendo:    
+1. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).    
+2. Continuar trabajando en equipo.  
+3. Continuar con las reuniones sincrónicas día de por medio.           
+  
+## Hacer menos:    
+1. No se identifica en este Sprint.    
+  
+## Dejar de hacer:    
+1. No se identifica en este Sprint.  
+  
+# Retrospectiva Sprint 7      
+    
+## Comenzar a hacer:    
+1. Commits individuales no solo en las sesiones sincrónicas.    
+  
+## Hacer más:    
+1. Continuar en lo posible con reuniones sincrónicas, aprovechando al máximo los espacios de trabajo en conjunto.     
   
 ## Continuar haciendo:    
 1. Optimizar los tiempos de ejecución de las actividades del sprint (compromiso).    

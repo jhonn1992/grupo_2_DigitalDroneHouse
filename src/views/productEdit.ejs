@@ -16,78 +16,93 @@
                         <%= errors.nombre.msg %>
                     </div>
                     <% } %>
-
-                <div class="errors">
-                    <ul> </ul>
-                </div>
+                    <div class="errors">
+                        <ul> </ul>
                         <input class="controls-login" type="text" name="nombre" id="nombre"
                             placeholder="<%=productToEdit.product_name %>" value="<%=productToEdit.product_name %>">
-                        <input class="controls-login" type="number" name="precio" id="precio"
-                            placeholder="<%=productToEdit.price %>" value="<%=productToEdit.price %>">
-                        <input class="controls-login" type="text" name="reference" id="reference"
-                            placeholder="<%=productToEdit.referece %>" value="<%=productToEdit.reference %>">
 
-                        <!-- <% if (locals.errors && errors.imagen) { %>
+                        <% if (locals.errors && errors.precio){ %>
                             <div class="text-danger">
-                                <%= errors.imagen.msg %>
+                                <%= errors.precio.msg %>
                             </div>
-                            <% } %> -->
-                                <div class="controls-login">
-                                    <label>Product Image</label>
-                                    <label class="label-file">
-                                        Upload File<input class="texto-oculto" type="file" name="imagen" id="imagen">
-                                    </label>
-                                </div>
-                                <input class="texto-oculto" type="text" name="image_default" value="<%=productToEdit.image %>">
-                                <div class="controls-login">
-                                    <label>
-                                        <h4>Categorias de Interés</h4>
-                                    </label>
-                                    <label><input type="radio" name="categoria" value="drone" <% if (productToEdit.category_id == 1) {%> checked <% } %>> &nbspDrones</label>
-                                    <label><input type="radio" name="categoria" value="accesory" <% if (productToEdit.category_id == 2) {%> checked <% } %>>
-                                        &nbspAccesories</label>
-                                </div>
-                                <div>
-                                    <label>
-                                        <h4>Features</h4>
-                                    </label>
-                                    <% for( let i=0; i < features.length; i++ ) { %>
+                            <% } %>
+                                <input class="controls-login" type="number" name="precio" id="precio"
+                                    placeholder="<%=productToEdit.price %>" value="<%=productToEdit.price %>">
 
-                                        <input class="controls-login" type="text" name="features"
-                                            id="<%= features.indexOf([i]) %> "
-                                            placeholder="<%= features[i] %>"
-                                            value="<%= features[i] %>">
-                                        <% } %>
-                                        <% if (features.length < 4 ) { %>
-                                            <% for( let j = features.length; j < 4 ; j++ ) { %>
-                                                <input class="controls-login" type="text" name="features"
-                                            id="<%= features.indexOf([j]) %> "
-                                            placeholder="<%= 'feature'+[j+1] %>">
+                                <% if (locals.errors && errors.reference){ %>
+                                    <div class="text-danger">
+                                        <%= errors.reference.msg %>
+                                    </div>
+                                    <% } %>
+                                        <input class="controls-login" type="text" name="reference" id="reference"
+                                            placeholder="<%=productToEdit.referece %>"
+                                            value="<%=productToEdit.reference %>">
+
+                                        <% if (locals.errors && errors.imagen) { %>
+                                            <div class="text-danger">
+                                                <%= errors.imagen.msg %>
+                                            </div>
                                             <% } %>
-                                        <% } %>
-                                </div>
+                                                <div class="controls-login">
+                                                    <label>Product Image</label>
+                                                    <label class="label-file">
+                                                        Upload File<input class="texto-oculto" type="file" name="imagen"
+                                                            id="imagen">
+                                                    </label>
+                                                </div>
+                                                <input class="texto-oculto" type="text" name="image_default"
+                                                    value="<%=productToEdit.image %>">
+                                                <div class="controls-login">
+                                                    <label>
+                                                        <h4>Categorias de Interés</h4>
+                                                    </label>
+                                                    <label><input type="radio" name="categoria" value="drone" <% if
+                                                            (productToEdit.category_id==1) {%> checked <% } %>>
+                                                            &nbspDrones</label>
+                                                    <label><input type="radio" name="categoria" value="accesory" <% if
+                                                            (productToEdit.category_id==2) {%> checked <% } %>>
+                                                            &nbspAccesories</label>
+                                                </div>
+                                                <div>
+                                                    <label>
+                                                        <h4>Features</h4>
+                                                    </label>
+                                                    <% for( let i=0; i < features.length; i++ ) { %>
 
-                                <button type="submit" class="botons"> UPDATE</button>
-                                <div class="btnreset">
-                                    <button class="botonstwo" type="reset">CLEAN</button>
-                                </div>
+                                                        <input class="controls-login" type="text" name="features"
+                                                            id="<%= features.indexOf([i]) %> "
+                                                            placeholder="<%= features[i] %>" value="<%= features[i] %>">
+                                                        <% } %>
+                                                            <% if (features.length < 4 ) { %>
+                                                                <% for( let j=features.length; j < 4 ; j++ ) { %>
+                                                                    <input class="controls-login" type="text"
+                                                                        name="features"
+                                                                        id="<%= features.indexOf([j]) %> "
+                                                                        placeholder="<%= 'feature'+[j+1] %>">
+                                                                    <% } %>
+                                                                        <% } %>
+                                                </div>
 
-                                <div class="pie-de-pagina-login">
-                                    <p>Copyright © 2022 DJI All Rights Reserved.</p>
-                                    <p>
-                                        <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site Map</a>
-                                        <a href="#"> Cookie Preferences.</a>
-                                    </p>
-                                    <p>
-                                        Should you have any questions, <a href="#"> click here </a> to contact
-                                        our dedicated customer support team.
-                                    </p>
-                                </div>
+                                                <button type="submit" class="botons"> UPDATE</button>
+                                                <div class="btnreset">
+                                                    <button class="botonstwo" type="reset">CLEAN</button>
+                                                </div>
+
+                                                <div class="pie-de-pagina-login">
+                                                    <p>Copyright © 2022 DJI All Rights Reserved.</p>
+                                                    <p>
+                                                        <a href="#"> Privacy Policy</a><a href="#"> Terms of Use Site
+                                                            Map</a>
+                                                        <a href="#"> Cookie Preferences.</a>
+                                                    </p>
+                                                    <p>
+                                                        Should you have any questions, <a href="#"> click here </a> to
+                                                        contact
+                                                        our dedicated customer support team.
+                                                    </p>
+                                                </div>
             </section>
         </form>
-
-        <script src="/js/productEdit.js"></script>
-
     </body>
 
     </html>

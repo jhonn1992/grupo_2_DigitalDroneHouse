@@ -16,6 +16,10 @@
                         <%= errors.nombre.msg %>
                     </div>
                     <% } %>
+
+                <div class="errors">
+                    <ul> </ul>
+                </div>
                         <input class="controls-login" type="text" name="nombre" id="nombre"
                             placeholder="<%=productToEdit.product_name %>" value="<%=productToEdit.product_name %>">
                         <input class="controls-login" type="number" name="precio" id="precio"
@@ -23,11 +27,11 @@
                         <input class="controls-login" type="text" name="reference" id="reference"
                             placeholder="<%=productToEdit.referece %>" value="<%=productToEdit.reference %>">
 
-                        <% if (locals.errors && errors.imagen) { %>
+                        <!-- <% if (locals.errors && errors.imagen) { %>
                             <div class="text-danger">
                                 <%= errors.imagen.msg %>
                             </div>
-                            <% } %>
+                            <% } %> -->
                                 <div class="controls-login">
                                     <label>Product Image</label>
                                     <label class="label-file">
@@ -81,6 +85,9 @@
                                 </div>
             </section>
         </form>
+
+        <script src="/js/productEdit.js"></script>
+
     </body>
 
     </html>

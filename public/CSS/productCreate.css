@@ -38,6 +38,11 @@
     display: none;
   }
 
+  .errors {
+    text-align: center;
+    color : red;
+  }
+
   .text-danger{
     color: red;
   }
@@ -62,6 +67,10 @@
     font-size: 15px;
     color: #38393A;
     
+  }
+
+  .nombre {
+    border: solid 2px red;
   }
   
   .controls-login:hover{

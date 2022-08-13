@@ -45,6 +45,11 @@
   display: none;
 }
 
+.errors {
+  text-align: center;
+  color : red;
+}
+
 .text-danger{
   color: red;
 }

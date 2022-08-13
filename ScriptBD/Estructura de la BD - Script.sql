@@ -25,7 +25,7 @@ CREATE TABLE `users` (
    `name` VARCHAR(100) NOT NULL,
    `lastName` VARCHAR(100) NOT NULL,
    `email` VARCHAR(50) NOT NULL,
-   `password` VARCHAR(20) NOT NULL,
+   `password` VARCHAR(100) NOT NULL,
    `rol_id` INT NOT NULL,
    `avatar` VARCHAR(100) NOT NULL,
    PRIMARY KEY (`user_id`)

@@ -13,6 +13,10 @@
           <%= errors.name.msg %>
         </div>
         <% } %>
+        <!--  div para mostrar errores de la vista -->
+        <div class="errors">
+          <ul> </ul>
+        </div>
 
         <input class="controls-register" type="text" name="name" id="name" placeholder="Your Name*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.name %>" 
         <% } %>
@@ -33,7 +37,7 @@
           <%= errors.email.msg %>
         </div>
         <% } %>
-      <input class="controls-register" type="email" name="email" id="correo" placeholder="Email address*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.email %>" 
+      <input class="controls-register" type="text" name="email" id="correo" placeholder="Email address*" <% if (locals.inputDataUser) { %> value="<%= locals.inputDataUser.email %>" 
       <% } %>
       />
       <% if (locals.errors && errors.password) { %>
@@ -41,10 +45,9 @@
           <%= errors.password.msg %>
         </div>
         <% } %>
-      <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" 
-        minlength="6" />
+      <input class="controls-register" type="password" name="password" id="password-1" placeholder="password*" />
       <input class="controls-register" type="password" name="passwordRepeat" id="passwordRepeat"
-        placeholder="Enter password again*" />
+        placeholder="Password confirmation*" />
 
       <div class="controls-login">
           <label>
@@ -99,6 +102,7 @@
       </footer>
     </section>
   </form>
+  <script src="/js/register.js"></script>
 </body>
 
 </html>

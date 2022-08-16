@@ -29,6 +29,11 @@
   width: 30%;
 }
 
+.errors {
+  text-align: center;
+  color : red;
+}
+
 .ubicacion-logo {
   text-align: center;
   margin-bottom: 18px;

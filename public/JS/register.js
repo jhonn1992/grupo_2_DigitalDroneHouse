@@ -68,6 +68,7 @@ window.addEventListener("load", function() {
         if (errors.length > 0 ) {
 
             e.preventDefault();
+            window.scroll(0, 0);
             
             let ulErrors =  document.querySelector(".errors ul");
             ulErrors.innerHTML = "";
@@ -77,7 +78,7 @@ window.addEventListener("load", function() {
                 ulErrors.style.listStyleType = 'none'
             }
         } else {
-            alert("La validación fue exitosa")
+            alert("Success")
             form.submit();
 
         }

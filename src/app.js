@@ -14,6 +14,7 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // Se importan los Routers de la API
 const apiProductsRouter = require("./routes/api/apiProductsRouter.js")
+const apiUsersRouter = require("./routes/api/apiUsersRouter.js")
 
 app.use(cookies()); //cookie-parser
 
@@ -49,6 +50,7 @@ app.use('/productList', productsRouter);
 /* ---------------RUTAS DE LOS ENDPOINTS DE API--------------- */
 
 app.use("/api", apiProductsRouter);
+app.use("/api", apiUsersRouter);
 
 app.use((req,res,next) => {
     res.status(404).render('not-found');

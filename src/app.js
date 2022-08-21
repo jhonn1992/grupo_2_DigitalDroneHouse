@@ -11,6 +11,7 @@ const mainRouter = require('./routes/mainRouter');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const imagesRouter = require('./routes/imagesRouter')
 
 // Se importan los Routers de la API
 const apiProductsRouter = require("./routes/api/apiProductsRouter.js")
@@ -46,6 +47,8 @@ app.use('/', mainRouter);
 app.use('/', usersRouter);
 
 app.use('/productList', productsRouter);
+
+app.use('/images',  imagesRouter)
 
 /* ---------------RUTAS DE LOS ENDPOINTS DE API--------------- */
 

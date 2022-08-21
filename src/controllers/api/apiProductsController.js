@@ -52,16 +52,20 @@ const apiProductsController = {
     productDetail: (req, res) => {
         db.Products.findByPk(req.params.id)
         .then(product => {  
-              let productOut = {
-                data: {
-                    productToSend: product,
-                    dbRelations: ["category_id"],
-                    imageUrl: "/public/img/products/" +product.image,
-                },
-                status: 200
-              }
-              res.json(productOut); 
-            }) 
+             if (product) {
+                let productOut = {
+                    data: {
+                        productToSend: product,
+                        dbRelations: ["category_id"],
+                        imageUrl: "/public/img/products/" +product.image,
+                    },
+                    status: 200
+                }
+                res.json(productOut); 
+             }else{
+                res.json({error: "No se encuentra el producto solicitado", status: 404});
+             }
+        }) 
     }
 }
 

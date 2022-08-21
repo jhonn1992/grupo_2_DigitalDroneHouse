@@ -30,22 +30,26 @@ const apiUsersController = {
     userDetail: (req, res) => {
         db.User.findByPk(req.params.user_id, {include: [{association: "roles"}]})
         .then(user => {
-            let userBDInput = {
-                user_id: user.user_id,
-                name: user.name,
-                lastName: user.lastName,
-                email: user.email
+            let userOut = {};
+            if (user) {
+                let userBDInput = {
+                    user_id: user.user_id,
+                    name: user.name,
+                    lastName: user.lastName,
+                    email: user.email
+                }
+    
+                userOut = {
+                    data: {
+                        userToSend: userBDInput,
+                        imageURL: "/public/img/users/" + user.avatar
+                    },
+                    status: 200
+                };
+                res.json(userOut);
+            }else{
+                res.json({error: "No se encuentra el usuario solicitado", status: 404});
             }
-
-            let userOut = {
-                data: {
-                    userToSend: userBDInput,
-                    imageURL: "/public/img/users/" + user.avatar
-                },
-                status: 200
-            };
-
-            res.json(userOut);
       }) 
     }
 };

@@ -4,6 +4,8 @@ const router = express.Router();
 const imageRouter = router;
 const imagesController = require('../controllers/imagesController')
 
-imageRouter.get('/:image', imagesController.getImage)
+imageRouter.get('/products/:image', imagesController.getImageProducts)
+imageRouter.get('/users/:image', imagesController.getImageUsers)
+
 
 module.exports = imageRouter;

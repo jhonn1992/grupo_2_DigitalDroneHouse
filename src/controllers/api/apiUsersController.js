@@ -42,7 +42,7 @@ const apiUsersController = {
                 userOut = {
                     data: {
                         userToSend: userBDInput,
-                        imageURL: "/public/img/users/" + user.avatar
+                        imageUrl: `/images/users/` + user.avatar
                     },
                     status: 200
                 };

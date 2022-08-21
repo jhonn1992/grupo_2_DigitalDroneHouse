@@ -57,7 +57,7 @@ const apiProductsController = {
                     data: {
                         productToSend: product,
                         dbRelations: ["category_id"],
-                        imageUrl: `/images/` + product.image,
+                        imageUrl: `/images/products/` + product.image,
                     },
                     status: 200
                 }

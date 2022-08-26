@@ -145,7 +145,6 @@ const usersController = {
                 rol_id : userToLogin.rol_id,
                 avatar : userToLogin.avatar
               }
-              console.log(req.session.userLogged);
               if(req.body.remember_user){ // remmeber_user
                 res.cookie("userEmail", req.body.correo, { maxAge:( 1000 * 60) * 2 })
               };

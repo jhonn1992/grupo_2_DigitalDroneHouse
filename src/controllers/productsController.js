@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 const db = require('../database/models');
+const sequalize = db.sequelize;
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
@@ -150,31 +151,49 @@ const productsController = {
         inputProduct: req.body,
       });
     } else {
-      let featuresEntry = req.body.features;
-      let featuresEntrySize = featuresEntry.length;
-      let categoryConvert = 0;
-      if(req.body.categoria == "drone"){
-        categoryConvert = 1;
-      } else{
-        categoryConvert = 2;
-      }
-      
-      db.Products.create (
-        {
-          id: 0,
-          product_name: req.body.nombre,
-          reference: req.body.reference,
-          image: req.file.filename,
-          category_id: categoryConvert,
-          price: req.body.precio,
-          features1: featuresEntrySize >=1 ? featuresEntry[0] : null,
-          features2: featuresEntrySize >=2 ? featuresEntry[1] : null,
-          features3: featuresEntrySize >=3 ? featuresEntry[2] : null,
-          features4: featuresEntrySize >=4 ? featuresEntry[3] : null
-        })
-        .then(()=> {
-          return res.redirect("/productList")})            
-        .catch(error => res.send(error));
+      db.Products.findAll({
+        where: {
+            product_name: req.body.nombre
+        }
+      })
+          .then(product => {
+              if (product == 0) {
+                let featuresEntry = req.body.features;
+                let featuresEntrySize = featuresEntry.length;
+                let categoryConvert = 0;
+                if(req.body.categoria == "drone"){
+                  categoryConvert = 1;
+                } else{
+                  categoryConvert = 2;
+                }
+
+                db.Products.create (
+                  {
+                    id: 0,
+                    product_name: req.body.nombre,
+                    reference: req.body.reference,
+                    image: req.file.filename,
+                    category_id: categoryConvert,
+                    price: req.body.precio,
+                    features1: featuresEntrySize >=1 ? featuresEntry[0] : null,
+                    features2: featuresEntrySize >=2 ? featuresEntry[1] : null,
+                    features3: featuresEntrySize >=3 ? featuresEntry[2] : null,
+                    features4: featuresEntrySize >=4 ? featuresEntry[3] : null
+                  })
+                  .then(()=> {
+                    return res.redirect("/productList")})            
+                  .catch(error => res.send(error));
+              } else{
+                return res.render("productCreate", {
+                  errors: {
+                    nombre: {
+                      msg: 'The product name is already registered'
+                    }
+                  },
+                  inputProduct: req.body,
+                });
+              }
+          });
     }
   },
   productDelete: (req, res) => {

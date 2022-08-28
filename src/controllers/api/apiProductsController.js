@@ -34,7 +34,6 @@ const apiProductsController = {
                 }
                 productsInput.push(productTemp);
             });
-            console.log(productsInput);
             let productsResponse = {
                 stock : products.length,
                 countByCategory: {

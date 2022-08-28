@@ -65,7 +65,27 @@ const apiProductsController = {
                 res.json({error: "No se encuentra el producto solicitado", status: 404});
              }
         }) 
-    }
+    },
+    lastProduct: (req, res) => {
+        db.Products.findAll()
+        .then(products => {
+            let lastProduct = products.pop();
+            let productTemp = {
+                    product_id: lastProduct.product_id,
+                    product_name: lastProduct.product_name,
+                    imageUrl: 'http://localhost:5000/images/products/' + lastProduct.image,
+                    category_id: lastProduct.category_id,
+                    price: lastProduct.price,
+                    features1: lastProduct.features1,
+                    features2: lastProduct.features2,
+                    features3: lastProduct.features3,
+                    features4: lastProduct.features4
+                };
+          res.json(productTemp);
+        }).catch (error => {
+          res.send(error);
+        });
+    }    
 }
 
 module.exports = apiProductsController;

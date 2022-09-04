@@ -11,7 +11,7 @@
             </div>
             <nav class="header-detail navbar-ocultar-menu">
                 <ul class="ul-nav navbar-ocultar-menu">
-                    <li><a href="/">Home</A></li>
+                    <li class="home"><a href="/">Home</a></li>
                     <li><a href="/productList">Products</A></li>
                     <% if (locals.userLogged && locals.userLogged.user_id == 1) { %>
                         <li><a href="/productList/productCreate">Create</A></li>
@@ -46,8 +46,8 @@
                         </form>
             </div>
             <div class="margin-iconos-header-der">
-                <form action="/home" method="GET">
-                    <button type="submit" class="fas fa-search iconosHeader"></button>
+                <form>
+                    <div class="fas fa-search iconosHeader"></div>
                 </form>
             </div>
             <div class="margin-iconos-header-der index-shopping-cart">

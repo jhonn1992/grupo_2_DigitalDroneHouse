@@ -158,6 +158,11 @@ main {
   
 }
 
+.detail-description-buy {
+  text-align: left;
+  margin-left: -100px;
+}
+
 .imgProducts {
   width: 335px;
   height: 350px;
@@ -569,5 +574,12 @@ li a {
 .logo-vs-menu-navbar {
   display: flex;
   flex-wrap: wrap;
+}
+
+.img-affirm {
+  position: relative;
+  z-index: 1000;
+  width: 100px;
+  height: 60px;
 }
 

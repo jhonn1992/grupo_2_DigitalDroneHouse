@@ -18,19 +18,23 @@
                         <li><%= features[i] %></li>
                     <% } %>
                 </ul>
-            </div>
+                <div class="center-btn">
+                    <div class="btn-buy-now">
+                        <A HREF="/productList/shopping-cart/<%= productDetail.product_id %>"><button class="botons" type="submit"> Buy Now </button></A>
+                    </div>
+                    <div class="btn-buy-now">
+                        <div>
+                            <A HREF="/productList/productEdit/<%= productDetail.product_id %> "><button class="botonstwo" type="submit"> Edit </button></A>
+                            <form action="/productList/productDelete/<%= productDetail.product_id %>?_method=DELETE" method="POST">
+                                <button class="botonstwo" type="submit"> Delete </button></A>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </section>
-        <div class="btn-buy-now">
-            <A HREF="/productList/shopping-cart/<%= productDetail.product_id %>"><button class="botons" type="submit"> Buy Now </button></A>
-        </div>
-        <div class="btn-buy-now">
-            <div>
-                <A HREF="/productList/productEdit/<%= productDetail.product_id %> "><button class="botonstwo" type="submit"> Edit </button></A>
-                <form action="/productList/productDelete/<%= productDetail.product_id %>?_method=DELETE" method="POST">
-                    <button class="botonstwo" type="submit"> Eliminar </button></A>
-                </form>
-            </div>
-        </div>
+        
+        
         <div class="font-size-h txt-accesorio">
             <h2>Accessories</h2>
         </div>

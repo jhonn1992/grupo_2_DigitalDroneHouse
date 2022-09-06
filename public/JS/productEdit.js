@@ -33,11 +33,11 @@ window. addEventListener("load", function() {
         let image = document.querySelector("#imagen");
         let extAllowed = /(.PNG|.JPG|.JPEG|.GIF)$/i;
 
-        if (image.value == "") {
+       /*  if (image.value == "") {
             errors.push("Image must be uploaded")
-        } else if (!extAllowed.exec(image.value)){
+        } else */ /* if (!extAllowed.exec(image.value)){
             errors.push("Sorry, this file type is not allowed.")
-        } 
+        }  */
 
 
         let features = document.querySelector('input[name="features"]')

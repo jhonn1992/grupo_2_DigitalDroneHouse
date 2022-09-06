@@ -23,19 +23,26 @@
                     <div class="btn-buy-now">
                         <A HREF="/productList/shopping-cart/<%= productDetail.product_id %>"><button class="botons" type="submit"> Buy Now </button></A>
                     </div>
-                    <div class="btn-buy-now">
-                        <div>
-                            <A HREF="/productList/productEdit/<%= productDetail.product_id %> "><button class="botonstwo" type="submit"> Edit </button></A>
-                            <form action="/productList/productDelete/<%= productDetail.product_id %>?_method=DELETE" method="POST">
-                                <button class="botonstwo" type="submit"> Delete </button></A>
-                            </form>
+                    <% if (locals.userLogged && locals.userLogged.user_id == 1) { %>
+                        <div class="btn-buy-now">
+                            <div>
+                                <A HREF="/productList/productEdit/<%= productDetail.product_id %> "><button class="botonstwo" type="submit"> Edit </button></A>
+                                <form action="/productList/productDelete/<%= productDetail.product_id %>?_method=DELETE" method="POST">
+                                    <button class="botonstwo" type="submit"> Delete </button></A>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    <% } else { %>
+                        <div >
+                            <p class="detail-description-buy" >USD <%= productDetail.price %> Starting at USD 100 mo/ with:</p>
+                            <div>
+                                <img class="img-affirm" src="/img/affirm_logo.png">
+                            </div>
+                        </div>
+                    <% } %>
                 </div>
             </div>  
-        </section>
-        
-        
+        </section>        
         <div class="font-size-h txt-accesorio">
             <h2>Accessories</h2>
         </div>

@@ -16,7 +16,7 @@ const validations = [
     check('categoria').notEmpty().withMessage('Tienes que seleccionar una categoría'),
     check('imagen').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.webp', '.webp'];
         if(!file) {
             throw new Error('Upload a product image');
         } else {
@@ -37,7 +37,7 @@ const validationsProductEdit = [
     check('categoria').notEmpty().withMessage('Tienes que seleccionar una categoría'),
     check('imagen').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.webp'];
         if(!file) {
             
         } else {

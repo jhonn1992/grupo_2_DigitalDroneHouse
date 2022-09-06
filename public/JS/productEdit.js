@@ -31,7 +31,7 @@ window. addEventListener("load", function() {
         }
 
         let image = document.querySelector("#imagen");
-        let extAllowed = /(.PNG|.JPG|.JPEG|.GIF)$/i;
+        let extAllowed = /(.PNG|.JPG|.JPEG|.GIF|.webp)$/i;
 
         if (image.value == "") {
             errors.push("Image must be uploaded")

@@ -20,10 +20,14 @@
     width: 100vw;
     margin-top: 0px;
     background-color: white;
-    padding: 5px;
+    padding: 11px;
     z-index: 200;
     border-bottom: 1px solid #d8e0e9;
     box-sizing: content-box;
+  }
+
+  .ocultar-menu-hamburguesa {
+    display: none;
   }
   
   .inonos-header {
@@ -60,7 +64,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-left: 35px;
+    margin-left: 30px;
   }
   
   .iconosHeader {
@@ -146,7 +150,7 @@
     margin-top: 10%; 
 }
 
-body p {
+.notfound-title {
     margin-top: 10px;
     color: #B34056;
     font-weight: bold;

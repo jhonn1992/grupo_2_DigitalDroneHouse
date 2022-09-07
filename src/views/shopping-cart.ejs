@@ -3,7 +3,7 @@
   <body>
     <%- include('partials/header') %>
       <!-- -----------------------------------main----------------------------------------------------------------- -->
-
+      <div class="shoppingmodel">
       <main>
         <h3 class="titular2"> SHOPPING CART</h3>
         <br><br>
@@ -16,7 +16,7 @@
           <article class="item-cart">
             <img src="/img/products/<%=productToBuy.image%>" alt="imagen-Articulo1" class="product-img">
             <div class="contenedor-descripcion">
-              <h4 class="nombre">
+              <h2 class="nombre">
                 <%=productToBuy.product_name%>
               </h4>
               <p class="descripcion">
@@ -37,7 +37,7 @@
                 <i class="fas fa-angle-double-down"></i>
               </div>
               <div class="contenedor-precio">
-                <p class="precio"> USD $<%=productToBuy.price%> </p>
+                <p class="precio"> $ <%=productToBuy.price%> </p>
               </div>
             </div>
           </article>
@@ -54,7 +54,7 @@
           <div class="separacion"></div>
           <div class="contenedor-sub contenedor2Columnas">
             <p>Subtotal</p>
-            <p>USD 1394</p>
+            <p>$ 1394</p>
           </div>
           <div class="contenedor-envio contenedor2Columnas">
             <p>Shipping</p>
@@ -63,7 +63,7 @@
           <div class="separacion"></div>
           <div class="contenedor2Columnas">
             <h4>TOTAL</h4>
-            <p>USD 1394</p>
+            <p>$ 1394</p>
           </div>
 
           <div class="contenedor-metodo-pago">
@@ -80,6 +80,7 @@
         </div>
 
       </main>
+      </div>
 
       <!--  footer-------------------------- -----------------------------  -->
 

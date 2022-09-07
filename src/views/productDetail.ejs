@@ -4,6 +4,10 @@
     <%- include('partials/header') %>
 
     <main>
+        <dialog id="modal">
+            <video class="video-product-detail" src="https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/Shot%20on%20Banner/Mavic3_webclip_08.mp4" autoplay loop></video>
+        <!-- <button id="btn-cerrar-modal"> Cerrar</button> -->
+        </dialog>
         <section class="seccion-producto">
             <div class="producto">
                 <img class="imgProducts" src="/img/products/<%= productDetail.image %>" alt="product image">
@@ -37,6 +41,9 @@
                             <p class="detail-description-buy" >USD $<%= productDetail.price %> Starting at USD $100 mo/ with:</p>
                             <div>
                                 <img class="img-affirm" src="/img/affirm_logo.png">
+                            </div>
+                            <div class="btn-buy-now">
+                                <button class="botons"  id="btn-abrir-modal">View Video</button>
                             </div>
                         </div>
                     <% } %>
@@ -134,6 +141,7 @@
         </section>
     </div>
     </main>
+    <script src="/js/modalProductDetail.js"></script>
     <%- include('partials/footer') %>
 </body>
 

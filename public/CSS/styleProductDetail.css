@@ -354,6 +354,21 @@ details[open] summary::before {
   padding-bottom: 1%;
 }
 
+.video-product-detail {
+  width: 100%;
+}
+
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, .55);
+}
+
+#modal {
+  margin-top: 6%;
+  max-width: 100ch;
+  max-height: 70ch;
+  border: none;
+}
+
 
 /* ---------------------------- Footer ------------------------------*/
 footer {
@@ -505,7 +520,7 @@ li a {
     padding: 10px;
     padding: 10px;
     width: 50%;
-    height: 400px;
+    height: 430px;
     border: 1px 1px 5px 2px #d8e0e9;
     box-shadow: 1px 1px 20px #38393a;; 
     background-color: white;
@@ -569,7 +584,7 @@ li a {
   .margin-all-pc {
     margin: auto;
     margin-top: 10px;
-    margin-left: -140px;
+    margin-left: -95px;
     margin-right: 90px;
     padding: 10px;
     padding: 10px;

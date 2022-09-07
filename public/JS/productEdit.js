@@ -57,6 +57,7 @@ window. addEventListener("load", function() {
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
                 ulErrors.style.listStyleType = 'none'
             }
+            document.getElementById("focusDivErrors").focus();
         }
     })
 

@@ -64,12 +64,14 @@ window.addEventListener("load", function() {
             e.preventDefault();
             
             let ulErrors =  document.querySelector(".errors ul");
+            
             ulErrors.innerHTML = "";
             for (let i=0; i<errors.length; i++ ) {
 
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>"
                 ulErrors.style.listStyleType = 'none'
             }
+            document.getElementById("focusDivErrors").focus();
         } else {
             alert("La validación fue exitosa")
             form.submit();

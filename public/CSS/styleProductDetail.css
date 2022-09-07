@@ -569,7 +569,7 @@ li a {
   .margin-all-pc {
     margin: auto;
     margin-top: 10px;
-    margin-left: 0px;
+    margin-left: -140px;
     margin-right: 90px;
     padding: 10px;
     padding: 10px;
@@ -591,6 +591,7 @@ li a {
 
   .font-size-h {
     margin-bottom: 50px;
+    text-align: center;
   }
 
   .txt-accesorio {

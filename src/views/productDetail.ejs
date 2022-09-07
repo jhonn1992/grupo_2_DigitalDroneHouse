@@ -13,7 +13,7 @@
                     <h2><%= productDetail.product_name%></h2>
                     <h2><%=productDetail.reference %></h2>
                 </div>
-                <p class="precio">USD <%= productDetail.price %></p>
+                <p class="precio">USD $<%= productDetail.price %></p>
                 <ul>
                     <% for( let i = 0; i < features.length; i++ ) { %>
                         <li><%= features[i] %></li>
@@ -34,7 +34,7 @@
                         </div>
                     <% } else { %>
                         <div >
-                            <p class="detail-description-buy" >USD <%= productDetail.price %> Starting at USD 100 mo/ with:</p>
+                            <p class="detail-description-buy" >USD $<%= productDetail.price %> Starting at USD $100 mo/ with:</p>
                             <div>
                                 <img class="img-affirm" src="/img/affirm_logo.png">
                             </div>

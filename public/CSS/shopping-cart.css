@@ -252,19 +252,23 @@ details[open] summary::before {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  box-shadow: 7px 13px 37px #38393a; 
+  border-radius: 8px; 
 }
 
 .contenedor2Columnas h4, p{
   font-size: 16px;
   align-self: center;
+  /*border: 1px solid grey;*/
+  padding: 1%;
 }
 
-.separacion {
+/*.separacion {
   width: 100%;
   border-bottom: solid 2px #38393A;
   margin-bottom: 10px;
   margin-top: 3px;
-}
+}*/
 
 .item-cart {
   width: 100%;
@@ -272,6 +276,9 @@ details[open] summary::before {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  box-shadow: 7px 7px 37px #38393a;
+  border-radius: 8px;
+
 }
 
 .product-img {
@@ -286,6 +293,7 @@ details[open] summary::before {
   padding-left: 5px;
   padding-right: 5px;
   flex-grow: 0.5;
+
 }
 
 
@@ -294,6 +302,7 @@ details[open] summary::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 3px;
 
 }
 
@@ -309,7 +318,7 @@ details[open] summary::before {
 
 .boton-cierre {
   position: relative;
-  top: -5px;
+  top: 5px;
 }
 
 .boton-cantidad {
@@ -318,6 +327,7 @@ details[open] summary::before {
 
 .contenedor-total {
   margin-top: 20px;
+  
 }
 
 .contenedor-total div {
@@ -332,7 +342,7 @@ details[open] summary::before {
   color: #ffffff;
   margin-bottom: 10px;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .boton:hover {
@@ -348,7 +358,8 @@ details[open] summary::before {
 }
 
 .seguir-comprando{
-  text-align: left;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .text-button{
@@ -531,7 +542,13 @@ li a {
   }
 
     /* ----------------------MAIN---------------------- */
-  
+  .shoppingmodel {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 7px 13px 37px #38393a;
+  }
 
   .seccion-producto {
     display: flex;

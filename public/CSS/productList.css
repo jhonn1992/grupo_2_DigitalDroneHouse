@@ -27,7 +27,13 @@
     z-index: 200;
     border-bottom: 1px solid #d8e0e9;
     box-sizing: content-box;
-    top: 0px
+    top: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+  }
+
+  .header a {
+    font-size: 16.8px;
   }
   
   .inonos-header {
@@ -46,6 +52,8 @@
     justify-content: space-between;
     margin-left: -30px;
     width: 99%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
   }
   
   .margin-iconos-header-der {
@@ -257,9 +265,11 @@
     margin: auto;
     margin-top: 5px;
     background-color: rgba(22, 22, 23, 0.05); 
-    border: #B34056 1px solid;
-    box-shadow: 1px 1px 1px 1px #B34056;
+    /* border: #B34056 1px solid; */
+    /* box-shadow: 1px 1px 1px 1px #B34056; */
     margin-bottom: 13px;
+    padding: 10px;
+    box-shadow: 1px 1px 20px #38393a;
   }
 
   .drone-product-list {
@@ -640,6 +650,8 @@
       flex-wrap: wrap;
       align-items: center;
       width: 100%;
+      font-family: "Open Sans", sans-serif;
+     font-size: 17px;
     }
 
 
@@ -719,8 +731,8 @@
     .drone-one {
       width: 46%;
       margin: 10px;
-      border: #B34056 1px solid;
-      box-shadow: 1px 1px 1px 1px #B34056;
+      /* border: black 1px solid; */
+      box-shadow: 1px 1px 20px #38393a;
     }
   
     .container-one {
@@ -823,6 +835,14 @@
   @media (min-width: 768px) {
     .font-size-h h2 {
       font-size: 18px;
+    }
+
+    .videoLista {
+      display: none;
+    }
+
+    .header {
+      padding: 5px;
     }
 
     .navbar-ocultar-menu {

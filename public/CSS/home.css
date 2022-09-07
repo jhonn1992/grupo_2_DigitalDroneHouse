@@ -23,7 +23,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding: 5px;
+  padding: 8px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
   box-sizing: content-box;
@@ -1035,6 +1035,7 @@ li a {
 
   header {
     height: 50px;
+    padding: 5px;
   }
 
   .header {

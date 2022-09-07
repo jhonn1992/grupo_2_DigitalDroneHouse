@@ -17,7 +17,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding: 1px;
+  padding: 8px;
   padding-left: 10px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
@@ -171,7 +171,7 @@ main {
   display: block;
   margin: auto;
   margin-left: 18%;
-  box-shadow: 1px 1px 1px 1px #d8e0e9;
+  box-shadow: 1px 1px 20px #38393a;
   background-color: white;
   margin-top: 20px;
 }
@@ -470,7 +470,7 @@ li a {
     height: 450px;
     position: relative;
     display: block;
-    box-shadow: 1px 1px 1px 1px #d8e0e9;
+    box-shadow: 1px 1px 20px #38393a;
     margin: auto;
     margin-left: -10%;
   }
@@ -507,7 +507,7 @@ li a {
     width: 50%;
     height: 400px;
     border: 1px 1px 5px 2px #d8e0e9;
-    box-shadow: 1px 1px 1px 1px #d8e0e9; 
+    box-shadow: 1px 1px 20px #38393a;; 
     background-color: white;
     width: 430px;
     margin-bottom: 20px;
@@ -537,16 +537,15 @@ li a {
     height: 500px;
     position: relative;
     display: block;
-    box-shadow: 1px 1px 1px 1px #d8e0e9;
+    box-shadow: 1px 1px 20px #38393a;
     margin-top: -20px;
     margin-left: auto;
     margin-bottom: 20px;
   }
 
-/*   header {
-    padding: 0%;
-    padding-left: 5px;
-  } */
+  header {
+    padding: 1px;
+  }
 
   .seccion-producto {
     display: flex;
@@ -577,7 +576,7 @@ li a {
     width: 25%;
     height: 480px;
     border: 1px 1px 5px 2px #d8e0e9;
-    box-shadow: 1px 1px 1px 1px #d8e0e9;
+    box-shadow: 1px 1px 20px #38393a;
     position: relative;
     background-color: white;
   }

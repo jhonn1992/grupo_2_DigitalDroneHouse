@@ -23,7 +23,7 @@ header {
   width: 100vw;
   margin-top: 0px;
   background-color: white;
-  padding: 5px;
+  padding: 10px;
   z-index: 200;
   border-bottom: 1px solid #d8e0e9;
   box-sizing: content-box;
@@ -66,6 +66,10 @@ header {
   margin-left: 35px;
 }
 
+.header-detail a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+}
 
 .iconosHeader {
   background-color: transparent;
@@ -252,8 +256,13 @@ main {
 /* Main section accesorios */
 
 .faq-container {
-  width: 92%;
+  width: 100%;
   max-width: 800px;
+}
+
+.faq-container a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
 }
 
 details {
@@ -261,6 +270,7 @@ details {
   margin-bottom: 1rem;
   border-bottom: 1px solid #d8e0e9;
   position: relative;
+  padding-left: 30px;
 }
 
 details summary {
@@ -269,6 +279,7 @@ details summary {
   padding: 1rem;
   cursor: pointer;
   list-style: none;
+  margin-left: -30px;
 }
 
 details p {
@@ -338,7 +349,7 @@ details[open] summary::before {
   padding: 10px;
   color: #ffffff;
   margin: 10px 0;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 2px;
   font-weight: bold;
 }
@@ -411,6 +422,7 @@ li a {
 .ocultar-footer {
   display: none;
 }
+
 
 /* --------------------------------------------------------Media Queries---------------------------------------*/
 
@@ -506,6 +518,7 @@ li a {
     flex-wrap: nowrap;
     flex-grow: 0.5;
     margin-top: 20px;
+    padding-right: 0%;
   }
 
   .data-and-butons{
@@ -517,9 +530,9 @@ li a {
   }
 
   .column{
-    margin-left: 0%;
-    margin-right: 3%;
-    margin-top: 9px;
+    margin-left: -4%;
+    margin-right: 8%;
+    margin-top: 14px;
     padding-top: 8px;
     padding-left: 0;
   }
@@ -533,7 +546,6 @@ li a {
     padding: 8px;
     box-shadow: 1px 1px 5px #38393a;
     background-color: white;
-    
   }
 
   .UserCredit p, a{
@@ -551,7 +563,7 @@ li a {
   .center{
     box-shadow: 1px 1px 5px #38393a;
     background-color: white;
-    width: 40%;
+    width: 39.5%;
   }
 
   .title-recent-orders{

@@ -23,7 +23,7 @@ const usersController = {
            .then(resultado => {
             if(resultado.length > 0){
               let errors = {
-                email: {msg: 'User already exist'}
+                email: {msg: 'Email already exist'}
               };
               res.render("register", {
                 errors: errors,

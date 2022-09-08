@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+main {
+  background-image: url("/img/products/drone-3819901");
+}
+
 h4 {
   color: grey;
 }

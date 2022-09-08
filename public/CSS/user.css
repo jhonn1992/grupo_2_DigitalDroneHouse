@@ -66,6 +66,7 @@ header {
   margin-left: 35px;
 }
 
+
 .iconosHeader {
   background-color: transparent;
   border: none;
@@ -149,14 +150,21 @@ main {
   margin-right: 5px;
 }
 
+.seccion-user {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .usuario {
   position: relative;
-  width: 100%;
+  width: 50%;
 }
 
 .avatar {
-  width: 235px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   position: relative;
   display: block;
   margin: auto;
@@ -164,9 +172,44 @@ main {
   border-radius: 50%;
 }
 
+.data-and-butons{
+  position: relative;
+  width: 50%;
+}
+
+.data-user{
+  margin-left: 10%;
+}
+
+.UserCredit{
+  width: 45%;
+  margin-left: 55%;
+}
+
+.UserCredit-available{
+  font-size: 16px;
+}
+
 .margin-all {
   margin-right: 5px;
   margin-left: 10px;
+}
+
+.container-orders{
+  width: 85%;
+  margin-left: 10%;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.title-recent-orders{
+
+  font-size: 16px;
+}
+
+.empty-orders{
+  padding: 20px;
+  text-align: center;
 }
 
 .accesorios {
@@ -204,10 +247,7 @@ main {
   font-size: 16px;
 }
 
-.seccion-producto .margin-all ul li {
-  list-style-type: disc;
-  color: black;
-}
+
 
 /* Main section accesorios */
 
@@ -271,6 +311,7 @@ details[open] summary::before {
   width: 100%;
   align-self: center;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .btn-buy-now {
@@ -279,25 +320,25 @@ details[open] summary::before {
 }
 
 .botons {
-  width: 100%;
+  width: 40%;
   background-color: #B43056;
   border: none;
   padding: 10px;
   color: #ffffff;
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 16px;
   border-radius: 2px;
   font-weight: bold;
 }
 
 .botonstwo {
-  width: 33%;
+  width: 80%;
   background-color: #B43056;
   border: none;
   padding: 10px;
   color: #ffffff;
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 2px;
   font-weight: bold;
 }
@@ -414,13 +455,12 @@ li a {
 
   .usuario {
     position: relative;
-    margin-top: 30px;
+    width: 50%;
   }
 
   .avatar {
     position: relative;
     display: block;
-    margin: auto;
   }
 
   .ocultar-footer {
@@ -441,23 +481,85 @@ li a {
   .usuario {
     position: relative;
     margin-top: 30px;
+    width: 38%;
   }
 
   .avatar {
-    width: 335px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
     position: relative;
     display: block;
     box-shadow: 1px 1px 5px 2px #d8e0e9;
     margin-top: -20px;
     margin-left: auto;
     margin-bottom: 20px;
+    border-radius: 0;
   }
 
-  .seccion-producto {
+  .contenedor-full{
+  display: flex;
+  padding: 10px;
+  }
+
+  .seccion-user {
     display: flex;
-    width: 100%;
+    flex-wrap: nowrap;
+    flex-grow: 0.5;
     margin-top: 20px;
+  }
+
+  .data-and-butons{
+    margin-top: 9px;
+    padding: 8px;
+    box-shadow: 1px 1px 5px #38393a;
+    background-color: white;
+    height: 280px;
+  }
+
+  .column{
+    margin-left: 0%;
+    margin-right: 3%;
+    margin-top: 9px;
+    padding-top: 8px;
+    padding-left: 0;
+  }
+
+  .UserCredit{
+    width: 250px;
+    height: 120px;
+    margin-left: 0%;
+    margin-right: 6%;
+    margin-top: 6%;
+    padding: 8px;
+    box-shadow: 1px 1px 5px #38393a;
+    background-color: white;
+    
+  }
+
+  .UserCredit p, a{
+    padding-top: 5px;
+    font-size: 10px;
+    
+  }
+
+  .container-orders{
+      text-align: center;
+      margin-left: 30%;
+      width: 100%;
+  }
+
+  .center{
+    box-shadow: 1px 1px 5px #38393a;
+    background-color: white;
+    width: 40%;
+  }
+
+  .title-recent-orders{
+    font-size: 20px;
+  }
+
+  .empty-orders{
+    padding-right: 0%;
   }
 
   .margin-all-pc {
